@@ -1,11 +1,27 @@
 <script>
     import Icon from '@iconify/svelte';
+    import { slide } from 'svelte/transition';
 
     export let icon;
-    export let color;
-    
+    export let name;
+
+    let hovered = false;
+
 </script>
 
-<div class="w-24 h-24 rounded-xl bg-white bg-opacity-20 backdrop-blur-l flex justify-center items-center drop-shadow-md">
-    <Icon icon={icon} color={color} class="w-3/5 h-3/5"/>
+<div role="listitem" 
+    on:mouseover={() => {hovered = true}} 
+    on:mouseout={() => {hovered=false}} 
+    on:focus={() => {}} 
+    on:blur={() => {}} 
+    class="w-28 h-28 rounded-xl bg-white text-white hover:text-secondary bg-opacity-20 backdrop-blur-l drop-shadow-md flex justify-center items-center  flex-col">
+
+    {#if hovered}
+        <p class="text-center" transition:slide>
+            {name}
+        </p>
+    {/if}
+    
+    <Icon icon={icon} class="danimate-bounce transition-all w-1/2 h-1/2 my-2"/>
+
 </div>

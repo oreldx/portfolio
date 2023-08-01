@@ -1,5 +1,11 @@
 <script>
     import {page} from '$app/stores'
+    import { onMount } from 'svelte';
+    import { quartIn } from 'svelte/easing';
+    import { blur } from 'svelte/transition';
+    
+    let mounted = false
+    onMount(() => mounted = true)
 
     const navOptions = [
         'about',
@@ -22,10 +28,25 @@
 <nav>
     <ul class="flex flex-col gap-6 my-12">
         {#each navOptions as option, i}
-            <li class="w-min">
-                <a class={`${intSelected==i ? "active before:bg-white" : "before:bg-transparent"} flex items-center before:w-3 before:h-3 before:mr-5 before:rounded-3xl before:border-solid before:border-white before:border-2`} 
-                   id={i.toString()} href={`/${option}`} on:click={switchSection}>{option.toUpperCase()}</a>
-            </li>
+            {#if mounted}
+                <li 
+                    class="w-min" 
+                    transition:blur={{
+                        delay: 230 + 100*i,
+                        duration: 300,
+                        amount: 6,
+                        easing: quartIn,
+                    }}
+                >
+                    <a class={`${intSelected==i ? "active text-white before:opacity-100 before:bg-white" : "before:bg-transparent hover:text-white hover:before:opacity-100 hover:before:bg-white"} 
+                        transition-all flex items-center before:transition-all before:w-4 before:h-4 before:mr-5 before:rounded-3xl before:border-solid before:border-white before:opacity-75 before:border-2`} 
+                        id={i.toString()} href={`/${option}`} 
+                        on:click={switchSection}>
+                        {intSelected==i ? option.toUpperCase() : option.charAt(0).toUpperCase() + option.slice(1)}
+                    </a>
+                </li>
+
+            {/if}
         {/each}
     </ul>
 </nav>

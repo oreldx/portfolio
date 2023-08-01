@@ -1,5 +1,7 @@
 <script>
     import Experience from "$lib/components/Experience.svelte";
+    import { expoOut } from "svelte/easing";
+    import { blur } from "svelte/transition";
 
     const experienceItems = [
         {
@@ -12,7 +14,14 @@
     ]
 </script>
 
-<div class="flex flex-col gap-12">
+<div 
+    class="flex flex-col gap-12"
+    in:blur={{
+        amount: 5,
+        duration: 800,
+        easing: expoOut,
+    }}
+>
     {#each experienceItems as item}
         <Experience data={item}/>
     {/each}

@@ -1,27 +1,36 @@
 <script>
     import Skill from "$lib/components/Skill.svelte";
+    import { expoOut } from "svelte/easing";
+    import { blur } from "svelte/transition";
 
     const skillItems = [
-        {icon: "simple-icons:python", color: "FFFFFF", name: "Python"},
-        {icon: "ri:html5-fill", color: "FFFFFF", name: "HTML"},
-        {icon: "uiw:css3", color: "FFFFFF", name: "CSS"},
-        {icon: "mdi:react", color: "FFFFFF", name: "React"},
-        {icon: "simple-icons:svelte", color: "FFFFFF", name: "Svelte"},
-        {icon: "mdi:tailwind", color: "FFFFFF", name: "Tailwind"},
-        {icon: "mdi:git", color: "FFFFFF", name: "Git"},
-        {icon: "mdi:docker", color: "FFFFFF", name: "Docker"},
-        {icon: "simple-icons:jupyter", color: "FFFFFF", name: "Jupyter Notebook"},
-        {icon: "ri:notion-fill", color: "FFFFFF", name: "Notion"},
-        {icon: "uil:linux", color: "FFFFFF", name: "Linux"},
-        {icon: "devicon-plain:mysql", color: "FFFFFF", name: "MySQL"},
-        {icon: "solar:figma-bold-duotone", color: "FFFFFF", name: "Figma"},
-        {icon: "devicon-plain:photoshop", color: "FFFFFF", name: "Photoshop"},
-        {icon: "devicon-plain:premierepro", color: "FFFFFF", name: "Premiere Pro"},
+        {icon: "simple-icons:python", name: "Python"},
+        {icon: "uiw:html5", name: "HTML"},
+        {icon: "uiw:css3", name: "CSS"},
+        {icon: "mdi:react", name: "React"},
+        {icon: "simple-icons:svelte", name: "Svelte"},
+        {icon: "mdi:tailwind", name: "Tailwind"},
+        {icon: "mdi:git", name: "Git"},
+        {icon: "mdi:docker", name: "Docker"},
+        {icon: "devicon-plain:mysql", name: "MySQL"},
+        {icon: "simple-icons:jupyter", name: "Jupyter"},
+        {icon: "uil:linux", name: "Linux"},
+        {icon: "ri:notion-fill", name: "Notion"},
+        {icon: "solar:figma-bold-duotone", name: "Figma"},
+        {icon: "devicon-plain:photoshop", name: "Photoshop"},
+        {icon: "devicon-plain:premierepro", name: "Premiere Pro"},
     ]
 </script>
 
-<div class="flex flex-wrap gap-6 justify-center md:max-w-md lg:max-w-fit mx-auto">
+<div 
+    class="flex flex-wrap gap-6 justify-center md:max-w-md lg:max-w-fit mx-auto"
+    in:blur={{
+        amount: 5,
+        duration: 800,
+        easing: expoOut,
+    }}
+>
     {#each skillItems as item}
-        <Skill icon={item.icon} color={item.color} />
+        <Skill icon={item.icon} name={item.name}/>
     {/each}
 </div>
