@@ -10,7 +10,7 @@
     const footerItems = [
         {icon: "mdi:github", url: "https://github.com/oreldx", text: ""},
         {icon: "mdi:linkedin", url: "https://www.linkedin.com/in/dureuxaur%C3%A9lien/", text: ""},
-        {icon: "ph:download-fill", url: "", text: "My Résumé"},
+        {icon: "ph:download-fill", url: "%sveltekit.assets%/resume.pdf", text: "My Résumé"},
     ]
 
 </script>
