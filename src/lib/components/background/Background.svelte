@@ -16,7 +16,7 @@
             
         } else {
             width = window.innerWidth;
-            height = window.innerWidth;
+            height = window.outerHeight;
         }    
     }
     
