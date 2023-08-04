@@ -4,23 +4,32 @@
 	import Sky from './Sky.svelte'
 	import PolarLights from './PolarLights.svelte'
 
-    let mounted = false
-    let width = 0;
-    let height = 0;
-
+    var mounted = false
+    var width = 0;
+    var height = 0;
+    const isMobile = () => /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    
+    const updateDimensions = () => {
+        if (isMobile()) {
+            width = window.outerWidth;
+            height = window.outerHeight;
+            
+        } else {
+            width = window.innerWidth;
+            height = window.outerHeight;
+        }    
+    }
+    
     onMount(() => {
         mounted = true;
-
+        
         window.addEventListener('resize', () => {
-            width = window.innerWidth;
-            height = window.innerHeight;
+            updateDimensions()
         });
+        
     });
 
-    $: if (mounted) {
-        width = window.innerWidth;
-        height = window.innerHeight;
-    }
+    $: if (mounted) updateDimensions();
 
 </script>
 
