@@ -1,10 +1,7 @@
 <script>
     import { Layer } from "svelte-canvas";
 
-    const GAP = 0;
     const bimWidth = 5;
-    var binHeight = 500;
-    
     const startInterval = 0;
     const endInterval = Math.PI*2;
 
@@ -12,58 +9,86 @@
     var currentHeight = 0;
     var bims = []
 
-    const createBims = (width, height) => {
-        
-        var n = Math.round((width + GAP) / (bimWidth + GAP)) + 1;
-        const amplitude = width*10/320;
+    const linearFunc = (x, a, b) => a*x+b; 
+    const randomBetween = (min, max) => Math.random() * (max - min) + min;
 
-        const yBims = [];
+    class Bim {
 
-        for (var i = 0; i < n; i++) {
+        constructor(i, windowWidth, windowHeight) {
+            this.i = i;
 
-            var xPosition = i*(bimWidth+GAP);
-
-            var x = (xPosition*endInterval/width) + startInterval;
-            var y = Math.sin(x) * amplitude + (height-binHeight)/2;
-
-            yBims.push(y);
+            this.scaleRatio = endInterval/windowWidth;
+            this.updatePosition();
             
+            this.createBim(windowWidth, windowHeight);
+        }
+        
+        createBim(windowWidth, windowHeight) {
+            this.height = Math.round(windowHeight*0.8);
+
+            this.opacity = 0.5;
+            this.amplitude =  windowWidth*10/320;
+
+            this.y = Math.sin(this.xFunction) * this.amplitude + (windowHeight-this.height)/2;
         }
 
-        return yBims;
-        
-    }
+        drawBim(i, n, context) {
+            this.i = i;
+            this.updatePosition();
 
-    const drawBims = (yBims, context) => {
+            
+            if (this.i/n <= .3) {
+                if (n<175) this.opacity = Math.min(this.i*n, .3)+.2;
+                else this.opacity = Math.min(this.i/n, .3)+.2;    
+            }
+            else this.opacity = 0.5;
 
-        for (let i = 0; i < yBims.length; i++) {
+            var tempHeight=0;
+            var tempHeight = this.height + (Math.cos(this.xFunction*0.6) *this.amplitude);
+            tempHeight += (Math.cos(this.xFunction*1.2) *this.amplitude*2);
+            tempHeight += (linearFunc(this.xFunction, -0.8, 2)) *this.amplitude;
 
-            var x = i*(bimWidth+GAP);
-            const y = yBims[i];
+            const tempY = this.y + (this.height - tempHeight)/2;
 
-            var gradient = context.createLinearGradient(x, y+binHeight, x, y );
+            var gradient = context.createLinearGradient(this.xWindow, tempY+tempHeight, this.xWindow, tempY );
             gradient.addColorStop(0,  'rgba(7, 169, 91, .0)');
             gradient.addColorStop(0.1,  'rgba(7, 169, 91, .05)');
-            gradient.addColorStop(0.3,  'rgba(7, 169, 91, .5)');
-            gradient.addColorStop(0.5,  'rgba(7, 169, 91, .5)');
-            gradient.addColorStop(0.8,  'rgba(253, 77, 155, .5)');
+            gradient.addColorStop(0.3,  `rgba(7, 169, 91, ${this.opacity})`);
+            gradient.addColorStop(0.5,  `rgba(7, 169, 91, ${this.opacity})`);
+            gradient.addColorStop(0.8,  `rgba(253, 77, 155, ${this.opacity})`);
             gradient.addColorStop(1,  'rgba(195, 54, 169, .0)');
             context.fillStyle = gradient;
     
-            context.fillRect(x, y, bimWidth, binHeight);
-
+            context.fillRect(this.xWindow, tempY, bimWidth, tempHeight);
         }
 
+        updatePosition() {
+            this.xWindow = this.i*bimWidth;
+            this.xFunction = (this.xWindow*this.scaleRatio) + startInterval;
+        }
+    }
 
-        const removeBim = yBims.shift();
-        yBims.push(removeBim);
+    const createBims = (width, height) => {
+        
+        var n = Math.round(width / bimWidth) + 1;
 
-        return yBims;
+        const bims = [];
+        for (var i = 0; i < n; i++) bims.push(new Bim(i, width, height));
+        return bims;
+        
+    }
 
+    const drawBims = (bims, context) => {
+
+        for (var i = 0; i < bims.length; i++) bims[i].drawBim(i, bims.length, context);
+
+        const removedBim = bims.shift();
+        bims.push(removedBim);
+
+        return bims;
     }
     
 	$: render = ({ context, width, height }) => {
-        binHeight = Math.round(height*0.4);
 
         if (width != currentWidth || height != currentHeight) {
             currentWidth = width;
@@ -71,10 +96,7 @@
 
             bims = createBims(currentWidth, currentHeight);
         } 
-    
         bims = drawBims(bims, context);
-
-
 	}
 
 </script>
