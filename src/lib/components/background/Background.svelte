@@ -16,7 +16,7 @@
             
         } else {
             width = window.innerWidth;
-            height = window.outerHeight;
+            height = window.innerWidth;
         }    
     }
     
@@ -35,7 +35,7 @@
 
 <div class="fixed top-0 left-0" style="z-index: -1;">
     <Canvas {width} {height}>
-        <Sky />
+        <!-- <Sky /> -->
          <PolarLights />
     </Canvas>
 </div>
