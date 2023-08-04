@@ -36,13 +36,11 @@
             this.i = i;
             this.updatePosition();
 
+            const progressedDraw = this.i/n;
+            if (progressedDraw <= .3 && n>=175) {
+                this.opacity = Math.min(this.i/n, .3)+.2;    
+            } else this.opacity = .5;
             
-            if (this.i/n <= .3) {
-                if (n<175) this.opacity = Math.min(this.i*n, .3)+.2;
-                else this.opacity = Math.min(this.i/n, .3)+.2;    
-            }
-            else this.opacity = 0.5;
-
             var tempHeight=0;
             var tempHeight = this.height + (Math.cos(this.xFunction*0.6) *this.amplitude);
             tempHeight += (Math.cos(this.xFunction*1.2) *this.amplitude*2);
