@@ -1,15 +1,16 @@
 <script>
-    import Experience from "$lib/components/Experience.svelte";
+    import DetailedCard from "$lib/components/DetailedCard.svelte";
     import { expoOut } from "svelte/easing";
     import { blur } from "svelte/transition";
 
     const experienceItems = [
         {
             date: "FEB 2023 - JUL 2023",
-            title: "Fullstack Engienner & ML ops - Grytics",
+            title: "Fullstack Engineer & ML Ops - Grytics",
             type: "Intern",
             desc: "At Grytics, I conducted functional testing and developed a machine learning and AI proof-of-concept for improving their web application. Working independently under the lead developer, I honed my skills in maintainable code and efficient problem-solving, contributing to the application's robustness and showcasing potential future enhancements.",
-            tags: ["React", "Machine Learning", "Javascript", "Python", "AWS", "Functional Tests"],
+            tags: ["React", "Machine Learning", "Javascript", "Python", "AWS", "Research & Development", "Functional Tests"],
+            url: "https://grytics.com/",
         },
     ]
 </script>
@@ -23,6 +24,6 @@
     }}
 >
     {#each experienceItems as item}
-        <Experience data={item}/>
+        <DetailedCard data={item}/>
     {/each}
 </div>
