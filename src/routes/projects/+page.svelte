@@ -13,20 +13,20 @@
             url: ""
         },
         {
-            date: "2021",
-            title: "Autonomous Youtube Channel",
-            type: "Personal",
-            desc: "This project involved crafting a YouTube channel dedicated to daily \"best-of\" compilations of top Twitch clips, enhanced with fancy overlays to enrich user experience. Utilizing Python for channel management, tasks encompassed data scrapping, resource acquisition, and content selection & creation.",
-            tags: ["Python", "MySQL", "ffmpeg", "API"],
-            url: ""
-        },
-        {
             date: "2022",
             title: "Machine Learning Model",
             type: "Academic",
             desc: "Creation of a machine learning model in Python to predict revenue of all types of retail stores in Norway",
             tags: ["Python", "Machine Learning"],
             url: "https://github.com/oreldx/TDT4173_Project"
+        },
+        {
+            date: "2021",
+            title: "Autonomous Youtube Channel",
+            type: "Personal",
+            desc: "This project involved crafting a YouTube channel dedicated to daily \"best-of\" compilations of top Twitch clips, enhanced with fancy overlays to enrich user experience. Utilizing Python for channel management, tasks encompassed data scrapping, resource acquisition, and content selection & creation.",
+            tags: ["Python", "MySQL", "ffmpeg", "API"],
+            url: ""
         },
         {
             date: "2021",

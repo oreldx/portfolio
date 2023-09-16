@@ -18,7 +18,7 @@
         
     <p>Despite my busy academic schedule, I make it a point to nurture <span class="strong-text">my love for side projects</span>. My ventures range from creating unique 3D printer projects along with FPV drones - a testament to my enduring fondness for the blend of creativity and technology.</p>
 
-    <p>Away from the screens and circuits, I'm an active individual with a keen interest in calisthenics and hiking. The thrill of a new trail or the satisfaction of a well-executed workout <span class="strong-text">keeps me grounded and invigorated</span>. Simultaneously, I'm continually broadening my horizons by delving into the world of film culture and graphic design, a hobby that <span class="strong-text">adds a splash of artistic inspiration to my technically-oriented mindset</span>.</p>
+    <p>Away from the screens and circuits, I'm an active individual with a keen interest in calisthenics, climbing and hiking. The thrill of a new trail or the satisfaction of a well-executed workout <span class="strong-text">keeps me grounded and invigorated</span>. Simultaneously, I'm continually broadening my horizons by delving into the world of film culture and graphic design, a hobby that <span class="strong-text">adds a splash of artistic inspiration to my technically-oriented mindset</span>.</p>
 
-    <p>When I reflect on my journey so far, I realize it's the perfect blend of code, creativity, and outdoor adventures that keeps me excited about each day ahead.</p>
+    <p>When I reflect on my journey so far, I realize it's the perfect blend of code, creativity, and outdoor adventures that <span class="strong-text">keeps me excited about each day ahead</span>.</p>
 </div>
