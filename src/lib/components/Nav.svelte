@@ -9,8 +9,9 @@
 
     const navOptions = [
         'about',
-        'skills',
         'experience',
+        'projects',
+        'skills',
     ];
 
     let intSelected = -1;
