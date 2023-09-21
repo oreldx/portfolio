@@ -28,7 +28,7 @@
     >
         {#each footerItems as item}
             <li class="hover:text-white transition-all">
-                <a target="_blank" href={item.url} class="flex items-center gap-3">
+                <a target="_blank" href={item.url} aria-label={item.label} class="flex items-center gap-3">
                     <Icon icon={item.icon} class="text-3xl"/>{item.text}
                 </a>
             </li>
