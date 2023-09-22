@@ -8,16 +8,17 @@
     onMount(() => mounted = true)
 
     const footerItems = [
-        {icon: "mdi:github", url: "https://github.com/oreldx", text: ""},
-        {icon: "mdi:linkedin", url: "https://www.linkedin.com/in/dureuxaur%C3%A9lien/", text: ""},
-        {icon: "ph:download-fill", url: "/resume.pdf", text: "My Résumé"},
+        {icon: "mdi:github", url: "https://github.com/oreldx", text: "", label:"GitHub link"},
+        {icon: "tabler:mail-filled", url: "mailto:aurelien.dureux+pf@proton.me", text: "", label:"Mail address"},
+        {icon: "mdi:linkedin", url: "https://www.linkedin.com/in/dureuxaur%C3%A9lien/", text: "", label:"Linkedin link"},
+        {icon: "ph:download-fill", url: "/resume.pdf", text: "My Résumé", label:"Resume file"},
     ]
 
 </script>
 
 {#if mounted}
     <ul 
-        class="flex justify-evenly lg:justify-start lg:gap-12 mt-auto"
+        class="flex justify-between md:justify-evenly lg:justify-start lg:gap-12 mt-auto"
         transition:fly={{
             duration: 1000,
             y: 20,
