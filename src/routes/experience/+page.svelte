@@ -12,6 +12,14 @@
             tags: ["Machine Learning", "React", "Javascript", "Python", "AWS", "Research & Development", "Functional Tests"],
             url: "https://grytics.com/",
         },
+        {
+            date: "FEB 2024 - JUL 2024",
+            title: "Fullstack Web Engineer - Selectra",
+            type: "Intern",
+            desc: "At Selectra, I integrated new features, refactored databases and services, and fixed issues using Vue.js and Laravel, enhancing both the stability and performance of the platforms. I advanced user experience and project efficiency through process optimization and API integration between projects. I worked in a resilient, rigorous and  various monolithic environments, aiming to deliver high-tier quality software and AI-driven applications, such as audio transcription.",
+            tags: ["Laravel", "Vue.js", "Inertia.js", "Sentry",  "Datadogs", "Semaphore","Metabase"],
+            url: "https://careers.selectra.com/",
+        },
     ]
 </script>
 

@@ -11,7 +11,7 @@
         {icon: "mdi:github", url: "https://github.com/oreldx", text: "", label:"GitHub link"},
         {icon: "tabler:mail-filled", url: "mailto:aurelien.dureux+pf@proton.me", text: "", label:"Mail address"},
         {icon: "mdi:linkedin", url: "https://www.linkedin.com/in/dureuxaur%C3%A9lien/", text: "", label:"Linkedin link"},
-        {icon: "ph:download-fill", url: "/resume.pdf", text: "My Résumé", label:"Resume file"},
+        {icon: "ph:download-fill", url: "/resume.pdf", text: "My Resume", label:"Resume file"},
     ]
 
 </script>
