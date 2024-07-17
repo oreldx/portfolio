@@ -3,6 +3,7 @@
     import { onMount } from 'svelte';
     import { quartIn } from 'svelte/easing';
     import { blur } from 'svelte/transition';
+
     
     let mounted = false
     onMount(() => mounted = true)
@@ -19,9 +20,16 @@
         const currentPage = $page.route.id.split('/')[1];
         intSelected = navOptions.indexOf(currentPage)
     }
-
+    
     const switchSection = (event) => {
-        intSelected = parseInt(event.srcElement.id) 
+        const clickedIndex = parseInt(event.srcElement.id);
+
+        if (intSelected === clickedIndex) {
+            intSelected = -1;
+            window.location.href = '/';
+            return
+        } 
+        intSelected = clickedIndex;
     }
 
 </script>
