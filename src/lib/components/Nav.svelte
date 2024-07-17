@@ -1,8 +1,10 @@
 <script>
     import {page} from '$app/stores'
     import { onMount } from 'svelte';
+    import { goto } from '$app/navigation';
     import { quartIn } from 'svelte/easing';
     import { blur } from 'svelte/transition';
+
     
     let mounted = false
     onMount(() => mounted = true)
@@ -21,7 +23,13 @@
     }
 
     const switchSection = (event) => {
-        intSelected = parseInt(event.srcElement.id) 
+        const clickedIndex = parseInt(event.srcElement.id);
+        if (intSelected === clickedIndex) {
+            intSelected = -1;
+            goto('/');
+        } else {
+            intSelected = clickedIndex;
+        }
     }
 
 </script>
