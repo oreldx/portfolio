@@ -1,7 +1,6 @@
 <script>
     import {page} from '$app/stores'
     import { onMount } from 'svelte';
-    import { goto } from '$app/navigation';
     import { quartIn } from 'svelte/easing';
     import { blur } from 'svelte/transition';
 
@@ -21,15 +20,16 @@
         const currentPage = $page.route.id.split('/')[1];
         intSelected = navOptions.indexOf(currentPage)
     }
-
+    
     const switchSection = (event) => {
         const clickedIndex = parseInt(event.srcElement.id);
+
         if (intSelected === clickedIndex) {
             intSelected = -1;
-            goto('/');
-        } else {
-            intSelected = clickedIndex;
-        }
+            window.location.href = '/';
+            return
+        } 
+        intSelected = clickedIndex;
     }
 
 </script>
