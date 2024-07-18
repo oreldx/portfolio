@@ -3,6 +3,7 @@
     import Icon from "@iconify/svelte";
     import { fly } from "svelte/transition";
     import { quartOut } from "svelte/easing";
+    import LanguageSelector from "./LanguageSelector.svelte";
 
     let mounted = false;
     onMount(() => (mounted = true));
@@ -48,4 +49,5 @@
             </li>
         {/each}
     </ul>
+    <LanguageSelector/>
 {/if}
