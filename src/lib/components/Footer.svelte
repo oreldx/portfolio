@@ -1,4 +1,5 @@
 <script>
+    import { t } from "../i18n";
     import { onMount } from "svelte";
     import Icon from "@iconify/svelte";
     import { fly } from "svelte/transition";
@@ -9,20 +10,26 @@
     onMount(() => (mounted = true));
 
     const footerItems = [
-        { icon: "mdi:github", url: "https://github.com/oreldx", text: "", label: "GitHub link" },
         {
+            key: "github",
+            icon: "mdi:github",
+            url: "https://github.com/oreldx",
+        },
+        {
+            key: "mail",
             icon: "tabler:mail-filled",
             url: "mailto:aurelien.dureux+pf@proton.me",
-            text: "",
-            label: "Mail address",
         },
         {
+            key: "linkedin",
             icon: "mdi:linkedin",
             url: "https://www.linkedin.com/in/dureuxaur%C3%A9lien/",
-            text: "",
-            label: "Linkedin link",
         },
-        { icon: "ph:download-fill", url: "/resume.pdf", text: "My Resume", label: "Resume file" },
+        {
+            key: "resume",
+            icon: "ph:download-fill",
+            url: "/resume.pdf",
+        },
     ];
 </script>
 
@@ -36,6 +43,9 @@
             easing: quartOut,
         }}
     >
+        <li>
+            <LanguageSelector />
+        </li>
         {#each footerItems as item}
             <li class="hover:text-white transition-all">
                 <a
@@ -44,10 +54,9 @@
                     aria-label={item.label}
                     class="flex items-center gap-3"
                 >
-                    <Icon icon={item.icon} class="text-3xl" />{item.text}
+                    <Icon icon={item.icon} class="text-3xl" />{$t("footer." + item.key + ".text")}
                 </a>
             </li>
         {/each}
     </ul>
-    <LanguageSelector/>
 {/if}

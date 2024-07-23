@@ -1,4 +1,5 @@
 <script>
+    import { t } from "../i18n";
     import { onMount } from "svelte";
     import { page } from "$app/stores";
     import { quartIn } from "svelte/easing";
@@ -32,7 +33,7 @@
         {#each navOptions as option, i}
             {#if mounted}
                 <li
-                    class="w-min"
+                    class="w-fit"
                     transition:blur={{
                         delay: 230 + 100 * i,
                         duration: 300,
@@ -48,8 +49,10 @@
                         on:click={switchSection}
                     >
                         {intSelected == i
-                            ? option.toUpperCase()
-                            : option.charAt(0).toUpperCase() + option.slice(1)}
+                            ? $t("nav." + option).toUpperCase()
+                            : $t("nav." + option)
+                                  .charAt(0)
+                                  .toUpperCase() + $t("nav." + option).slice(1)}
                     </a>
                 </li>
             {/if}
