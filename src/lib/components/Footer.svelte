@@ -1,23 +1,39 @@
 <script>
-    import Icon from '@iconify/svelte';
-    import { onMount } from 'svelte';
-    import { quartOut } from 'svelte/easing';
-    import { fly } from 'svelte/transition';
-    
-    let mounted = false
-    onMount(() => mounted = true)
+    import { t } from "../i18n";
+    import { onMount } from "svelte";
+    import Icon from "@iconify/svelte";
+    import { fly } from "svelte/transition";
+    import { quartOut } from "svelte/easing";
+    import LanguageSelector from "./LanguageSelector.svelte";
+
+    let mounted = false;
+    onMount(() => (mounted = true));
 
     const footerItems = [
-        {icon: "mdi:github", url: "https://github.com/oreldx", text: "", label:"GitHub link"},
-        {icon: "tabler:mail-filled", url: "mailto:aurelien.dureux+pf@proton.me", text: "", label:"Mail address"},
-        {icon: "mdi:linkedin", url: "https://www.linkedin.com/in/dureuxaur%C3%A9lien/", text: "", label:"Linkedin link"},
-        {icon: "ph:download-fill", url: "/resume.pdf", text: "My Résumé", label:"Resume file"},
-    ]
-
+        {
+            key: "github",
+            icon: "mdi:github",
+            url: "https://github.com/oreldx",
+        },
+        {
+            key: "mail",
+            icon: "tabler:mail-filled",
+            url: "mailto:aurelien.dureux+pf@proton.me",
+        },
+        {
+            key: "linkedin",
+            icon: "mdi:linkedin",
+            url: "https://www.linkedin.com/in/dureuxaur%C3%A9lien/",
+        },
+        {
+            key: "resume",
+            icon: "ph:download-fill",
+        },
+    ];
 </script>
 
 {#if mounted}
-    <ul 
+    <ul
         class="flex justify-between md:justify-evenly lg:justify-start lg:gap-12 mt-auto"
         transition:fly={{
             duration: 1000,
@@ -26,13 +42,20 @@
             easing: quartOut,
         }}
     >
+        <li>
+            <LanguageSelector />
+        </li>
         {#each footerItems as item}
             <li class="hover:text-white transition-all">
-                <a target="_blank" href={item.url} aria-label={item.label} class="flex items-center gap-3">
-                    <Icon icon={item.icon} class="text-3xl"/>{item.text}
+                <a
+                    target="_blank"
+                    href={item.url ? item.url : $t("footer." + item.key + ".url")}
+                    aria-label={item.label}
+                    class="flex items-center gap-3"
+                >
+                    <Icon icon={item.icon} class="text-3xl" />{$t("footer." + item.key + ".text")}
                 </a>
             </li>
         {/each}
-        
     </ul>
 {/if}
