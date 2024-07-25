@@ -28,7 +28,6 @@
         {
             key: "resume",
             icon: "ph:download-fill",
-            url: "/resume.pdf",
         },
     ];
 </script>
@@ -50,7 +49,7 @@
             <li class="hover:text-white transition-all">
                 <a
                     target="_blank"
-                    href={item.url}
+                    href={item.url ? item.url : $t("footer." + item.key + ".url")}
                     aria-label={item.label}
                     class="flex items-center gap-3"
                 >

@@ -1,11 +1,11 @@
 export default {
     en: {
-        hero: { quote: "I dev stuff on the Web for the World", title: "Fullstack Web Engineer" },
+        hero: { quote: "I dev stuff on the Web for the World", title: "Full-stack Web Engineer" },
         footer: {
             github: { text: "", label: "GitHub link" },
             mail: { text: "", label: "Mail address" },
             linkedin: { text: "", label: "Linkedin link" },
-            resume: { text: "My Resume", label: "Resume file" },
+            resume: { text: "My Resume", label: "Resume file", url: "/resume_en.pdf" },
         },
         nav: { about: "about", experience: "experience", projects: "projects", skills: "skills" },
         projects: {
@@ -34,7 +34,7 @@ export default {
                 date: "FEB 2023 - JUL 2023",
             },
             selectra: {
-                title: "Fullstack Web Engineer",
+                title: "Full-stack Web Engineer",
                 desc: "At Selectra, I integrated new features, refactored databases and services, and fixed issues using Vue.js and Laravel, enhancing both the stability and performance of the platforms. I advanced user experience and project efficiency through process optimization and API integration between projects. I worked in a resilient, rigorous and  various monolithic environments, aiming to deliver high-tier quality software and AI-driven applications, such as audio transcription.",
                 date: "JUL 2023 - DEC 2023",
             },
@@ -47,7 +47,7 @@ export default {
             >, tinkering with DIY drones, 3D printers, Arduino, and Raspberry Pi. This adventurous
             beginning served as a gateway, immersing me deeply into the realms of programming and web
             development. As I transitioned from hardware to the digital realm, I cultivated an affinity
-            for <span class="strong-text">both frontend and backend</span> development.
+            for <span class="strong-text">both front-end and back-end</span> development.
             </p>
 
             <p>
@@ -64,7 +64,7 @@ export default {
                     class="text-white hover:text-secondary font-semibold"
                     target="_blank"
                     href="https://careers.selectra.com/">Selectra</a
-                >, working as a Fullstack Web Engineer. These experiences have equipped me with a solid
+                >, working as a Full-stack Web Engineer. These experiences have equipped me with a solid
                 foundation in both the theoretical and practical aspects of technology. It's now time for me
                 to <span class="strong-text">seek the best opportunities to start my career</span> and make a
                 significant impact in the tech industry.
@@ -81,8 +81,7 @@ export default {
                 Away from the screens and circuits, I'm an active individual with a keen interest in
                 calisthenics, climbing and hiking. The thrill of a new trail or the satisfaction of a
                 well-executed workout <span class="strong-text">keeps me grounded and invigorated</span>.
-                Simultaneously, I'm continually broadening my horizons by delving into the world of film
-                culture and graphic design, a hobby that
+                Simultaneously, I'm continually broadening my horizons by delving into the world graphic design, a hobby that
                 <span class="strong-text"
                     >adds a splash of artistic inspiration to my technically-oriented mindset</span
                 >.
@@ -99,13 +98,13 @@ export default {
     fr: {
         hero: {
             quote: "Je développe des choses sur le Web pour ce petit Monde",
-            title: "Ingénieur Web Fullstack",
+            title: "Ingénieur Web Full-stack",
         },
         footer: {
             github: { text: "", label: "Lien GitHub" },
             mail: { text: "", label: "Adresse mail" },
             linkedin: { text: "", label: "Lien Linkedin" },
-            resume: { text: "Mon CV", label: "Fichier CV" },
+            resume: { text: "Mon CV", label: "Fichier CV", url: "/resume_fr.pdf" },
         },
         nav: {
             about: "à propos",
@@ -120,12 +119,12 @@ export default {
                 desc: "Ce projet consistait à développer une solution d'automatisation des réseaux sociaux basée sur Python. Les principales fonctionnalités comprennent l'extraction de données, la génération de contenu assistée par IA, la publication automatique et l'engagement communautaire. Une architecture complète a été conçue pour gérer plusieurs comptes et tâches.",
             },
             ml: {
-                title: "Modèle d'Apprentissage Machine",
+                title: "Modèle de Machine Learning",
                 desc: "Création d'un modèle d'apprentissage machine en Python pour prédire les revenus de tous types de magasins de détail en Norvège",
             },
             ayc: {
                 title: "Chaîne Youtube Autonome",
-                desc: "Ce projet impliquait la création d’une chaîne YouTube dédiée aux compilations quotidiennes des meilleurs clips de Twitch, améliorées avec des superpositions graphiques pour enrichir l’expérience utilisateur. Utilisant Python pour la gestion de la chaîne, les tâches comprenaient le grattage de données, l’acquisition de ressources, et la sélection et création de contenu.",
+                desc: "Ce projet impliquait la création d'une chaîne YouTube dédiée aux compilations quotidiennes des meilleurs clips de Twitch, le tout amélioré par des superpositions graphiques pour enrichir l'expérience utilisateur. Utilisant Python pour la gestion de la chaîne, les tâches comprenaient le scrapping de données, l'acquisition de ressources, la sélection puis la création de contenu et sa mise en ligne.",
             },
             dw: {
                 title: "Site Web Dynamique",
@@ -135,12 +134,12 @@ export default {
         experience: {
             grytics: {
                 title: "Ingénieur Développeur Assistant",
-                desc: "Chez Grytics, j'ai effectué des tests fonctionnels et développé un concept de preuve d'intelligence artificielle/machine learning pour améliorer leur application web. Travaillant de manière autonome sous la direction du développeur principal, j'ai affiné mes compétences dans le code maintenable et la résolution de problèmes efficace, contribuant à la robustesse de l'application et mettant en avant les améliorations futures possibles.",
+                desc: "Chez Grytics, j'ai effectué des tests fonctionnels et des preuves de concept en machine learning/IA pour améliorer leur application web. Travaillant de manière autonome sous la direction du lead développeur, j'ai affiné mes compétences dans le code maintenable et la résolution de problèmes efficace, contribuant à la robustesse de l'application et mettant en avant les améliorations futures possibles.",
                 date: "FÉV 2023 - JUIL 2023",
             },
             selectra: {
-                title: "Ingénieur Web Fullstack",
-                desc: "Chez Selectra, j'ai intégré de nouvelles fonctionnalités, refactorisé des bases de données et des services, et résolu des problèmes en utilisant Vue.js et Laravel, améliorant ainsi la stabilité et la performance des plateformes. J'ai amélioré l'expérience utilisateur et l'efficacité du projet grâce à l'optimisation des processus et à l'intégration d'API entre les projets. J'ai travaillé dans un environnement monolithique résilient et rigoureux, visant à fournir des logiciels de haute qualité et des applications poussées par l'IA, telles que la transcription audio.",
+                title: "Ingénieur Web Full-stack",
+                desc: "Chez Selectra, j'ai intégré de nouvelles fonctionnalités, refactorisé des bases de données et des services, et résolu des problèmes en utilisant Vue.js et Laravel, améliorant ainsi la stabilité et la performance des plateformes. J'ai amélioré l'expérience utilisateur et l'efficacité du projet grâce à l'optimisation des processus et à l'intégration d'APIs entre les projets. J'ai travaillé dans un environnement monolithique résilient et rigoureux, visant à fournir des logiciels de haute qualité et des applications poussées utilisant l'IA, comme la transcription audio.",
                 date: "JUIL 2023 - DÉC 2023",
             },
             type: { internship: "Stage" },
@@ -149,13 +148,13 @@ export default {
             <p>
             En 2016, pendant mes années de collège, j'ai commencé un <span class="strong-text"
                 >voyage de curiosité et de découverte</span
-            >, en bidouillant avec des drones DIY, des imprimantes 3D, Arduino et Raspberry Pi. Ce début aventureux a servi de porte d'entrée, me plongeant profondément dans les royaumes de la programmation et du développement web. En passant du matériel au domaine numérique, j'ai développé une affinité pour le développement <span class="strong-text">frontend et backend</span>.
+            >, en bidouillant avec des drones DIY, des imprimantes 3D, Arduino et Raspberry Pi. Ce début aventureux a servi de porte d'entrée, me plongeant profondément dans les royaumes de la programmation et du développement web. En passant du hardware pure au domaine numérique, j'ai développé une affinité pour le développement <span class="strong-text">front-end et back-end</span>.
             </p>
 
             <p>
                 Ayant récemment <span class="strong-text"
                     >obtenu un Diplôme d'ingénieur en Informatique et Systèmes d'Information de l'UTT</span
-                >, je n'apporte pas seulement des compétences académiques mais aussi une expérience professionnelle substantielle. Mon premier pas dans le monde technologique professionnel a commencé avec un stage de six mois chez
+                >, je n'apporte pas seulement des compétences académiques mais aussi une expérience professionnelle grâce à mon parcours. Mon premier pas dans le monde informatique professionnel a commencé avec un stage de six mois chez
                 <a
                     class="text-white hover:text-secondary font-semibold"
                     target="_blank"
@@ -165,24 +164,24 @@ export default {
                     class="text-white hover:text-secondary font-semibold"
                     target="_blank"
                     href="https://careers.selectra.com/">Selectra</a
-                >, travaillant en tant qu'Ingénieur Web Fullstack. Ces expériences m'ont doté d'une solide
+                >, travaillant en tant qu'Ingénieur Web Full-stack. Ces expériences m'ont doté d'une solide
                 base dans les aspects théoriques et pratiques de la technologie. Il est maintenant temps pour moi
                 de <span class="strong-text">chercher les meilleures opportunités pour démarrer ma carrière</span> et faire une
                 impact significatif dans l'industrie technologique.
             </p>
 
             <p>
-                Malgré mon emploi du temps académique chargé, je m'assure de nourrir <span class="strong-text"
-                    >mon amour pour les projets annexes</span
-                >. Mes entreprises vont de la création de projets uniques d'impression 3D avec des drones FPV - un
+                Malgré mon emploi du temps chargé, je m'assure de nourrir <span class="strong-text"
+                    >mon amour pour les side-projects</span
+                >. Mes entreprises vont de la création de projets uniques d'impression 3D et aux drones FPV - un
                 témoignage de mon affection persistante pour le mélange de créativité et de technologie.
             </p>
 
             <p>
                 Loin des écrans et des circuits, je suis une personne active avec un vif intérêt pour
-                la calisthénie, l'escalade et la randonnée. L'excitation d'un nouveau sentier ou la satisfaction d'un
+                l'escalade, la calisthénie et la randonnée. L'excitation d'un nouveau sentier ou la satisfaction d'un
                 entraînement bien exécuté <span class="strong-text">me garde ancré et revigoré</span>.
-                Simultanément, je continue d'élargir mes horizons en explorant le monde de la culture cinématographique et du design graphique, un passe-temps qui
+                Simultanément, je continue d'élargir mes horizons en explorant le monde du design graphique, un passe-temps qui
                 <span class="strong-text"
                     >ajoute une touche d'inspiration artistique à mon esprit orienté techniquement</span
                 >.
