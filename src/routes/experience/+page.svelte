@@ -1,7 +1,8 @@
 <script>
     import { expoOut } from "svelte/easing";
     import { blur } from "svelte/transition";
-    import DetailedCard from "$lib/components/DetailedCard.svelte";
+    import CardTypes from "$lib/enums/cardType";
+    import DetailedCard from "$lib/components/Card.svelte";
 
     const experienceItems = [
         {
@@ -44,6 +45,6 @@
     }}
 >
     {#each experienceItems as item}
-        <DetailedCard data={item} />
+        <DetailedCard data={item} cardType={CardTypes.EXPERIENCE} />
     {/each}
 </div>
