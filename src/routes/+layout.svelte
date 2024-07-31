@@ -3,7 +3,7 @@
     import Nav from "$lib/components/Nav.svelte";
     import Hero from "$lib/components/Hero.svelte";
     import Footer from "$lib/components/Footer.svelte";
-    import Background from "$lib/components/background/Background.svelte";
+    import Background from "$lib/components/Background/Background.svelte";
 </script>
 
 <Background />

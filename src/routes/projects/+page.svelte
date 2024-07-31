@@ -1,7 +1,8 @@
 <script>
     import { expoOut } from "svelte/easing";
     import { blur } from "svelte/transition";
-    import DetailedCard from "$lib/components/DetailedCard.svelte";
+    import CardTypes from "$lib/enums/cardType";
+    import Card from "$lib/components/Card.svelte";
 
     const projectsItems = [
         {
@@ -9,7 +10,7 @@
             date: "2023",
             type: "personal",
             tags: ["Python", "React", "Generative AIs", "ffmpeg", "APIs"],
-            url: "",
+            url: "/projects/sna",
         },
         {
             key: "projects.ml",
@@ -23,7 +24,7 @@
             date: "2021",
             type: "personal",
             tags: ["Python", "MySQL", "ffmpeg", "APIs"],
-            url: "",
+            url: "/projects/ayc",
         },
         {
             key: "projects.dw",
@@ -44,6 +45,6 @@
     }}
 >
     {#each projectsItems as item}
-        <DetailedCard data={item} />
+        <Card data={item} cardType={CardTypes.PROJECT} />
     {/each}
 </div>

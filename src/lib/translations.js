@@ -1,3 +1,5 @@
+import { backIn } from "svelte/easing";
+
 export default {
     en: {
         hero: { quote: "I dev stuff on the Web for the World", title: "Full-stack Web Engineer" },
@@ -7,22 +9,31 @@ export default {
             linkedin: { text: "", label: "Linkedin link" },
             resume: { text: "My Resume", label: "Resume file", url: "/resume_en.pdf" },
         },
+        button: {
+            seeMore: "See More",
+            viewOn: "View on",
+            back: "Back",
+        },
         nav: { about: "about", experience: "experience", projects: "projects", skills: "skills" },
         projects: {
             type: { personal: "Personal", academic: "Academic" },
             sna: {
+                date: "2023",
                 title: "Autonomous Social Network Accounts",
                 desc: "This project entailed developing a Python-based Social Networks automation solution. Key features include data extraction, AI-powered content generation, automated post uploads, and community engagement. A whole architecture was designed to manage multiple accounts and tasks.",
             },
             ml: {
+                date: "2022",
                 title: "Machine Learning Model",
                 desc: "Creation of a machine learning model in Python to predict revenue of all types of retail stores in Norway",
             },
             ayc: {
+                date: "2022",
                 title: "Autonomous Youtube Channel",
                 desc: 'This project involved crafting a YouTube channel dedicated to daily "best-of" compilations of top Twitch clips, enhanced with fancy overlays to enrich user experience. Utilizing Python for channel management, tasks encompassed data scrapping, resource acquisition, and content selection & creation.',
             },
             dw: {
+                date: "2021",
                 title: "Dynamic Website",
                 desc: "Vaccination site in HTML, CSS, PHP, SQL with management of the various functionalities from a provider point of view",
             },
@@ -106,6 +117,11 @@ export default {
             linkedin: { text: "", label: "Lien Linkedin" },
             resume: { text: "Mon CV", label: "Fichier CV", url: "/resume_fr.pdf" },
         },
+        button: {
+            seeMore: "Voir plus",
+            viewOn: "Regarder sur",
+            back: "Retour",
+        },
         nav: {
             about: "à propos",
             experience: "expérience",
@@ -115,18 +131,22 @@ export default {
         projects: {
             type: { personal: "Personnel", academic: "Académique" },
             sna: {
+                date: "2023",
                 title: "Comptes de Réseaux Sociaux Autonomes",
                 desc: "Ce projet consistait à développer une solution d'automatisation des réseaux sociaux basée sur Python. Les principales fonctionnalités comprennent l'extraction de données, la génération de contenu assistée par IA, la publication automatique et l'engagement communautaire. Une architecture complète a été conçue pour gérer plusieurs comptes et tâches.",
             },
             ml: {
+                date: "2022",
                 title: "Modèle de Machine Learning",
                 desc: "Création d'un modèle d'apprentissage machine en Python pour prédire les revenus de tous types de magasins de détail en Norvège",
             },
             ayc: {
+                date: "2022",
                 title: "Chaîne Youtube Autonome",
                 desc: "Ce projet impliquait la création d'une chaîne YouTube dédiée aux compilations quotidiennes des meilleurs clips de Twitch, le tout amélioré par des superpositions graphiques pour enrichir l'expérience utilisateur. Utilisant Python pour la gestion de la chaîne, les tâches comprenaient le scrapping de données, l'acquisition de ressources, la sélection puis la création de contenu et sa mise en ligne.",
             },
             dw: {
+                date: "2021",
                 title: "Site Web Dynamique",
                 desc: "Site de vaccination en HTML, CSS, PHP, SQL avec gestion des différentes fonctionnalités du point de vue du fournisseur",
             },
