@@ -58,26 +58,30 @@
                 {/each}
             </div>
             {#if data.url.includes("https://")}
-                <a
-                    href={data.url ? data.url : null}
-                    target="_blank"
-                    on:mouseenter={() => (cardHover = true)}
-                    on:mouseleave={() => (cardHover = false)}
-                    class="flex gap-2 items-center justify-end mt-2 opacity-70 hover:opacity-100"
-                >
-                    <span class="text-white">{$t("button.viewOn")}</span>
-                    <Icon icon={getIcon(data.url)} class="text-white text-xl" />
-                </a>
+                <div class="flex justify-end">
+                    <a
+                        href={data.url ? data.url : null}
+                        target="_blank"
+                        on:mouseenter={() => (cardHover = true)}
+                        on:mouseleave={() => (cardHover = false)}
+                        class="flex gap-2 items-center w-fit mt-2 opacity-70 hover:opacity-100"
+                    >
+                        <span class="text-white">{$t("button.viewOn")}</span>
+                        <Icon icon={getIcon(data.url)} class="text-white text-xl" />
+                    </a>
+                </div>
             {:else}
-                <a
-                    href={data.url ? data.url : null}
-                    on:mouseenter={() => (cardHover = true)}
-                    on:mouseleave={() => (cardHover = false)}
-                    class="flex gap-2 items-center justify-end mt-2 opacity-70 hover:opacity-100"
-                >
-                    <p class="text-white text-right">{$t("button.seeMore")}</p>
-                    <Icon icon="bxs:right-arrow" class="text-white text-l" />
-                </a>
+                <div class="flex justify-end">
+                    <a
+                        href={data.url ? data.url : null}
+                        on:mouseenter={() => (cardHover = true)}
+                        on:mouseleave={() => (cardHover = false)}
+                        class="flex gap-2 items-center w-fit mt-2 opacity-70 hover:opacity-100"
+                    >
+                        <p class="text-white text-right">{$t("button.seeMore")}</p>
+                        <Icon icon="bxs:right-arrow" class="text-white text-l" />
+                    </a>
+                </div>
             {/if}
         </div>
     </div>

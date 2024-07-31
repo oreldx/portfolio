@@ -17,14 +17,7 @@
     }
 
     const switchSection = (event) => {
-        const clickedIndex = parseInt(event.srcElement.id);
-
-        if (intSelected === clickedIndex) {
-            intSelected = -1;
-            window.location.href = "/";
-            return;
-        }
-        intSelected = clickedIndex;
+        intSelected = parseInt(event.srcElement.id);
     };
 </script>
 

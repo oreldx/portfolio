@@ -15,5 +15,6 @@
         <p>
             {$t("projects.sna.desc")}
         </p>
+        <p class="italic">Content in progress...</p>
     </div>
 </div>

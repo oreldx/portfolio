@@ -34,7 +34,8 @@
 
 {#if mounted}
     <ul
-        class="flex justify-between md:justify-evenly lg:justify-start lg:gap-12 mt-auto"
+        class="flex justify-between
+        items-center md:justify-evenly lg:justify-start lg:gap-12 mt-auto"
         transition:fly={{
             duration: 1000,
             y: 20,
@@ -53,7 +54,10 @@
                     aria-label={item.label}
                     class="flex items-center gap-3"
                 >
-                    <Icon icon={item.icon} class="text-3xl" />{$t("footer." + item.key + ".text")}
+                    <Icon icon={item.icon} class="text-3xl" />
+                    <p class="hidden sm:block">
+                        {$t("footer." + item.key + ".text")}
+                    </p>
                 </a>
             </li>
         {/each}
