@@ -1,5 +1,3 @@
-import { backIn } from "svelte/easing";
-
 export default {
     en: {
         hero: { quote: "I dev stuff on the Web for the World", title: "Full-stack Web Engineer" },
@@ -31,6 +29,18 @@ export default {
                 date: "2022",
                 title: "Autonomous Youtube Channel",
                 desc: 'This project involved crafting a YouTube channel dedicated to daily "best-of" compilations of top Twitch clips, enhanced with fancy overlays to enrich user experience. Utilizing Python for channel management, tasks encompassed data scrapping, resource acquisition, and content selection & creation.',
+                details: {
+                    intro: "This is <b>my first personal programming project</b>, and notably my learning of <b>Python, APIs, FFmpeg, Docker, and hosting on a VPS</b>. It involved developing a YouTube channel specializing in daily compilations of the <b>best Twitch clips</b>. The goal was to enrich the <b>user experience</b> with graphic assets. The project relies on Twitch's API for <b>scraping and storing</b> data, and also involves <b>resource acquisition</b>, <b>content selection</b>, and its <b>automatic publication</b>.",
+                    video: "Each compiled video featured a <b>dynamic structure</b>: at the top left, a <b>summary</b> displayed the names of the streamers, on the right was the selected <b>Twitch clip</b>, at the bottom left the <b>thumbnail of the game</b> in question, and at the bottom right the <b>title of the clip</b>. Calls to action for sharing and subscribing (<b>Call to Action</b>) were integrated throughout the video, complemented by an outro at the end of the video.",
+                    thumbnail:
+                        "The <b>thumbnails</b> of each video were designed to capture the viewers' attention, with bright colors and eye-catching graphic elements. The <b>most popular streamers were highlighted</b> in the center with predefined images, while the profile photos of other streamers appeared in side circles. The episode number and a screenshot of two viral clips formed the background, with the option to vary the colors of the background, title, and numbers according to <b>several combinations</b>.",
+                    text: "A <b>title</b> was automatically generated for each video, featuring the popular streamers present. A <b>description</b> created a precise timeline for each included clip, thus facilitating navigation through the video.",
+                    media: {
+                        video: "Video extract",
+                        cta: "Example of Call to Action",
+                        thumbnail: "Video thumbnail",
+                    },
+                },
             },
             dw: {
                 date: "2021",
@@ -144,6 +154,18 @@ export default {
                 date: "2022",
                 title: "Chaîne Youtube Autonome",
                 desc: "Ce projet impliquait la création d'une chaîne YouTube dédiée aux compilations quotidiennes des meilleurs clips de Twitch, le tout amélioré par des superpositions graphiques pour enrichir l'expérience utilisateur. Utilisant Python pour la gestion de la chaîne, les tâches comprenaient le scrapping de données, l'acquisition de ressources, la sélection puis la création de contenu et sa mise en ligne.",
+                details: {
+                    intro: "Il s'agit de <b>mon premier projet de programmation personnel</b>, et notamment mon apprentissage de <b>Python, des APIs, de FFmpeg, de Docker et de l'hébergement sur un VPS</b>. Il a consisté à développer une chaîne YouTube spécialisée dans les compilations quotidiennes des <b>meilleurs clips de Twitch</b>. L'objectif était d'enrichir <b>l'expérience utilisateur</b> grâce à des assets graphiques. Le projet repose sur l'API de Twitch pour le <b>scrapping et stockage<b> de données, il y a également une <b>acquisition</b> de ressources, la <b>sélection</b> de contenu, et sa <b>publication</b> automatique.",
+                    video: "Chaque vidéo compilée présentait une <b>structure dynamique</b> : sur la gauche, en haut, un <b>sommaire</b> affichait les noms des streamers, à droite figurait le <b>clip Twitch</b> sélectionné, en bas à gauche la <b>vignette du jeu</b> correspondant, et en bas à droite le <b>titre du clip</b>. Des incitations au partage et à l'abonnement (<b>Call to Action</b>) étaient intégrées tout au long de la vidéo, complétées par une outro en fin de vidéo.",
+                    thumbnail:
+                        "Les <b>miniatures</b> de chaque vidéo étaient conçues pour attirer l'attention des spectateurs, avec des couleurs vives et des éléments graphiques accrocheurs. Les <b>streamers les plus populaires étaient mis en avant</b> au centre avec des images pré-définies, tandis que les photos de profil des autres streamers apparaissaient dans des cercles latéraux. Le numéro de l'épisode et une capture d'écran de deux clips viraux formaient l'arrière-plan, avec la possibilité de varier les couleurs du fond, du titre et des numéros selon <b>plusieurs combinaisons</b>.",
+                    text: "Un <b>titre</b> était généré automatiquement pour chaque vidéo, mettant en avant les streamers populaires présents. Une <b>description</b> détaillée créait une timeline précise pour chaque clip inclus, facilitant ainsi la navigation dans la vidéo.",
+                    media: {
+                        video: "Extrait d'une vidéo",
+                        cta: "Exemple de Call to Action",
+                        thumbnail: "Miniature d'une vidéo",
+                    },
+                },
             },
             dw: {
                 date: "2021",
@@ -193,7 +215,7 @@ export default {
             <p>
                 Malgré mon emploi du temps chargé, je m'assure de nourrir <span class="strong-text"
                     >mon amour pour les side-projects</span
-                >. Mes entreprises vont de la création de projets uniques d'impression 3D et aux drones FPV - un
+                >. Mes projets vont de la création d'impression 3D et aux drones FPV - un
                 témoignage de mon affection persistante pour le mélange de créativité et de technologie.
             </p>
 

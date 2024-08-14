@@ -9,7 +9,17 @@
             key: "projects.sna",
             date: "2023",
             type: "personal",
-            tags: ["Python", "React", "Generative AIs", "ffmpeg", "APIs"],
+            tags: [
+                "Flask",
+                "Vue.js",
+                "Node.js",
+                "Remotion",
+                "Redis",
+                "Celery",
+                "MySQL",
+                "Docker",
+                "Generative AIs",
+            ],
             url: "/projects/sna",
         },
         {
@@ -23,7 +33,7 @@
             key: "projects.ayc",
             date: "2021",
             type: "personal",
-            tags: ["Python", "MySQL", "ffmpeg", "APIs"],
+            tags: ["Python", "SQLite", "Docker", "CRON", "APIs", "FFmpeg"],
             url: "/projects/ayc",
         },
         {
