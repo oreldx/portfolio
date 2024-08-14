@@ -1,9 +1,9 @@
 <script>
     import { t } from "../i18n";
+    import { onMount } from "svelte";
     import { page } from "$app/stores";
     import { quartIn } from "svelte/easing";
     import { blur } from "svelte/transition";
-    import { onMount, afterUpdate } from "svelte";
 
     let mounted = false;
     onMount(() => (mounted = true));
@@ -11,20 +11,14 @@
     const navOptions = ["about", "experience", "projects", "skills"];
 
     let intSelected = -1;
-    if ($page.route.id) {
-        const currentPage = $page.route.id.split("/")[1];
-        intSelected = navOptions.indexOf(currentPage);
+    $: {
+        const currentPage = $page.route.id ? $page.route.id.split("/")[1] : null;
+        intSelected = currentPage ? navOptions.indexOf(currentPage) : -1;
     }
 
     const switchSection = (event) => {
         intSelected = parseInt(event.srcElement.id);
     };
-    afterUpdate(() => {
-        const currentPage = $page.route.id.split("/")[1];
-        if (!currentPage) {
-            intSelected = -1;
-        }
-    });
 </script>
 
 <nav>
