@@ -35,7 +35,7 @@
 {#if mounted}
     <ul
         class="flex justify-between
-        items-center md:justify-evenly lg:justify-start lg:gap-12 mt-auto"
+        items-center md:justify-evenly lg:justify-start lg:gap-6 mt-auto"
         transition:fly={{
             duration: 1000,
             y: 20,

@@ -13,7 +13,7 @@
 </script>
 
 <div
-    class="flex flex-col gap-4"
+    class="flex flex-col gap-4 w-full"
     in:blur={{
         amount: 5,
         duration: 800,
@@ -30,7 +30,7 @@
         </h2>
         <div class="flex flex-col gap-8">
             <section>
-                <p class="text-justify">
+                <p>
                     {@html $t("projects.ayc.details.intro")}
                 </p>
             </section>
@@ -39,7 +39,7 @@
                     <video class="px-8" src="/ayc/video.mp4" muted autoplay loop />
                     <p class="text-center text-sm">{$t("projects.ayc.details.media.video")}</p>
                 </div>
-                <p class="text-justify">
+                <p>
                     {@html $t("projects.ayc.details.video")}
                 </p>
 
@@ -49,7 +49,7 @@
                 </div>
             </section>
             <section>
-                <p class="text-justify">
+                <p>
                     {@html $t("projects.ayc.details.thumbnail")}
                 </p>
                 <div class="mt-2">
@@ -58,14 +58,14 @@
                 </div>
             </section>
             <section>
-                <p class="text-justify">
+                <p>
                     {@html $t("projects.ayc.details.text")}
                 </p>
                 <p class="border p-2 mt-4 underline">
                     Mynthos, Sackzi, Wingobear, Terracid et LittleBigWhale... [Compil' Twitch FR #1]
                 </p>
                 <pre
-                    class="border p-2 mt-2 max-h-[250px] overflow-y-scroll whitespace-pre-wrap">{description}</pre>
+                    class="border p-2 mt-2 max-h-[250px] overflow-y-scroll whitespace-pre-line">{description}</pre>
             </section>
         </div>
     </div>
