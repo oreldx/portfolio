@@ -16,7 +16,7 @@ export default {
         projects: {
             type: { personal: "Personal", academic: "Academic" },
             sna: {
-                date: "2023",
+                date: "2024",
                 title: "Autonomous Social Network Accounts",
                 desc: "This project entailed developing a Python-based Social Networks automation solution. Key features include data extraction, AI-powered content generation, automated post uploads, and community engagement. A whole architecture was designed to manage multiple accounts and tasks.",
                 details: {
@@ -102,8 +102,7 @@ export default {
             <p>
                 Despite my busy academic schedule, I make it a point to nurture <span class="strong-text"
                     >my love for side projects</span
-                >. My ventures range from creating unique 3D printer projects along with FPV drones - a
-                testament to my enduring fondness for the blend of creativity and technology.
+                >. My ventures range from creating unique 3D printer projects along with FPV drones and even Web stuff such as Twitch or social networks with Artificial Intelligence - a testament to my enduring fondness for the blend of creativity and technology.
             </p>
 
             <p>
@@ -111,16 +110,12 @@ export default {
                 calisthenics, climbing and hiking. The thrill of a new trail or the satisfaction of a
                 well-executed workout <span class="strong-text">keeps me grounded and invigorated</span>.
                 Simultaneously, I'm continually broadening my horizons by delving into the world graphic design, a hobby that
-                <span class="strong-text"
-                    >adds a splash of artistic inspiration to my technically-oriented mindset</span
-                >.
+                <span class="strong-text">adds a splash of artistic inspiration to my technically-oriented mindset</span>.
             </p>
 
             <p>
                 When I reflect on my journey so far, I realize it's the perfect blend of code, creativity,
-                and outdoor adventures that <span class="strong-text"
-                    >keeps me excited about each day ahead</span
-                >.
+                and outdoor adventures that <span class="strong-text">keeps me excited about each day ahead</span>.
             </p>
         `,
     },
@@ -149,7 +144,7 @@ export default {
         projects: {
             type: { personal: "Personnel", academic: "Académique" },
             sna: {
-                date: "2023",
+                date: "2024",
                 title: "Comptes de Réseaux Sociaux Autonomes",
                 desc: "Ce projet consistait à développer une solution d'automatisation des réseaux sociaux basée sur Python. Les principales fonctionnalités comprennent l'extraction de données, la génération de contenu assistée par IA, la publication automatique et l'engagement communautaire. Une architecture complète a été conçue pour gérer plusieurs comptes et tâches.",
                 details: {
@@ -206,7 +201,7 @@ export default {
             <p>
             En 2016, pendant mes années de collège, j'ai commencé un <span class="strong-text"
                 >voyage de curiosité et de découverte</span
-            >, en bidouillant avec des drones DIY, des imprimantes 3D, Arduino et Raspberry Pi. Ce début aventureux a servi de porte d'entrée, me plongeant profondément dans les royaumes de la programmation et du développement web. En passant du hardware pure au domaine numérique, j'ai développé une affinité pour le développement <span class="strong-text">front-end et back-end</span>.
+            >, en bidouillant avec des drones FPV, des imprimantes 3D, Arduino et Raspberry Pi. Ce début a servi de porte d'entrée, me plongeant profondément dans les royaumes de la programmation et du développement web. En passant du hardware pure au domaine numérique, j'ai développé une affinité pour le développement <span class="strong-text">front-end et back-end</span>.
             </p>
 
             <p>
@@ -224,15 +219,14 @@ export default {
                     href="https://careers.selectra.com/">Selectra</a
                 >, travaillant en tant qu'Ingénieur Web Full-stack. Ces expériences m'ont doté d'une solide
                 base dans les aspects théoriques et pratiques de la technologie. Il est maintenant temps pour moi
-                de <span class="strong-text">chercher les meilleures opportunités pour démarrer ma carrière</span> et faire une
+                de <span class="strong-text">chercher les meilleures opportunités pour démarrer ma carrière</span> et faire un
                 impact significatif dans l'industrie technologique.
             </p>
 
             <p>
                 Malgré mon emploi du temps chargé, je m'assure de nourrir <span class="strong-text"
                     >mon amour pour les side-projects</span
-                >. Mes projets vont de la création d'impression 3D et aux drones FPV - un
-                témoignage de mon affection persistante pour le mélange de créativité et de technologie.
+                >. Mes projets englobent de l'impression 3D, des drones FPV, divers thématiques du Web comme Twitch et les réseaux sociaux et l'Intelligence Artificielle - un témoignage de mon affection persistante pour le mélange de créativité et de technologie.
             </p>
 
             <p>
@@ -240,16 +234,13 @@ export default {
                 l'escalade, la calisthénie et la randonnée. L'excitation d'un nouveau sentier ou la satisfaction d'un
                 entraînement bien exécuté <span class="strong-text">me garde ancré et revigoré</span>.
                 Simultanément, je continue d'élargir mes horizons en explorant le monde du design graphique, un passe-temps qui
-                <span class="strong-text"
-                    >ajoute une touche d'inspiration artistique à mon esprit orienté techniquement</span
+                <span class="strong-text">ajoute une touche d'inspiration artistique à mon esprit orienté techniquement</span
                 >.
             </p>
 
             <p>
                 Quand je réfléchis à mon parcours jusqu'à présent, je réalise que c'est le mélange parfait de code, de créativité,
-                et d'aventures en plein air qui <span class="strong-text"
-                    >me rend enthousiaste pour chaque jour à venir</span
-                >.
+                et d'aventures en plein air qui <span class="strong-text">me rend enthousiaste pour chaque jour à venir</span>.
             </p>
         `,
     },

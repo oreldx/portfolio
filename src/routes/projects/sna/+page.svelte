@@ -23,17 +23,17 @@
         </h2>
         <div class="flex flex-col gap-8">
             <section>
-                <p class="text-justify">
+                <p>
                     {@html $t("projects.sna.details.intro")}
                 </p>
             </section>
             <section>
-                <p class="text-justify">
+                <p>
                     {@html $t("projects.sna.details.video")}
                 </p>
                 <div class="mt-4 flex flex-col items-center">
                     <video
-                        class="px-8 lg:max-h-[50vh] md:max-h-[60vh]"
+                        class="px-8 lg:max-h-[50vh] max-h-[40vh]"
                         src="/sna/video.mp4"
                         muted
                         autoplay
@@ -44,7 +44,7 @@
                 </div>
             </section>
             <section>
-                <p class="text-justify">
+                <p>
                     {@html $t("projects.sna.details.outro")}
                 </p>
             </section>
