@@ -45,7 +45,7 @@
             <h4 class="font-semibold opacity-70">
                 {$t(getTypeKey() + "." + data.type)}
             </h4>
-            <div class="text-justify">
+            <div>
                 {$t(data.key + ".desc")}
             </div>
             <div class="flex flex-wrap gap-3">

@@ -7,7 +7,6 @@
     const projectsItems = [
         {
             key: "projects.sna",
-            date: "2023",
             type: "personal",
             tags: [
                 "Flask",
@@ -24,21 +23,18 @@
         },
         {
             key: "projects.ml",
-            date: "2022",
             type: "academic",
             tags: ["Python", "Machine Learning"],
             url: "https://github.com/oreldx/TDT4173_Project",
         },
         {
             key: "projects.ayc",
-            date: "2021",
             type: "personal",
             tags: ["Python", "SQLite", "Docker", "CRON", "APIs", "FFmpeg"],
             url: "/projects/ayc",
         },
         {
             key: "projects.dw",
-            date: "2021",
             type: "academic",
             tags: ["HTML", "CSS", "PHP", "SQL"],
             url: "https://github.com/oreldx/LO07_Project",
