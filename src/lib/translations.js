@@ -67,7 +67,12 @@ export default {
                 desc: "At Selectra, I integrated new features, refactored databases and services, and fixed issues using Vue.js and Laravel, enhancing both the stability and performance of the platforms. I advanced user experience and project efficiency through process optimization and API integration between projects. I worked in a resilient, rigorous and  various monolithic environments, aiming to deliver high-tier quality software and AI-driven applications, such as audio transcription.",
                 date: "JUL 2023 - DEC 2023",
             },
-            type: { internship: "Intern" },
+            namkin: {
+                title: "Full-stack Web Engineer",
+                desc: "At Namkin, I am part of an Agile team where I work autonomously to design solutions tailored to industrial clients' BtoB issues. My approach is based on close communication with clients to understand their specific needs and develop custom web applications, thus finding the best technical balance to effectively meet their expectations.",
+                date: "OCT 2023 - PRESENT",
+            },
+            type: { internship: "Intern", permanent: "Permanent"},
         },
         about: `
             <p>
@@ -195,7 +200,12 @@ export default {
                 desc: "Chez Selectra, j'ai intégré de nouvelles fonctionnalités, refactorisé des bases de données et des services, et résolu des problèmes en utilisant Vue.js et Laravel, améliorant ainsi la stabilité et la performance des plateformes. J'ai amélioré l'expérience utilisateur et l'efficacité du projet grâce à l'optimisation des processus et à l'intégration d'APIs entre les projets. J'ai travaillé dans un environnement monolithique résilient et rigoureux, visant à fournir des logiciels de haute qualité et des applications poussées utilisant l'IA, comme la transcription audio.",
                 date: "JUIL 2023 - DÉC 2023",
             },
-            type: { internship: "Stage" },
+            namkin: {
+                title: "Ingénieur Web Full-stack",
+                desc: "Chez Namkin, je fais partie d'une équipe Agile où je travaille en autonomie pour concevoir des solutions adaptées aux problématiques BtoB de clients industriels. Mon approche repose sur une communication étroite avec les clients afin de comprendre leurs besoins spécifiques et de développer des applications web sur mesure, trouvant ainsi le meilleur équilibre technique pour répondre efficacement à leurs attentes.",
+                date: "OCT 2023 - PRÉSENT",
+            },
+            type: { internship: "Stage", permanent: "CDI"},
         },
         about: `
             <p>
