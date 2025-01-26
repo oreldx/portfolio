@@ -6,18 +6,17 @@
 
     const experienceItems = [
         {
-            key: "experience.grytics",
-            type: "internship",
+            key: "experience.namkin",
+            type: "permanent",
             tags: [
-                "Machine Learning",
                 "React",
-                "Javascript",
+                "Typescript",
+                "Medusa.js",
                 "Python",
-                "AWS",
-                "Research & Development",
-                "Functional Tests",
+                "Docker",
+                "PostgreSQL",
             ],
-            url: "https://grytics.com/",
+            url: "https://namkin.fr/",
         },
         {
             key: "experience.selectra",
@@ -32,6 +31,20 @@
                 "Metabase",
             ],
             url: "https://careers.selectra.com/",
+        },
+        {
+            key: "experience.grytics",
+            type: "internship",
+            tags: [
+                "Machine Learning",
+                "React",
+                "Javascript",
+                "Python",
+                "AWS",
+                "Research & Development",
+                "Functional Tests",
+            ],
+            url: "https://grytics.com/",
         },
     ];
 </script>
