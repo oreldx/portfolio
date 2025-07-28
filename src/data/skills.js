@@ -1,0 +1,63 @@
+export const skills = {
+    python: { icon: "simple-icons:python", name: "Python", type: "hard" },
+    nest: { icon: "simple-icons:nestjs", name: "NestJS", type: "hard" },
+    flask: { icon: "bxl:flask", name: "Flask", type: "hard" },
+    laravel: { icon: "mdi:laravel", name: "Laravel", type: "hard" },
+    react: { icon: "mdi:react", name: "React", type: "hard" },
+    vue: { icon: "mdi:vuejs", name: "Vue.js", type: "hard" },
+    svelte: { icon: "simple-icons:svelte", name: "Svelte", type: "hard" },
+    tailwind: { icon: "mdi:tailwind", name: "Tailwind", type: "hard" },
+    html: { icon: "uiw:html5", name: "HTML", type: "hard" },
+    css: { icon: "uuiw:css3", name: "CSS", type: "hard" },
+    docker: { icon: "mdi:docker", name: "Docker", type: "hard" },
+    git: { icon: "mdi:git", name: "Git", type: "hard" },
+    semaphore: { icon: "simple-icons:semaphoreci", name: "Semaphore", type: "hard" },
+    linux: { icon: "uil:linux", name: "Linux", type: "hard" },
+    mysql: { icon: "devicon-plain:mysql", name: "MySQL", type: "hard" },
+    metabase: { icon: "simple-icons:metabase", name: "Metabase", type: "hard" },
+    datadog: { icon: "simple-icons:datadog", name: "Datadog", type: "hard" },
+    figma: { icon: "solar:figma-bold-duotone", name: "Figma", type: "soft" },
+    photoshop: { icon: "devicon-plain:photoshop", name: "Photoshop", type: "soft" },
+    premierepro: { icon: "devicon-plain:premierepro", name: "Premiere Pro", type: "soft" },
+    notion: { icon: "devicon-plain:notion", name: "Notion", type: "soft" },
+    remotion: { icon: null, name: "Remotion", type: "hard" },
+    nodejs: { icon: "devicon-plain:nodejs", name: "Node.js", type: "hard" },
+    redis: { icon: "devicon-plain:redis", name: "Redis", type: "hard" },
+    celery: { icon: "devicon-plain:celery", name: "Celery", type: "hard" },
+    sqlite: { icon: "devicon-plain:sqlite", name: "SQLite", type: "hard" },
+    machinelearning: {
+        icon: "devicon-plain:machinelearning",
+        name: "Machine Learning",
+        type: "soft",
+    },
+    apis: { icon: "devicon-plain:api", name: "APIs", type: "hard" },
+    ffmpeg: { icon: "devicon-plain:ffmpeg", name: "FFmpeg", type: "hard" },
+    ui_ux: { icon: "devicon-plain:uiux", name: "UI/UX", type: "bridge" },
+};
+
+export const skillSections = [
+    {
+        type: "backend",
+        skills: [skills.python, skills.nest, skills.flask, skills.laravel],
+    },
+    {
+        type: "frontend",
+        skills: [skills.react, skills.vue, skills.svelte, skills.tailwind, skills.html, skills.css],
+    },
+    {
+        type: "devops",
+        skills: [
+            skills.docker,
+            skills.git,
+            skills.semaphore,
+            skills.linux,
+            skills.mysql,
+            skills.metabase,
+            skills.datadog,
+        ],
+    },
+    {
+        type: "tools",
+        skills: [skills.figma, skills.photoshop, skills.premierepro, skills.notion],
+    },
+];

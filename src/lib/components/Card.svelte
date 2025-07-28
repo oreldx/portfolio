@@ -33,14 +33,25 @@
                     <Icon icon={getIcon(data.externalLink)} class="text-lg" />
                 </a>
             {/if}
-            <a
-                href={`${type}/${data.key}`}
-                class="bg-green-600 text-white px-4 py-2 text-sm rounded hover:bg-green-500 transition-colors"
-            >
-                {$t("button.seeMore")}
-            </a>
+            {#if data.readMore}
+                <a
+                    href={`${type}/${data.key}`}
+                    class="bg-green-600 text-white px-4 py-2 text-sm rounded hover:bg-green-500 transition-colors"
+                >
+                    {$t("button.readMore")}
+                </a>
+            {/if}
         </div>
 
         <!-- TODO: maybe tags -->
+        {#if data.tags && data.tags.length > 0}
+            <div class="flex flex-wrap gap-2 mt-4">
+                {#each data.tags as tag}
+                    <span class="bg-zinc-800 text-green-400 px-3 py-1 rounded-full text-xs">
+                        {tag?.name ?? tag.key}
+                    </span>
+                {/each}
+            </div>
+        {/if}
     </div>
 {/if}

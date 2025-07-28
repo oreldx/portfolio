@@ -8,7 +8,7 @@ export default {
             resume: { text: "My Resume", label: "Resume file", url: "/resume_en.pdf" },
         },
         button: {
-            seeMore: "See More",
+            readMore: "Read More",
             viewOn: "View on",
             back: "Back",
         },
@@ -75,17 +75,30 @@ export default {
             type: { internship: "Intern", permanent: "Permanent" },
         },
         skills: {
-            backend: {
-                title: "Back-end",
+            list: {
+                python: {
+                    title: "Python",
+                },
+                autonomy: {
+                    title: "Autonomy",
+                },
+                ui_ux: {
+                    title: "UI/UX Design",
+                },
             },
-            fontend: {
-                title: "Front-end",
-            },
-            devops: {
-                title: "DevOps",
-            },
-            tools: {
-                title: "Tools",
+            title: {
+                backend: {
+                    title: "Back-end",
+                },
+                fontend: {
+                    title: "Front-end",
+                },
+                devops: {
+                    title: "DevOps",
+                },
+                tools: {
+                    title: "Tools",
+                },
             },
         },
         about: `
@@ -150,7 +163,7 @@ export default {
             resume: { text: "Mon CV", label: "Fichier CV", url: "/resume_fr.pdf" },
         },
         button: {
-            seeMore: "Voir plus",
+            readMore: "En savoir plus",
             viewOn: "Regarder sur",
             back: "Retour",
         },
