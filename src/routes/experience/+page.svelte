@@ -2,55 +2,56 @@
     import { expoOut } from "svelte/easing";
     import { blur } from "svelte/transition";
     import CardTypes from "$lib/enums/cardType";
-    import DetailedCard from "$lib/components/Card.svelte";
+    import Card from "$lib/components/Card.svelte";
 
     const experienceItems = [
         {
-            key: "experience.namkin",
+            key: "namkin",
             type: "permanent",
-            tags: [
-                "React",
-                "Typescript",
-                "Medusa.js",
-                "Python",
-                "Docker",
-                "PostgreSQL",
-            ],
-            url: "https://namkin.fr/",
+            tags: {
+                techs: ["React", "Typescript", "Medusa.js", "Python", "Docker", "PostgreSQL"],
+                subjects: ["Web Development", "Agile Methodologies"],
+            },
+            externalLink: "https://namkin.fr/",
         },
         {
-            key: "experience.selectra",
+            key: "selectra",
             type: "internship",
-            tags: [
-                "Laravel",
-                "Vue.js",
-                "Inertia.js",
-                "Sentry",
-                "Datadogs",
-                "Semaphore",
-                "Metabase",
-            ],
-            url: "https://careers.selectra.com/",
+            tags: {
+                techs: [
+                    "Laravel",
+                    "Vue.js",
+                    "Inertia.js",
+                    "Sentry",
+                    "Datadogs",
+                    "Semaphore",
+                    "Metabase",
+                ],
+                subjects: ["Web Development"],
+            },
+            externalLink: "https://careers.selectra.com/",
         },
         {
-            key: "experience.grytics",
+            key: "grytics",
             type: "internship",
-            tags: [
-                "Machine Learning",
-                "React",
-                "Javascript",
-                "Python",
-                "AWS",
-                "Research & Development",
-                "Functional Tests",
-            ],
-            url: "https://grytics.com/",
+            tags: {
+                techs: [
+                    "Machine Learning",
+                    "React",
+                    "Javascript",
+                    "Python",
+                    "AWS",
+                    "Research & Development",
+                ],
+                subjects: ["Web Development", "Functional Tests"],
+            },
+            externalLink: "https://grytics.com/",
         },
     ];
 </script>
 
 <div
-    class="flex flex-col gap-12"
+    class="flex flex-col gap-4"
     in:blur={{
         amount: 5,
         duration: 800,
@@ -58,6 +59,6 @@
     }}
 >
     {#each experienceItems as item}
-        <DetailedCard data={item} cardType={CardTypes.EXPERIENCE} />
+        <Card type={CardTypes.EXPERIENCE} data={item} />
     {/each}
 </div>

@@ -6,44 +6,53 @@
 
     const projectsItems = [
         {
-            key: "projects.sna",
+            key: "sna",
             type: "personal",
-            tags: [
-                "Flask",
-                "Vue.js",
-                "Node.js",
-                "Remotion",
-                "Redis",
-                "Celery",
-                "MySQL",
-                "Docker",
-                "Generative AIs",
-            ],
-            url: "/projects/sna",
+            tags: {
+                techs: [
+                    "Flask",
+                    "Vue.js",
+                    "Node.js",
+                    "Remotion",
+                    "Redis",
+                    "Celery",
+                    "MySQL",
+                    "Docker",
+                ],
+                subjects: ["Generative AIs"],
+            },
         },
         {
-            key: "projects.ml",
+            key: "ml",
             type: "academic",
-            tags: ["Python", "Machine Learning"],
-            url: "https://github.com/oreldx/TDT4173_Project",
+            tags: {
+                techs: ["Python"],
+                subjects: ["Machine Learning"],
+            },
+            externalLink: "https://github.com/oreldx/TDT4173_Project",
         },
         {
-            key: "projects.ayc",
+            key: "ayc",
             type: "personal",
-            tags: ["Python", "SQLite", "Docker", "CRON", "APIs", "FFmpeg"],
-            url: "/projects/ayc",
+            tags: {
+                techs: ["Python", "SQLite", "Docker", "CRON", "APIs", "FFmpeg"],
+                subjects: [],
+            },
         },
         {
-            key: "projects.dw",
+            key: "dw",
             type: "academic",
-            tags: ["HTML", "CSS", "PHP", "SQL"],
-            url: "https://github.com/oreldx/LO07_Project",
+            tags: {
+                techs: ["HTML", "CSS", "PHP", "SQL"],
+                subjects: [],
+            },
+            externalLink: "https://github.com/oreldx/LO07_Project",
         },
     ];
 </script>
 
 <div
-    class="flex flex-col gap-12"
+    class="flex flex-col gap-4"
     in:blur={{
         amount: 5,
         duration: 800,
@@ -51,6 +60,6 @@
     }}
 >
     {#each projectsItems as item}
-        <Card data={item} cardType={CardTypes.PROJECT} />
+        <Card type={CardTypes.PROJECT} data={item} />
     {/each}
 </div>

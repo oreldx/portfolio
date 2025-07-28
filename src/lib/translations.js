@@ -1,6 +1,6 @@
 export default {
     en: {
-        hero: { quote: "I dev stuff on the Web for the World", title: "Full-stack Web Engineer" },
+        hero: { quote: "I dev stuff on the Web for the World", title: "Software Engineer" },
         footer: {
             github: { text: "", label: "GitHub link" },
             mail: { text: "", label: "Mail address" },
@@ -13,7 +13,7 @@ export default {
             back: "Back",
         },
         nav: { about: "about", experience: "experience", projects: "projects", skills: "skills" },
-        projects: {
+        project: {
             type: { personal: "Personal", academic: "Academic" },
             sna: {
                 date: "2024",
@@ -68,11 +68,25 @@ export default {
                 date: "JUL 2023 - DEC 2023",
             },
             namkin: {
-                title: "Full-stack Web Engineer",
+                title: "Software Engineer",
                 desc: "At Namkin, I am part of an Agile team where I work autonomously to design solutions tailored to industrial clients' BtoB issues. My approach is based on close communication with clients to understand their specific needs and develop custom web applications, thus finding the best technical balance to effectively meet their expectations.",
-                date: "OCT 2023 - PRESENT",
+                date: "OCT 2024 - PRESENT",
             },
-            type: { internship: "Intern", permanent: "Permanent"},
+            type: { internship: "Intern", permanent: "Permanent" },
+        },
+        skills: {
+            backend: {
+                title: "Back-end",
+            },
+            fontend: {
+                title: "Front-end",
+            },
+            devops: {
+                title: "DevOps",
+            },
+            tools: {
+                title: "Tools",
+            },
         },
         about: `
             <p>
@@ -127,7 +141,7 @@ export default {
     fr: {
         hero: {
             quote: "Je développe des choses sur le Web pour ce petit Monde",
-            title: "Ingénieur Web Full-stack",
+            title: "Ingénieur logiciel",
         },
         footer: {
             github: { text: "", label: "Lien GitHub" },
@@ -146,7 +160,7 @@ export default {
             projects: "projets",
             skills: "compétences",
         },
-        projects: {
+        project: {
             type: { personal: "Personnel", academic: "Académique" },
             sna: {
                 date: "2024",
@@ -201,11 +215,25 @@ export default {
                 date: "JUIL 2023 - DÉC 2023",
             },
             namkin: {
-                title: "Ingénieur Web Full-stack",
+                title: "Ingénieur Logiciel",
                 desc: "Chez Namkin, je fais partie d'une équipe Agile où je travaille en autonomie pour concevoir des solutions adaptées aux problématiques BtoB de clients industriels. Mon approche repose sur une communication étroite avec les clients afin de comprendre leurs besoins spécifiques et de développer des applications web sur mesure, trouvant ainsi le meilleur équilibre technique pour répondre efficacement à leurs attentes.",
-                date: "OCT 2023 - PRÉSENT",
+                date: "OCT 2024 - PRÉSENT",
             },
-            type: { internship: "Stage", permanent: "CDI"},
+            type: { internship: "Stage", permanent: "CDI" },
+        },
+        skills: {
+            backend: {
+                title: "Back-end",
+            },
+            fontend: {
+                title: "Front-end",
+            },
+            devops: {
+                title: "DevOps",
+            },
+            tools: {
+                title: "Outils",
+            },
         },
         about: `
             <p>
