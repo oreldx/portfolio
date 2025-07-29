@@ -1,5 +1,5 @@
 <script>
-    import { getIcon } from "$lib/utils";
+    import { getIcon, getSkillColor } from "$lib/utils";
     import Icon from "@iconify/svelte";
     import { t } from "../i18n";
 
@@ -47,8 +47,11 @@
         {#if data.tags && data.tags.length > 0}
             <div class="flex flex-wrap gap-2 mt-4">
                 {#each data.tags as tag}
-                    <span class="bg-zinc-800 text-green-400 px-3 py-1 rounded-full text-xs">
-                        {tag?.name ?? tag.key}
+                    <span
+                        class={`flex gap-2 px-3 py-1 rounded-full text-sm border ${getSkillColor(tag?.type)}`}
+                    >
+                        <Icon icon={tag?.icon ?? "pepicons-pop:circle"} class="text-lg" />
+                        {tag?.name ?? tag}
                     </span>
                 {/each}
             </div>

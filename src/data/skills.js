@@ -26,13 +26,24 @@ export const skills = {
     celery: { icon: "devicon-plain:celery", name: "Celery", type: "hard" },
     sqlite: { icon: "devicon-plain:sqlite", name: "SQLite", type: "hard" },
     machinelearning: {
-        icon: "devicon-plain:machinelearning",
+        icon: "fluent-mdl2:machine-learning",
         name: "Machine Learning",
         type: "soft",
     },
     apis: { icon: "devicon-plain:api", name: "APIs", type: "hard" },
     ffmpeg: { icon: "devicon-plain:ffmpeg", name: "FFmpeg", type: "hard" },
+    typescript: { icon: "devicon-plain:typescript", name: "TypeScript", type: "hard" },
     ui_ux: { icon: "devicon-plain:uiux", name: "UI/UX", type: "bridge" },
+    project_management: {
+        icon: "fluent-mdl2:machine-learning",
+        name: "Project Management",
+        type: "bridge",
+    },
+    medusajs: { icon: null, name: "MedusaJS", type: "hard" },
+    sentry: { icon: "file-icons:sentry", name: "Sentry", type: "hard" },
+    postgresql: { icon: "akar-icons:postgresql-fill", name: "PostgreSQL", type: "hard" },
+    researchanddevelopment: { icon: "material-symbols:lab-research", name: "R&D", type: "soft" },
+    autonomy: { icon: "mdi:cook", name: "Autonomy", type: "soft" },
 };
 
 export const skillSections = [
