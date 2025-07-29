@@ -21,7 +21,21 @@
                 {$t(`${type}.${data.key}.date`)}
             </p>
         </div>
-        <p class="text-zinc-200 text-sm mb-4">{$t(`${type}.${data.key}.desc`)}</p>
+
+        {#if data.tags && data.tags.length > 0}
+            <div class="flex flex-wrap gap-2 mt-2">
+                {#each data.tags as tag}
+                    <span
+                        class={`flex items-center justify-center gap-2 px-3 py-1 rounded-full text-sm border ${getSkillColor(tag?.type)}`}
+                    >
+                        <Icon icon={tag?.icon ?? "pepicons-pop:circle"} />
+                        {tag?.name ?? tag}
+                    </span>
+                {/each}
+            </div>
+        {/if}
+
+        <p class="text-zinc-200 text-sm mt-2">{$t(`${type}.${data.key}.desc`)}</p>
 
         <div class="flex justify-end gap-2">
             {#if data.externalLink}
@@ -42,19 +56,5 @@
                 </a>
             {/if}
         </div>
-
-        <!-- TODO: maybe tags -->
-        {#if data.tags && data.tags.length > 0}
-            <div class="flex flex-wrap gap-2 mt-4">
-                {#each data.tags as tag}
-                    <span
-                        class={`flex gap-2 px-3 py-1 rounded-full text-sm border ${getSkillColor(tag?.type)}`}
-                    >
-                        <Icon icon={tag?.icon ?? "pepicons-pop:circle"} class="text-lg" />
-                        {tag?.name ?? tag}
-                    </span>
-                {/each}
-            </div>
-        {/if}
     </div>
 {/if}

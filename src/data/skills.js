@@ -30,10 +30,11 @@ export const skills = {
         name: "Machine Learning",
         type: "soft",
     },
-    apis: { icon: "devicon-plain:api", name: "APIs", type: "hard" },
-    ffmpeg: { icon: "devicon-plain:ffmpeg", name: "FFmpeg", type: "hard" },
+    apis: { icon: "icon-park-solid:api", name: "APIs", type: "hard" },
+    ffmpeg: { icon: "file-icons:ffmpeg", name: "FFmpeg", type: "hard" },
+    cron: { icon: "eos-icons:cronjob", name: "Cron", type: "hard" },
     typescript: { icon: "devicon-plain:typescript", name: "TypeScript", type: "hard" },
-    ui_ux: { icon: "devicon-plain:uiux", name: "UI/UX", type: "bridge" },
+    ui_ux: { icon: "mdi:design", name: "UI/UX", type: "bridge" },
     project_management: {
         icon: "fluent-mdl2:machine-learning",
         name: "Project Management",
@@ -44,6 +45,7 @@ export const skills = {
     postgresql: { icon: "akar-icons:postgresql-fill", name: "PostgreSQL", type: "hard" },
     researchanddevelopment: { icon: "material-symbols:lab-research", name: "R&D", type: "soft" },
     autonomy: { icon: "mdi:cook", name: "Autonomy", type: "soft" },
+    php: { icon: "devicon-plain:php", name: "PHP", type: "hard" },
 };
 
 export const skillSections = [

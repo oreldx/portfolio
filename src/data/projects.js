@@ -3,7 +3,7 @@ import { skills } from "./skills";
 
 export const projectsItems = [
     {
-        key: "sna",
+        key: "social_network_account",
         type: ProjectType.PERSONAL,
         tags: [
             skills.flask,
@@ -18,14 +18,21 @@ export const projectsItems = [
         readMore: true,
     },
     {
+        key: "portfolio",
+        type: ProjectType.PERSONAL,
+        tags: [skills.svelte, skills.ui_ux, skills.tailwind],
+        readMore: false,
+        externalLink: "https://github.com/oreldx/portfolio",
+    },
+    {
         key: "ml",
         type: ProjectType.ACADEMIC,
-        tags: [skills.python],
+        tags: [skills.python, skills.researchanddevelopment],
         readMore: false,
         externalLink: "https://github.com/oreldx/TDT4173_Project",
     },
     {
-        key: "ayc",
+        key: "auto_youtube_channel",
         type: ProjectType.PERSONAL,
         tags: [
             skills.python,
@@ -40,7 +47,7 @@ export const projectsItems = [
     {
         key: "dw",
         type: ProjectType.ACADEMIC,
-        tags: [skills.html, skills.css, skills.php, skills.sql],
+        tags: [skills.html, skills.css, skills.php, skills.mysql],
         readMore: false,
         externalLink: "https://github.com/oreldx/LO07_Project",
     },

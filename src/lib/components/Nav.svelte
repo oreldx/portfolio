@@ -8,7 +8,7 @@
     let mounted = false;
     onMount(() => (mounted = true));
 
-    const navOptions = ["about", "experience", "projects", "skills"];
+    const navOptions = ["about", "experience", "project", "skills"];
 
     let intSelected = -1;
     $: {

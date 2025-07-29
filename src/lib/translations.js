@@ -12,10 +12,10 @@ export default {
             viewOn: "View on",
             back: "Back",
         },
-        nav: { about: "about", experience: "experience", projects: "projects", skills: "skills" },
+        nav: { about: "about", experience: "experience", project: "projects", skills: "skills" },
         project: {
             type: { personal: "Personal", academic: "Academic" },
-            sna: {
+            social_network_account: {
                 date: "2024",
                 title: "Autonomous Social Network Accounts",
                 desc: "This project entailed developing a Python-based Social Networks automation solution. Key features include data extraction, AI-powered content generation, automated post uploads, and community engagement. A whole architecture was designed to manage multiple accounts and tasks.",
@@ -28,12 +28,17 @@ export default {
                     },
                 },
             },
+            portfolio: {
+                date: "2023",
+                title: "Personal Portfolio",
+                desc: "Creation of a personal portfolio to showcase my projects and skills.",
+            },
             ml: {
                 date: "2022",
                 title: "Machine Learning Model",
                 desc: "Creation of a machine learning model in Python to predict revenue of all types of retail stores in Norway",
             },
-            ayc: {
+            auto_youtube_channel: {
                 date: "2022",
                 title: "Autonomous Youtube Channel",
                 desc: 'This project involved crafting a YouTube channel dedicated to daily "best-of" compilations of top Twitch clips, enhanced with fancy overlays to enrich user experience. Utilizing Python for channel management, tasks encompassed data scrapping, resource acquisition, and content selection & creation.',
@@ -75,30 +80,17 @@ export default {
             type: { internship: "Intern", permanent: "Permanent" },
         },
         skills: {
-            list: {
-                python: {
-                    title: "Python",
-                },
-                autonomy: {
-                    title: "Autonomy",
-                },
-                ui_ux: {
-                    title: "UI/UX Design",
-                },
+            backend: {
+                title: "Back-end",
             },
-            title: {
-                backend: {
-                    title: "Back-end",
-                },
-                fontend: {
-                    title: "Front-end",
-                },
-                devops: {
-                    title: "DevOps",
-                },
-                tools: {
-                    title: "Tools",
-                },
+            frontend: {
+                title: "Front-end",
+            },
+            devops: {
+                title: "DevOps",
+            },
+            tools: {
+                title: "Tools",
             },
         },
         about: `
@@ -170,12 +162,12 @@ export default {
         nav: {
             about: "à propos",
             experience: "expérience",
-            projects: "projets",
+            project: "projets",
             skills: "compétences",
         },
         project: {
             type: { personal: "Personnel", academic: "Académique" },
-            sna: {
+            social_network_account: {
                 date: "2024",
                 title: "Comptes de Réseaux Sociaux Autonomes",
                 desc: "Ce projet consistait à développer une solution d'automatisation des réseaux sociaux basée sur Python. Les principales fonctionnalités comprennent l'extraction de données, la génération de contenu assistée par IA, la publication automatique et l'engagement communautaire. Une architecture complète a été conçue pour gérer plusieurs comptes et tâches.",
@@ -188,12 +180,17 @@ export default {
                     },
                 },
             },
+            portfolio: {
+                date: "2023",
+                title: "Portfolio Personnel",
+                desc: "Création d'un portfolio personnel pour présenter mes projets et compétences.",
+            },
             ml: {
                 date: "2022",
                 title: "Modèle de Machine Learning",
                 desc: "Création d'un modèle d'apprentissage machine en Python pour prédire les revenus de tous types de magasins de détail en Norvège",
             },
-            ayc: {
+            auto_youtube_channel: {
                 date: "2022",
                 title: "Chaîne Youtube Autonome",
                 desc: "Ce projet impliquait la création d'une chaîne YouTube dédiée aux compilations quotidiennes des meilleurs clips de Twitch, le tout amélioré par des superpositions graphiques pour enrichir l'expérience utilisateur. Utilisant Python pour la gestion de la chaîne, les tâches comprenaient le scrapping de données, l'acquisition de ressources, la sélection puis la création de contenu et sa mise en ligne.",
@@ -238,7 +235,7 @@ export default {
             backend: {
                 title: "Back-end",
             },
-            fontend: {
+            frontend: {
                 title: "Front-end",
             },
             devops: {
