@@ -6,7 +6,7 @@
     import { quartOut } from "svelte/easing";
     import LanguageSelector from "./LanguageSelector.svelte";
 
-    let mounted = false;
+    let mounted = $state(false);
     onMount(() => (mounted = true));
 
     const footerItems = [

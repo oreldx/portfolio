@@ -1,12 +1,11 @@
 <script>
-    import Sky from "./Sky.svelte";
+    import { onMount } from "svelte";
     import { Canvas } from "svelte-canvas";
-    import { afterUpdate, onMount } from "svelte";
     import PolarLights from "./PolarLights.svelte";
 
-    var mounted = false;
-    var width = 0;
-    var height = 0;
+    var mounted = $state(false);
+    var width = $state(0);
+    var height = $state(0);
     const isMobile = () =>
         /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
@@ -28,7 +27,9 @@
         });
     });
 
-    $: if (mounted) updateDimensions();
+    $effect(() => {
+        if (mounted) updateDimensions();
+    });
 </script>
 
 <div class="fixed top-0 left-0" style="z-index: -1;">

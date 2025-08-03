@@ -111,11 +111,13 @@ export default {
                 <a
                     class="hover:text-secondary font-semibold"
                     target="_blank"
+                    aria-label="Grytics"
                     href="https://grytics.com">Grytics</a
                 >, where I honed my programming skills. This was followed by a second internship at
                 <a
                     class="hover:text-secondary font-semibold"
                     target="_blank"
+                    aria-label="Selectra"
                     href="https://careers.selectra.com/">Selectra</a
                 >, working as a Full-stack Web Engineer. These experiences have equipped me with a solid
                 foundation in both the theoretical and practical aspects of technology. It's now time for me
@@ -259,11 +261,13 @@ export default {
                 <a
                     class="hover:text-secondary font-semibold"
                     target="_blank"
+                    aria-label="Grytics"
                     href="https://grytics.com">Grytics</a
                 >, où j'ai affiné mes compétences en programmation. Cela a été suivi par un deuxième stage chez
                 <a
                     class="hover:text-secondary font-semibold"
                     target="_blank"
+                    aria-label="Selectra"
                     href="https://careers.selectra.com/">Selectra</a
                 >, travaillant en tant qu'Ingénieur Web Full-stack. Ces expériences m'ont doté d'une solide
                 base dans les aspects théoriques et pratiques de la technologie. Il est maintenant temps pour moi

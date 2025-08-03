@@ -5,7 +5,7 @@
     import { t } from "../../../lib/i18n.js";
     import { blur } from "svelte/transition";
 
-    let description = "";
+    let description = $state("");
     onMount(async () => {
         const res = await fetch("/auto_youtube_channel/description.txt");
         description = await res.text();
@@ -20,7 +20,11 @@
         easing: expoOut,
     }}
 >
-    <a class="flex gap-2 items-center text-primary/70 hover:text-primary" href="/project">
+    <a
+        class="flex gap-2 items-center text-primary/70 hover:text-primary"
+        href="/project"
+        aria-label="Back to Projects"
+    >
         <Icon icon="bxs:left-arrow" class=" text-l" />
         <p>Back</p>
     </a>
@@ -36,7 +40,8 @@
             </section>
             <section>
                 <div>
-                    <video class="px-8" src="/auto_youtube_channel/video.mp4" muted autoplay loop />
+                    <video class="px-8" src="/auto_youtube_channel/video.mp4" muted autoplay loop
+                    ></video>
                     <p class="text-center text-sm">
                         {$t("project.auto_youtube_channel.details.media.video")}
                     </p>
@@ -52,7 +57,7 @@
                         muted
                         autoplay
                         loop
-                    />
+                    ></video>
                     <p class="text-center text-sm">
                         {$t("project.auto_youtube_channel.details.media.cta")}
                     </p>
