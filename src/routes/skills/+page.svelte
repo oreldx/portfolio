@@ -6,7 +6,7 @@
     import { blur } from "svelte/transition";
 </script>
 
-<div class="flex flex-col gap-4">
+<div class="flex flex-col gap-4 w-full">
     {#each skillSections as section}
         <div
             class="flex flex-col gap-2 bg-linear-to-tr from-zinc-950 to-zinc-900 rounded-xl p-5 shadow-md border border-zinc-700 hover:border-accent hover:shadow-[0px_0px_10px_5px_rgba(0,255,83,0.1)] transition-colors duration-300"
