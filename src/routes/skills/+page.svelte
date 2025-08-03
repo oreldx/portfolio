@@ -9,9 +9,9 @@
 <div class="flex flex-col gap-4">
     {#each skillSections as section}
         <div
-            class="flex flex-col gap-2 bg-linear-to-tr from-zinc-950 to-zinc-900 rounded-xl p-5 shadow-md border border-zinc-700 hover:border-primary hover:shadow-[0px_0px_10px_5px_rgba(0,255,83,0.1)] transition-colors duration-300"
+            class="flex flex-col gap-2 bg-linear-to-tr from-zinc-950 to-zinc-900 rounded-xl p-5 shadow-md border border-zinc-700 hover:border-accent hover:shadow-[0px_0px_10px_5px_rgba(0,255,83,0.1)] transition-colors duration-300"
         >
-            <h2 class="text-white font-semibold">
+            <h2 class="text-primary font-semibold">
                 {$t(`skills.${section.type}.title`)}
             </h2>
             <div

@@ -2,9 +2,10 @@
 
 
 @theme {
-  --color-primary-light: #4ade80;
-  --color-primary: #10a154;
-  --color-primary-dark: #15803d;
+  --color-primary: #ffffff;
+  --color-accent: #10a154;
+  --color-accent-light: #4ade80;
+  --color-accent-dark: #15803d;
 }
 
 @utility strong-text {
