@@ -9,7 +9,7 @@
 }
 
 @utility strong-text {
-  @apply text-primary font-semibold;
+  @apply text-accent font-semibold;
 }
 
 @layer base {
@@ -33,7 +33,6 @@
     body {
         min-height: 100vh;
         margin: 0;
-        color: rgba(255, 255, 255, 0.75);
         font-family: Sen;
 
         overflow-y: scroll;

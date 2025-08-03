@@ -64,11 +64,11 @@
         }}
     >
         <a href="/">
-            <h1 class="text-primary">
+            <h1>
                 {displayText}
             </h1>
         </a>
-        <h2 class="text-primary">{$t("hero.title")}</h2>
+        <h2>{$t("hero.title")}</h2>
         <p class="italic">{$t("hero.quote")}</p>
     </div>
 {/if}

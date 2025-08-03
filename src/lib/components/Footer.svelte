@@ -47,7 +47,7 @@
             <LanguageSelector />
         </li>
         {#each footerItems as item}
-            <li class="hover:text-primary transition-all">
+            <li class="text-primary/70 hover:text-primary transition-all">
                 <a
                     target="_blank"
                     href={item.url ? item.url : $t("footer." + item.key + ".url")}

@@ -109,12 +109,12 @@ export default {
                 >, I bring with me not just academic credentials but substantial professional experience as
                 well. My first foray into the professional tech world began with a six-month internship at
                 <a
-                    class="text-primary hover:text-secondary font-semibold"
+                    class="hover:text-secondary font-semibold"
                     target="_blank"
                     href="https://grytics.com">Grytics</a
                 >, where I honed my programming skills. This was followed by a second internship at
                 <a
-                    class="text-primary hover:text-secondary font-semibold"
+                    class="hover:text-secondary font-semibold"
                     target="_blank"
                     href="https://careers.selectra.com/">Selectra</a
                 >, working as a Full-stack Web Engineer. These experiences have equipped me with a solid
@@ -257,12 +257,12 @@ export default {
                     >obtenu un Diplôme d'ingénieur en Informatique et Systèmes d'Information de l'UTT</span
                 >, je n'apporte pas seulement des compétences académiques mais aussi une expérience professionnelle grâce à mon parcours. Mon premier pas dans le monde informatique professionnel a commencé avec un stage de six mois chez
                 <a
-                    class="text-primary hover:text-secondary font-semibold"
+                    class="hover:text-secondary font-semibold"
                     target="_blank"
                     href="https://grytics.com">Grytics</a
                 >, où j'ai affiné mes compétences en programmation. Cela a été suivi par un deuxième stage chez
                 <a
-                    class="text-primary hover:text-secondary font-semibold"
+                    class="hover:text-secondary font-semibold"
                     target="_blank"
                     href="https://careers.selectra.com/">Selectra</a
                 >, travaillant en tant qu'Ingénieur Web Full-stack. Ces expériences m'ont doté d'une solide

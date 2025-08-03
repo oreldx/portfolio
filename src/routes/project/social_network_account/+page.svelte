@@ -13,12 +13,12 @@
         easing: expoOut,
     }}
 >
-    <a class="flex gap-2 items-center hover:text-primary" href="/project">
+    <a class="flex gap-2 items-center text-primary/70 hover:text-primary" href="/project">
         <Icon icon="bxs:left-arrow" class=" text-l" />
         <p>Back</p>
     </a>
     <div class="flex flex-col gap-3">
-        <h2 class="text-primary">
+        <h2>
             {$t("project.social_network_account.title")}
         </h2>
         <div class="flex flex-col gap-8">
