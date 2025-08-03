@@ -18,7 +18,7 @@
     }}
     on:focus={() => {}}
     on:blur={() => {}}
-    class="w-28 h-28 rounded-xl bg-white/20 text-white hover:text-green-600 drop-shadow-md flex justify-center items-center flex-col"
+    class="w-28 h-28 rounded-xl bg-white/20 text-white hover:text-primary drop-shadow-md flex justify-center items-center flex-col"
 >
     {#if hovered}
         <p class="text-center" transition:slide>

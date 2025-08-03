@@ -9,8 +9,9 @@
 
 {#if data}
     <div
-        class="card flex flex-col gap-2 bg-linear-to-tr from-zinc-950 to-zinc-900 rounded-xl p-5 shadow-md border border-zinc-700 hover:border-green-500 hover:shadow-[0px_0px_10px_5px_rgba(0,255,83,0.1)] transition-colors duration-300"
+        class="card flex flex-col gap-2 bg-linear-to-tr from-zinc-950 to-zinc-900 rounded-xl p-5 shadow-md border border-zinc-700 hover:border-primary-light hover:shadow-[0px_0px_5px_5px] hover:shadow-primary/30 transition-colors duration-300"
     >
+        <!-- shadow-[0px_0px_10px_5px_rgba(0,255,83,0.1)] -->
         <h2 class="text-white font-semibold">{$t(`${type}.${data.key}.title`)}</h2>
 
         <div class="flex justify-between">
@@ -40,7 +41,7 @@
         <div class="flex justify-end gap-2">
             {#if data.externalLink}
                 <a
-                    class="bg-zinc-800 text-green-400 border border-green-600 px-4 py-2 text-sm rounded-sm hover:bg-green-600 hover:text-white transition-colors"
+                    class="bg-zinc-800 text-primary border border-primary px-4 py-2 text-sm rounded-sm hover:bg-primary hover:text-white transition-colors"
                     href={data.externalLink}
                     target="_blank"
                 >
@@ -50,7 +51,7 @@
             {#if data.readMore}
                 <a
                     href={`${type}/${data.key}`}
-                    class="bg-green-600 text-white px-4 py-2 text-sm rounded-sm hover:bg-green-500 transition-colors"
+                    class="bg-primary-dark text-white px-4 py-2 text-sm rounded-sm hover:bg-primary transition-colors"
                 >
                     {$t("button.readMore")}
                 </a>
