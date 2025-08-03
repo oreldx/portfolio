@@ -49,7 +49,7 @@
             {/if}
             {#if data.readMore}
                 <a
-                    href={`${type}/${data.key}`}
+                    href={`/${type}/${data.key}`}
                     class="bg-accent-dark px-4 py-2 text-sm rounded-sm hover:bg-accent transition-colors"
                 >
                     {$t("button.readMore")}
