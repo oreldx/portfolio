@@ -1,6 +1,14 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@theme {
+  --color-primary-light: #4ade80;
+  --color-primary: ##16a34a;
+  --color-primary-dark: ##15803d;
+}
+
+@utility strong-text {
+  @apply text-primary font-semibold;
+}
 
 @layer base {
     h1 {
@@ -35,10 +43,4 @@
         width: 0px; 
     }
 
-}
-
-@layer components {
-    .strong-text {
-        @apply text-secondary font-semibold;
-    }
 }
