@@ -1,9 +1,9 @@
 <script>
-    import { t } from "../i18n";
-    import { onMount } from "svelte";
     import { page } from "$app/stores";
+    import { onMount } from "svelte";
     import { quartIn } from "svelte/easing";
     import { blur } from "svelte/transition";
+    import { t } from "../i18n";
 
     let mounted = false;
     onMount(() => (mounted = true));
@@ -35,17 +35,15 @@
                     }}
                 >
                     <a
-                        class={`${intSelected == i ? "active text-white before:opacity-100 before:bg-white" : "before:bg-transparent hover:text-white hover:before:opacity-100 hover:before:bg-white"} 
-                        transition-all flex items-center before:transition-all before:w-4 before:h-4 before:mr-5 before:rounded-3xl before:border-solid before:border-white before:opacity-75 before:border-2`}
+                        class={`${intSelected == i ? "pl-4 font-bold tracking-[0.2rem] before:border-primary before:bg-primary shadow-md before:shadow-[0px_0px_8px_3px] before:shadow-primary-light/30" : "before:border-white hover:before:bg-white"}
+                         flex items-center transition-all text-white before:transition-all before:w-4 before:h-4 before:mr-5 before:rounded-3xl before:border-solid   before:border-2 `}
                         id={i.toString()}
                         href={`/${option}`}
                         on:click={switchSection}
                     >
-                        {intSelected == i
-                            ? $t("nav." + option).toUpperCase()
-                            : $t("nav." + option)
-                                  .charAt(0)
-                                  .toUpperCase() + $t("nav." + option).slice(1)}
+                        {$t("nav." + option)
+                            .charAt(0)
+                            .toUpperCase() + $t("nav." + option).slice(1)}
                     </a>
                 </li>
             {/if}
