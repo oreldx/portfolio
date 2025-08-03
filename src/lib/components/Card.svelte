@@ -1,87 +1,59 @@
 <script>
-    import { t } from "../i18n";
+    import { getIcon, getSkillColor } from "$lib/utils";
     import Icon from "@iconify/svelte";
-    import CardTypes from "$lib/enums/cardType";
+    import { t } from "../i18n";
 
     export let data;
-    export let cardType;
-
-    let cardHover = false;
-
-    const getTypeKey = () => {
-        switch (cardType) {
-            case CardTypes.EXPERIENCE:
-                return "experience.type";
-            case CardTypes.PROJECT:
-                return "projects.type";
-            default:
-                return "";
-        }
-    };
-
-    const getIcon = (url) => {
-        if (url.includes("github")) {
-            return "mdi:github";
-        }
-        return "mdi:link";
-    };
+    export let type;
 </script>
 
 {#if data}
     <div
-        class="p-4 grid rounded-xl gap-6 transition-all"
-        class:bg-white={cardHover}
-        class:bg-opacity-10={cardHover}
-        class:backdrop-blur-l={cardHover}
-        class:drop-shadow-md={cardHover}
+        class="card flex flex-col gap-2 bg-linear-to-tr from-zinc-950 to-zinc-900 rounded-xl p-5 shadow-md border border-zinc-700 hover:border-accent-light hover:shadow-[0px_0px_5px_5px] hover:shadow-accent/30 transition-colors duration-300"
     >
-        <div class="date font-bold whitespace-nowrap w-min opacity-70">
-            {$t(data.key + ".date")}
+        <h2 class="font-semibold">{$t(`${type}.${data.key}.title`)}</h2>
+
+        <div class="flex justify-between">
+            <p class="font-semibold">
+                {$t(type + ".type" + "." + data.type)}
+            </p>
+            <p class="date whitespace-nowrap">
+                {$t(`${type}.${data.key}.date`)}
+            </p>
         </div>
-        <div class="sm:col-start-2 flex flex-col gap-2">
-            <h3 class="text-white font-bold">
-                {$t(data.key + ".title")}
-            </h3>
-            <h4 class="font-semibold opacity-70">
-                {$t(getTypeKey() + "." + data.type)}
-            </h4>
-            <div>
-                {$t(data.key + ".desc")}
-            </div>
-            <div class="flex flex-wrap gap-3">
+
+        {#if data.tags && data.tags.length > 0}
+            <div class="flex flex-wrap gap-2 mt-2">
                 {#each data.tags as tag}
-                    <div
-                        class="text-secondary-light bg-secondary-dark bg-opacity-50 color rounded-full px-3 py-1"
+                    <span
+                        class={`flex items-center justify-center gap-2 px-3 py-1 rounded-full text-sm border ${getSkillColor(tag?.type)}`}
                     >
-                        {tag}
-                    </div>
+                        <Icon icon={tag?.icon ?? "pepicons-pop:circle"} />
+                        {tag?.name ?? tag}
+                    </span>
                 {/each}
             </div>
-            {#if data.url.includes("https://")}
-                <div class="flex justify-end">
-                    <a
-                        href={data.url ? data.url : null}
-                        target="_blank"
-                        on:mouseenter={() => (cardHover = true)}
-                        on:mouseleave={() => (cardHover = false)}
-                        class="flex gap-2 items-center w-fit mt-2 opacity-70 hover:opacity-100"
-                    >
-                        <span class="text-white">{$t("button.viewOn")}</span>
-                        <Icon icon={getIcon(data.url)} class="text-white text-xl" />
-                    </a>
-                </div>
-            {:else}
-                <div class="flex justify-end">
-                    <a
-                        href={data.url ? data.url : null}
-                        on:mouseenter={() => (cardHover = true)}
-                        on:mouseleave={() => (cardHover = false)}
-                        class="flex gap-2 items-center w-fit mt-2 opacity-70 hover:opacity-100"
-                    >
-                        <p class="text-white text-right">{$t("button.seeMore")}</p>
-                        <Icon icon="bxs:right-arrow" class="text-white text-l" />
-                    </a>
-                </div>
+        {/if}
+
+        <p class="text-sm mt-2">{$t(`${type}.${data.key}.desc`)}</p>
+
+        <div class="flex justify-end gap-2">
+            {#if data.externalLink}
+                <a
+                    class="bg-zinc-800 text-accent border border-accent px-4 py-2 text-sm rounded-sm hover:bg-accent hover:text-primary transition-colors"
+                    href={data.externalLink}
+                    target="_blank"
+                >
+                    <Icon icon={getIcon(data.externalLink)} class="text-lg" />
+                </a>
+            {/if}
+            {#if data.readMore}
+                <a
+                    href={`/${type}/${data.key}`}
+                    class="bg-accent-dark px-4 py-2 text-sm rounded-sm hover:bg-accent transition-colors"
+                >
+                    {$t("button.readMore")}
+                </a>
             {/if}
         </div>
     </div>

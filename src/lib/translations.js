@@ -1,6 +1,6 @@
 export default {
     en: {
-        hero: { quote: "I dev stuff on the Web for the World", title: "Full-stack Web Engineer" },
+        hero: { quote: "I dev stuff on the Web for the World", title: "Software Engineer" },
         footer: {
             github: { text: "", label: "GitHub link" },
             mail: { text: "", label: "Mail address" },
@@ -8,14 +8,14 @@ export default {
             resume: { text: "My Resume", label: "Resume file", url: "/resume_en.pdf" },
         },
         button: {
-            seeMore: "See More",
+            readMore: "Read More",
             viewOn: "View on",
             back: "Back",
         },
-        nav: { about: "about", experience: "experience", projects: "projects", skills: "skills" },
-        projects: {
+        nav: { about: "about", experience: "experience", project: "projects", skills: "skills" },
+        project: {
             type: { personal: "Personal", academic: "Academic" },
-            sna: {
+            social_network_account: {
                 date: "2024",
                 title: "Autonomous Social Network Accounts",
                 desc: "This project entailed developing a Python-based Social Networks automation solution. Key features include data extraction, AI-powered content generation, automated post uploads, and community engagement. A whole architecture was designed to manage multiple accounts and tasks.",
@@ -28,12 +28,17 @@ export default {
                     },
                 },
             },
+            portfolio: {
+                date: "2023",
+                title: "Personal Portfolio",
+                desc: "Creation of a personal portfolio to showcase my projects and skills.",
+            },
             ml: {
                 date: "2022",
                 title: "Machine Learning Model",
                 desc: "Creation of a machine learning model in Python to predict revenue of all types of retail stores in Norway",
             },
-            ayc: {
+            auto_youtube_channel: {
                 date: "2022",
                 title: "Autonomous Youtube Channel",
                 desc: 'This project involved crafting a YouTube channel dedicated to daily "best-of" compilations of top Twitch clips, enhanced with fancy overlays to enrich user experience. Utilizing Python for channel management, tasks encompassed data scrapping, resource acquisition, and content selection & creation.',
@@ -68,11 +73,25 @@ export default {
                 date: "JUL 2023 - DEC 2023",
             },
             namkin: {
-                title: "Full-stack Web Engineer",
+                title: "Software Engineer",
                 desc: "At Namkin, I am part of an Agile team where I work autonomously to design solutions tailored to industrial clients' BtoB issues. My approach is based on close communication with clients to understand their specific needs and develop custom web applications, thus finding the best technical balance to effectively meet their expectations.",
-                date: "OCT 2023 - PRESENT",
+                date: "OCT 2024 - PRESENT",
             },
-            type: { internship: "Intern", permanent: "Permanent"},
+            type: { internship: "Intern", permanent: "Permanent" },
+        },
+        skills: {
+            backend: {
+                title: "Back-end",
+            },
+            frontend: {
+                title: "Front-end",
+            },
+            devops: {
+                title: "DevOps",
+            },
+            tools: {
+                title: "Tools",
+            },
         },
         about: `
             <p>
@@ -90,12 +109,12 @@ export default {
                 >, I bring with me not just academic credentials but substantial professional experience as
                 well. My first foray into the professional tech world began with a six-month internship at
                 <a
-                    class="text-white hover:text-secondary font-semibold"
+                    class="hover:text-secondary font-semibold"
                     target="_blank"
                     href="https://grytics.com">Grytics</a
                 >, where I honed my programming skills. This was followed by a second internship at
                 <a
-                    class="text-white hover:text-secondary font-semibold"
+                    class="hover:text-secondary font-semibold"
                     target="_blank"
                     href="https://careers.selectra.com/">Selectra</a
                 >, working as a Full-stack Web Engineer. These experiences have equipped me with a solid
@@ -127,7 +146,7 @@ export default {
     fr: {
         hero: {
             quote: "Je développe des choses sur le Web pour ce petit Monde",
-            title: "Ingénieur Web Full-stack",
+            title: "Software Engineer",
         },
         footer: {
             github: { text: "", label: "Lien GitHub" },
@@ -136,19 +155,19 @@ export default {
             resume: { text: "Mon CV", label: "Fichier CV", url: "/resume_fr.pdf" },
         },
         button: {
-            seeMore: "Voir plus",
+            readMore: "En savoir plus",
             viewOn: "Regarder sur",
             back: "Retour",
         },
         nav: {
             about: "à propos",
             experience: "expérience",
-            projects: "projets",
+            project: "projets",
             skills: "compétences",
         },
-        projects: {
+        project: {
             type: { personal: "Personnel", academic: "Académique" },
-            sna: {
+            social_network_account: {
                 date: "2024",
                 title: "Comptes de Réseaux Sociaux Autonomes",
                 desc: "Ce projet consistait à développer une solution d'automatisation des réseaux sociaux basée sur Python. Les principales fonctionnalités comprennent l'extraction de données, la génération de contenu assistée par IA, la publication automatique et l'engagement communautaire. Une architecture complète a été conçue pour gérer plusieurs comptes et tâches.",
@@ -161,12 +180,17 @@ export default {
                     },
                 },
             },
+            portfolio: {
+                date: "2023",
+                title: "Portfolio Personnel",
+                desc: "Création d'un portfolio personnel pour présenter mes projets et compétences.",
+            },
             ml: {
                 date: "2022",
                 title: "Modèle de Machine Learning",
                 desc: "Création d'un modèle d'apprentissage machine en Python pour prédire les revenus de tous types de magasins de détail en Norvège",
             },
-            ayc: {
+            auto_youtube_channel: {
                 date: "2022",
                 title: "Chaîne Youtube Autonome",
                 desc: "Ce projet impliquait la création d'une chaîne YouTube dédiée aux compilations quotidiennes des meilleurs clips de Twitch, le tout amélioré par des superpositions graphiques pour enrichir l'expérience utilisateur. Utilisant Python pour la gestion de la chaîne, les tâches comprenaient le scrapping de données, l'acquisition de ressources, la sélection puis la création de contenu et sa mise en ligne.",
@@ -201,11 +225,25 @@ export default {
                 date: "JUIL 2023 - DÉC 2023",
             },
             namkin: {
-                title: "Ingénieur Web Full-stack",
+                title: "Ingénieur Logiciel",
                 desc: "Chez Namkin, je fais partie d'une équipe Agile où je travaille en autonomie pour concevoir des solutions adaptées aux problématiques BtoB de clients industriels. Mon approche repose sur une communication étroite avec les clients afin de comprendre leurs besoins spécifiques et de développer des applications web sur mesure, trouvant ainsi le meilleur équilibre technique pour répondre efficacement à leurs attentes.",
-                date: "OCT 2023 - PRÉSENT",
+                date: "OCT 2024 - PRÉSENT",
             },
-            type: { internship: "Stage", permanent: "CDI"},
+            type: { internship: "Stage", permanent: "CDI" },
+        },
+        skills: {
+            backend: {
+                title: "Back-end",
+            },
+            frontend: {
+                title: "Front-end",
+            },
+            devops: {
+                title: "DevOps",
+            },
+            tools: {
+                title: "Outils",
+            },
         },
         about: `
             <p>
@@ -219,12 +257,12 @@ export default {
                     >obtenu un Diplôme d'ingénieur en Informatique et Systèmes d'Information de l'UTT</span
                 >, je n'apporte pas seulement des compétences académiques mais aussi une expérience professionnelle grâce à mon parcours. Mon premier pas dans le monde informatique professionnel a commencé avec un stage de six mois chez
                 <a
-                    class="text-white hover:text-secondary font-semibold"
+                    class="hover:text-secondary font-semibold"
                     target="_blank"
                     href="https://grytics.com">Grytics</a
                 >, où j'ai affiné mes compétences en programmation. Cela a été suivi par un deuxième stage chez
                 <a
-                    class="text-white hover:text-secondary font-semibold"
+                    class="hover:text-secondary font-semibold"
                     target="_blank"
                     href="https://careers.selectra.com/">Selectra</a
                 >, travaillant en tant qu'Ingénieur Web Full-stack. Ces expériences m'ont doté d'une solide
