@@ -22,10 +22,7 @@
         <a href="/">
             <h1 class="text-white">Aurélien Dureux</h1>
         </a>
-        <div class="flex items-center">
-            <Icon icon="game-icons:fleur-de-lys" class="w-5 h-5 mr-2 text-white" />
-            <h2 class="text-white">{$t("hero.title")}</h2>
-        </div>
+        <h2 class="text-white">{$t("hero.title")}</h2>
         <p class="italic">{$t("hero.quote")}</p>
     </div>
 {/if}

@@ -8,7 +8,7 @@ export const skills = {
     svelte: { icon: "simple-icons:svelte", name: "Svelte", type: "hard" },
     tailwind: { icon: "mdi:tailwind", name: "Tailwind", type: "hard" },
     html: { icon: "uiw:html5", name: "HTML", type: "hard" },
-    css: { icon: "uuiw:css3", name: "CSS", type: "hard" },
+    css: { icon: "tdesign:css3-filled", name: "CSS", type: "hard" },
     docker: { icon: "mdi:docker", name: "Docker", type: "hard" },
     git: { icon: "mdi:git", name: "Git", type: "hard" },
     semaphore: { icon: "simple-icons:semaphoreci", name: "Semaphore", type: "hard" },
