@@ -146,7 +146,7 @@ export default {
     fr: {
         hero: {
             quote: "Je développe des choses sur le Web pour ce petit Monde",
-            title: "Ingénieur logiciel",
+            title: "Software Engineer",
         },
         footer: {
             github: { text: "", label: "Lien GitHub" },
