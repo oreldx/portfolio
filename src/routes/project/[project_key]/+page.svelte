@@ -1,10 +1,14 @@
 <script>
+    import { locale } from "$lib/i18n.js";
     import Icon from "@iconify/svelte";
     import showdown from "showdown";
     import { expoOut } from "svelte/easing";
     import { blur } from "svelte/transition";
 
     let { data } = $props();
+
+    const activeLocale = $derived($locale);
+    const currentContent = $derived(data.content[activeLocale] ?? Object.values(data.content)[0]);
 
     const converter = new showdown.Converter();
 </script>
@@ -26,8 +30,10 @@
         <p>Back</p>
     </a>
     <div class="flex flex-col gap-3">
-        <div class="prose">
-            {@html converter.makeHtml(data.content)}
+        <div
+            class="prose prose-p:text-primary prose-strong:text-accent prose-headings:text-primary prose-li:text-primary"
+        >
+            {@html converter.makeHtml(currentContent)}
         </div>
     </div>
 </div>
