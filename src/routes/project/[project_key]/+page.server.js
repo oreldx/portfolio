@@ -8,7 +8,7 @@ export async function load({ params }) {
 
     try {
         const markdown = locales.reduce((acc, locale) => {
-            const filePath = path.resolve(`static/project/${slug}_${locale}.md`);
+            const filePath = path.resolve(`static/contents/project/${slug}_${locale}.md`);
             if (fs.existsSync(filePath)) {
                 const content = fs.readFileSync(filePath, "utf-8");
                 acc[locale] = content;

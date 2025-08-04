@@ -14,7 +14,7 @@
 </script>
 
 <div
-    class="flex flex-col gap-4"
+    class="flex flex-col gap-4 w-full"
     in:blur={{
         amount: 5,
         duration: 800,
@@ -29,11 +29,9 @@
         <Icon icon="bxs:left-arrow" class=" text-l" />
         <p>Back</p>
     </a>
-    <div class="flex flex-col gap-3">
-        <div
-            class="prose prose-p:text-primary prose-strong:text-accent prose-headings:text-primary prose-li:text-primary"
-        >
-            {@html converter.makeHtml(currentContent)}
-        </div>
+    <div
+        class="prose !max-w-none prose-p:text-primary prose-strong:text-accent prose-headings:text-primary prose-li:text-primary"
+    >
+        {@html converter.makeHtml(currentContent)}
     </div>
 </div>
