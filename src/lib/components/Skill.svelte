@@ -2,22 +2,21 @@
     import Icon from "@iconify/svelte";
     import { slide } from "svelte/transition";
 
-    export let icon;
-    export let name;
+    let { icon, name } = $props();
 
-    let hovered = false;
+    let hovered = $state(false);
 </script>
 
 <div
     role="listitem"
-    on:mouseover={() => {
+    onmouseover={() => {
         hovered = true;
     }}
-    on:mouseout={() => {
+    onmouseout={() => {
         hovered = false;
     }}
-    on:focus={() => {}}
-    on:blur={() => {}}
+    onfocus={() => {}}
+    onblur={() => {}}
     class="w-28 h-28 rounded-xl bg-primary/20 hover:text-accent drop-shadow-md flex justify-center items-center flex-col"
 >
     {#if hovered}

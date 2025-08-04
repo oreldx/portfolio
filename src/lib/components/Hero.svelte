@@ -4,10 +4,10 @@
     import { fly } from "svelte/transition";
     import { t } from "../i18n";
 
-    let mounted = false;
+    let mounted = $state(false);
     onMount(() => (mounted = true));
 
-    let displayText = "";
+    let displayText = $state("");
     const targetText = "Aurélien Dureux";
     const intervalTime = 10000;
 
@@ -63,7 +63,7 @@
             easing: quartOut,
         }}
     >
-        <a href="/">
+        <a href="/" aria-label="Home Link">
             <h1>
                 {displayText}
             </h1>

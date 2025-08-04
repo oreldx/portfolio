@@ -13,7 +13,11 @@
         easing: expoOut,
     }}
 >
-    <a class="flex gap-2 items-center text-primary/70 hover:text-primary" href="/project">
+    <a
+        class="flex gap-2 items-center text-primary/70 hover:text-primary"
+        href="/project"
+        aria-label="Back to Projects"
+    >
         <Icon icon="bxs:left-arrow" class=" text-l" />
         <p>Back</p>
     </a>
@@ -39,7 +43,7 @@
                         autoplay
                         loop
                         controls
-                    />
+                    ></video>
                     <p class="text-center text-sm">
                         {$t("project.social_network_account.details.media.video")}
                     </p>

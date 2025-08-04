@@ -3,6 +3,13 @@
     import Hero from "$lib/components/Hero.svelte";
     import Nav from "$lib/components/Nav.svelte";
     import "../app.css";
+    /**
+     * @typedef {Object} Props
+     * @property {import('svelte').Snippet} [children]
+     */
+
+    /** @type {Props} */
+    let { children } = $props();
 </script>
 
 <!-- <Background /> -->
@@ -15,6 +22,6 @@
     </div>
 
     <div class="flex-1 flex items-center lg:py-20 pb-10">
-        <slot />
+        {@render children?.()}
     </div>
 </main>

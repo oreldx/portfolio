@@ -3,8 +3,7 @@
     import Icon from "@iconify/svelte";
     import { t } from "../i18n";
 
-    export let data;
-    export let type;
+    let { data, type } = $props();
 </script>
 
 {#if data}
@@ -43,6 +42,7 @@
                     class="bg-zinc-800 text-accent border border-accent px-4 py-2 text-sm rounded-sm hover:bg-accent hover:text-primary transition-colors"
                     href={data.externalLink}
                     target="_blank"
+                    aria-label="External Link"
                 >
                     <Icon icon={getIcon(data.externalLink)} class="text-lg" />
                 </a>
@@ -51,6 +51,7 @@
                 <a
                     href={`/${type}/${data.key}`}
                     class="bg-accent-dark px-4 py-2 text-sm rounded-sm hover:bg-accent transition-colors"
+                    aria-label="Read More"
                 >
                     {$t("button.readMore")}
                 </a>

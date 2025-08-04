@@ -5,9 +5,9 @@
     const startInterval = 0;
     const endInterval = Math.PI * 2;
 
-    var currentWidth = 0;
-    var currentHeight = 0;
-    var bims = [];
+    var currentWidth = $state(0);
+    var currentHeight = $state(0);
+    var bims = $state([]);
 
     const linearFunc = (x, a, b) => a * x + b;
     const randomBetween = (min, max) => Math.random() * (max - min) + min;
@@ -87,7 +87,7 @@
         return bims;
     };
 
-    $: render = ({ context, width, height }) => {
+    let render = $derived(({ context, width, height }) => {
         if (width != currentWidth || height != currentHeight) {
             currentWidth = width;
             currentHeight = height;
@@ -95,7 +95,7 @@
             bims = createBims(currentWidth, currentHeight);
         }
         bims = drawBims(bims, context);
-    };
+    });
 </script>
 
 <Layer {render} />

@@ -1,20 +1,20 @@
 <script>
-    import { page } from "$app/stores";
+    import { page } from "$app/state";
     import { onMount } from "svelte";
     import { quartIn } from "svelte/easing";
     import { blur } from "svelte/transition";
     import { t } from "../i18n";
 
-    let mounted = false;
+    let mounted = $state(false);
     onMount(() => (mounted = true));
 
     const navOptions = ["about", "experience", "project", "skills"];
 
-    let intSelected = -1;
-    $: {
-        const currentPage = $page.route.id ? $page.route.id.split("/")[1] : null;
+    let intSelected = $state(-1);
+    $effect(() => {
+        const currentPage = page.route.id ? page.route.id.split("/")[1] : null;
         intSelected = currentPage ? navOptions.indexOf(currentPage) : -1;
-    }
+    });
 
     const switchSection = (event) => {
         intSelected = parseInt(event.srcElement.id);
@@ -39,7 +39,7 @@
                          flex items-center transition-all before:transition-all before:w-4 before:h-4 before:mr-5 before:rounded-3xl before:border-solid   before:border-2 `}
                         id={i.toString()}
                         href={`/${option}`}
-                        on:click={switchSection}
+                        onclick={switchSection}
                     >
                         {$t("nav." + option)
                             .charAt(0)
