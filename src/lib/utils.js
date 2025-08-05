@@ -24,7 +24,10 @@ export const getSkillColor = (type) => {
 
 export const fetchMarkdownFiles = (type, key) => {
     const markdown = locales.reduce((acc, locale) => {
-        const filePath = path.resolve(`static/contents/${type}/${key}_${locale}.md`);
+        const fileString = type
+            ? path.join("static", "contents", type, `${key}_${locale}.md`)
+            : path.join("static", "contents", `${key}_${locale}.md`);
+        const filePath = path.resolve(fileString);
         if (fs.existsSync(filePath)) {
             const content = fs.readFileSync(filePath, "utf-8");
             acc[locale] = content;
