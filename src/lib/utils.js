@@ -1,5 +1,3 @@
-import fs from "fs";
-import path from "path";
 import { locales } from "./i18n";
 
 export const getIcon = (url) => {
@@ -22,18 +20,21 @@ export const getSkillColor = (type) => {
     }
 };
 
-export const fetchMarkdownFiles = (type, key) => {
-    const markdown = locales.reduce((acc, locale) => {
-        const fileString = type
-            ? path.join("static", "contents", type, `${key}_${locale}.md`)
-            : path.join("static", "contents", `${key}_${locale}.md`);
-        const filePath = path.resolve(fileString);
-        if (fs.existsSync(filePath)) {
-            const content = fs.readFileSync(filePath, "utf-8");
-            acc[locale] = content;
+export const fetchMarkdownFiles = async (eventFetch, type, key) => {
+    const markdown = {};
+
+    for (const locale of locales) {
+        const fileUrl = type
+            ? `/contents/${type}/${key}_${locale}.md`
+            : `/contents/${key}_${locale}.md`;
+
+        const response = await eventFetch(fileUrl);
+        if (response.ok) {
+            const content = await response.text();
+            markdown[locale] = content;
         }
-        return acc;
-    }, {});
+    }
+
     if (Object.keys(markdown).length === 0) {
         throw new Error("No markdown files found for this project");
     }

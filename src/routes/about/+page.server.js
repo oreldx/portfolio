@@ -1,9 +1,9 @@
 import { fetchMarkdownFiles } from "$lib/utils";
 import { error } from "@sveltejs/kit";
 
-export async function load() {
+export async function load({ fetch }) {
     try {
-        const files = fetchMarkdownFiles(null, "about");
+        const files = await fetchMarkdownFiles(fetch, null, "about");
         return {
             content: files,
         };
