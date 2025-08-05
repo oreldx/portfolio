@@ -1,3 +1,7 @@
+import fs from "fs";
+import path from "path";
+import { locales } from "./i18n";
+
 export const getIcon = (url) => {
     if (url.includes("github")) {
         return "mdi:github";
@@ -16,4 +20,19 @@ export const getSkillColor = (type) => {
         default:
             return "text-gray-500 border-gray-600";
     }
+};
+
+export const fetchMarkdownFiles = (type, key) => {
+    const markdown = locales.reduce((acc, locale) => {
+        const filePath = path.resolve(`static/contents/${type}/${key}_${locale}.md`);
+        if (fs.existsSync(filePath)) {
+            const content = fs.readFileSync(filePath, "utf-8");
+            acc[locale] = content;
+        }
+        return acc;
+    }, {});
+    if (Object.keys(markdown).length === 0) {
+        throw new Error("No markdown files found for this project");
+    }
+    return markdown;
 };

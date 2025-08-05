@@ -8,7 +8,7 @@
     let { data } = $props();
 
     const activeLocale = $derived($locale);
-    const currentContent = $derived(data.content[activeLocale] ?? Object.values(data.content)[0]);
+    const currentContent = $derived(data.content?.[activeLocale] ?? Object.values(data.content)[0]);
 
     const converter = new showdown.Converter();
 </script>

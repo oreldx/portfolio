@@ -1,26 +1,12 @@
-import { locales } from "$lib/i18n";
+import { fetchMarkdownFiles } from "$lib/utils";
 import { error } from "@sveltejs/kit";
-import fs from "fs";
-import path from "path";
 
 export async function load({ params }) {
-    const slug = params.project_key;
-
     try {
-        const markdown = locales.reduce((acc, locale) => {
-            const filePath = path.resolve(`static/contents/project/${slug}_${locale}.md`);
-            if (fs.existsSync(filePath)) {
-                const content = fs.readFileSync(filePath, "utf-8");
-                acc[locale] = content;
-            }
-            return acc;
-        }, {});
-        if (Object.keys(markdown).length === 0) {
-            throw new Error("No markdown files found for this project");
-        }
+        const files = fetchMarkdownFiles("project", params.project_key);
         return {
-            content: markdown,
-            slug,
+            slug: params.project_key,
+            content: files,
         };
     } catch (err) {
         throw error(404, "Project not found");
