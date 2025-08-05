@@ -29,9 +29,7 @@
         <Icon icon="bxs:left-arrow" class=" text-l" />
         <p>Back</p>
     </a>
-    <div
-        class="prose !max-w-none prose-p:text-primary prose-strong:text-accent prose-headings:text-primary prose-li:text-primary"
-    >
+    <div class="prose-wrapper">
         {@html converter.makeHtml(currentContent)}
     </div>
 </div>

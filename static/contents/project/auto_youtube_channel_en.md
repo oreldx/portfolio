@@ -53,13 +53,27 @@ The episode number and a screenshot of two viral clips formed the background, wi
 
 A **title** was automatically generated for each video, featuring the popular streamers present.  
 **Example Title:**  
-_Mynthos, Sackzi, Wingobear, Terracid et LittleBigWhale... [Compil' Twitch FR #1]_
+```
+Mynthos, Sackzi, Wingobear, Terracid et LittleBigWhale... [Compil' Twitch FR #1]
+```
 
 A **description** created a precise timeline for each included clip, thus facilitating navigation through the video.
 
 **Video Description:**
-
 ```
-{description}
+••► Nouvelle compilation [n°1] des meilleurs clips Twitch français 🇫🇷 des dernières 24 heures.
 
+••► 🔥 Aujourd'hui au programme : 🔥
+00:00 - Mynthos : " Emmanuel Maquerong a un message pour Antoine Daniel ! "
+    🔗 http://www.twitch.tv/mynthos
+
+00:20 - Sackzi : " Quad feed head shot "
+    🔗 http://www.twitch.tv/sackzi
+
+[...]
+
+••► A demain pour 💥 une nouvelle compilation 💥 !!
+
+Si jamais vous êtes un streamer ne souhaitant plus apparaitre dans mes compilations, n’hésitez pas à me contacter sous l’adresse mail suivante afin de me le notifier :
+📧 exemple@mail.com 📧
 ```
