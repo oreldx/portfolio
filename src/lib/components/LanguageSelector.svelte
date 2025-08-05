@@ -24,6 +24,7 @@
         }}
         onfocus={() => {}}
         onblur={() => {}}
+        aria-label="Switch Language"
     >
         <span
             class={`${

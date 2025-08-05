@@ -1,3 +1,5 @@
+import { locales } from "./i18n";
+
 export const getIcon = (url) => {
     if (url.includes("github")) {
         return "mdi:github";
@@ -16,4 +18,25 @@ export const getSkillColor = (type) => {
         default:
             return "text-gray-500 border-gray-600";
     }
+};
+
+export const fetchMarkdownFiles = async (eventFetch, type, key) => {
+    const markdown = {};
+
+    for (const locale of locales) {
+        const fileUrl = type
+            ? `/contents/${type}/${key}_${locale}.md`
+            : `/contents/${key}_${locale}.md`;
+
+        const response = await eventFetch(fileUrl);
+        if (response.ok) {
+            const content = await response.text();
+            markdown[locale] = content;
+        }
+    }
+
+    if (Object.keys(markdown).length === 0) {
+        throw new Error("No markdown files found for this project");
+    }
+    return markdown;
 };

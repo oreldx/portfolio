@@ -1,9 +1,9 @@
 <script>
     import { locale } from "$lib/i18n.js";
+    import Icon from "@iconify/svelte";
     import showdown from "showdown";
     import { expoOut } from "svelte/easing";
     import { blur } from "svelte/transition";
-    import { t } from "../../lib/i18n";
 
     let { data } = $props();
 
@@ -14,12 +14,21 @@
 </script>
 
 <div
+    class="flex flex-col gap-4"
     in:blur={{
         amount: 5,
         duration: 800,
         easing: expoOut,
     }}
 >
+    <a
+        class="flex gap-2 items-center text-primary/70 hover:text-primary"
+        href="/project"
+        aria-label="Back to Projects"
+    >
+        <Icon icon="bxs:left-arrow" class=" text-l" />
+        <p>Back</p>
+    </a>
     <div class="prose-wrapper">
         {@html converter.makeHtml(currentContent)}
     </div>
