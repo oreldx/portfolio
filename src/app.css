@@ -12,6 +12,10 @@
   @apply text-accent font-semibold;
 }
 
+@utility prose-wrapper {
+  @apply prose !max-w-none prose-p:text-primary prose-strong:text-accent prose-a:text-accent prose-headings:text-primary prose-li:text-primary prose-pre:wrap-break-word prose-pre:whitespace-pre-wrap;
+}
+
 @layer base {
     h1 {
         @apply text-4xl;
