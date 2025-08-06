@@ -1,6 +1,7 @@
 <script>
+    import HeaderContent from "$lib/components/HeaderContent.svelte";
     import { locale } from "$lib/i18n.js";
-    import Icon from "@iconify/svelte";
+    import { experienceItems } from "data/experience.js";
     import showdown from "showdown";
     import { expoOut } from "svelte/easing";
     import { blur } from "svelte/transition";
@@ -11,6 +12,8 @@
     const currentContent = $derived(data.content?.[activeLocale] ?? Object.values(data.content)[0]);
 
     const converter = new showdown.Converter();
+
+    const experienceData = $derived(experienceItems.find((item) => item.key === data.slug));
 </script>
 
 <div
@@ -21,14 +24,8 @@
         easing: expoOut,
     }}
 >
-    <a
-        class="flex gap-2 items-center text-primary/70 hover:text-primary"
-        href="/project"
-        aria-label="Back to Projects"
-    >
-        <Icon icon="bxs:left-arrow" class=" text-l" />
-        <p>Back</p>
-    </a>
+    <HeaderContent data={experienceData} />
+    <hr class="h-px border-0 bg-primary" />
     <div class="prose-wrapper">
         {@html converter.makeHtml(currentContent)}
     </div>

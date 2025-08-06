@@ -1,5 +1,5 @@
 <script>
-    import { getIcon, getSkillColor } from "$lib/utils";
+    import { getButtonDataFromURL, getSkillColor } from "$lib/utils";
     import Icon from "@iconify/svelte";
     import { t } from "../i18n";
 
@@ -44,7 +44,7 @@
                     target="_blank"
                     aria-label="External Link"
                 >
-                    <Icon icon={getIcon(data.externalLink)} class="text-lg" />
+                    <Icon icon={getButtonDataFromURL(data.externalLink).icon} class="text-lg" />
                 </a>
             {/if}
             {#if data.readMore}

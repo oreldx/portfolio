@@ -1,6 +1,4 @@
 
-# Comptes de Réseaux Sociaux Autonomes
-
 Ce projet consistait à développer une solution d’automatisation des réseaux sociaux basée sur Python. Les fonctionnalités clés incluent l’extraction de données, la génération de contenu assistée par l’IA, la publication automatisée de posts, et l’interaction avec la communauté. Une architecture complète a été conçue pour gérer plusieurs comptes et tâches simultanément.
 
 ### Introduction

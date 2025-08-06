@@ -1,6 +1,4 @@
 
-# Autonomous Youtube Channel
-
 This project involved crafting a YouTube channel dedicated to daily "best-of" compilations of top Twitch clips, enhanced with fancy overlays to enrich user experience. Utilizing Python for channel management, tasks encompassed data scrapping, resource acquisition, and content selection & creation.
 
 

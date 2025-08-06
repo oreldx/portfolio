@@ -1,10 +1,10 @@
 import { locales } from "./i18n";
 
-export const getIcon = (url) => {
+export const getButtonDataFromURL = (url) => {
     if (url.includes("github")) {
-        return "mdi:github";
+        return { icon: "mdi:github", text: "GitHub" };
     }
-    return "mdi:link";
+    return { icon: "mdi:link", text: null };
 };
 
 export const getSkillColor = (type) => {

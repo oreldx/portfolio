@@ -1,6 +1,4 @@
 
-# Autonomous Social Network Accounts
-
 This project entailed developing a Python-based Social Networks automation solution. Key features include data extraction, AI-powered content generation, automated post uploads, and community engagement. A whole architecture was designed to manage multiple accounts and tasks.
 
 

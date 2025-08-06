@@ -1,6 +1,4 @@
 
-# Chaîne YouTube Autonome
-
 Ce projet consistait à créer une chaîne YouTube dédiée à des compilations quotidiennes des meilleurs clips Twitch, enrichies avec des habillages graphiques pour améliorer l’expérience utilisateur. En utilisant Python pour la gestion de la chaîne, les tâches comprenaient le scraping de données, l’acquisition de ressources, ainsi que la sélection et la création de contenu.
 
 ## Introduction
