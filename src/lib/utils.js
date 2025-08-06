@@ -10,13 +10,13 @@ export const getIcon = (url) => {
 export const getSkillColor = (type) => {
     switch (type) {
         case "hard":
-            return "text-amber-200 border-amber-200";
+            return "text-amber-200 border-amber-200 dark:bg-amber-200 dark:text-primary";
         case "soft":
-            return "text-pink-300 border-pink-300";
+            return "text-pink-300 border-pink-300 dark:bg-pink-300 dark:text-primary";
         case "bridge":
-            return "text-cyan-300 border-cyan-300";
+            return "text-cyan-300 border-cyan-300 dark:bg-cyan-300 dark:text-primary";
         default:
-            return "text-gray-500 border-gray-600";
+            return "text-gray-500 border-gray-600 dark:bg-gray-600 dark:text-primary";
     }
 };
 

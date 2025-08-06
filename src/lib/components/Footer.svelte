@@ -5,6 +5,7 @@
     import { fly } from "svelte/transition";
     import { quartOut } from "svelte/easing";
     import LanguageSelector from "./LanguageSelector.svelte";
+    import { toggleMode } from "mode-watcher";
 
     let mounted = $state(false);
     onMount(() => (mounted = true));
@@ -43,6 +44,9 @@
             easing: quartOut,
         }}
     >
+        <li>
+            <button onclick={toggleMode} class="w-32 h-12 bg-tertiary">Toggle Mode</button>
+        </li>
         <li>
             <LanguageSelector />
         </li>
