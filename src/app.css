@@ -2,10 +2,16 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --color-primary: #ffffff;
+  --color-primary: #000000; 
   --color-accent: #10a154;
   --color-accent-light: #4ade80;
   --color-accent-dark: #15803d;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+.dark {
+    --color-primary: #ffffff;
 }
 
 @utility strong-text {

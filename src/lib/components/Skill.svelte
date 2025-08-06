@@ -17,7 +17,7 @@
     }}
     onfocus={() => {}}
     onblur={() => {}}
-    class="w-28 h-28 rounded-xl bg-primary/20 hover:text-accent drop-shadow-md flex justify-center items-center flex-col"
+    class="w-28 h-28 rounded-xl bg-primary/20 dark:bg-primary/10 hover:text-accent drop-shadow-md flex justify-center items-center flex-col"
 >
     {#if hovered}
         <p class="text-center" transition:slide>

@@ -31,6 +31,7 @@
     },
     "type": "module",
     "dependencies": {
+        "mode-watcher": "^1.1.0",
         "showdown": "^2.1.0",
         "svelte-canvas": "^0.9.3"
     }
