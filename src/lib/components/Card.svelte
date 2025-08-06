@@ -8,7 +8,7 @@
 
 {#if data}
     <div
-        class="card flex flex-col gap-2 bg-linear-to-tr from-zinc-950 to-zinc-900 dark:from-stone-50 dark:to-stone-200 rounded-xl p-5 shadow-md border border-zinc-700 hover:border-accent-light hover:shadow-[0px_0px_5px_5px] hover:shadow-accent/30 transition-colors duration-300"
+        class="card flex flex-col gap-2 bg-linear-to-tr from-zinc-950 to-zinc-900 dark:from-stone-50 dark:to-stone-100 rounded-xl p-5 shadow-md border border-zinc-700 hover:border-accent-light hover:shadow-[0px_0px_5px_5px] hover:shadow-accent/30 transition-colors duration-300"
     >
         <h2 class="font-semibold">{$t(`${type}.${data.key}.title`)}</h2>
 

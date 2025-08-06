@@ -1,5 +1,5 @@
 <script>
-    import { locale } from "$lib/i18n.js";
+    import { locale, t } from "$lib/i18n.js";
     import Icon from "@iconify/svelte";
     import showdown from "showdown";
     import { expoOut } from "svelte/easing";
@@ -27,7 +27,7 @@
         aria-label="Back to Projects"
     >
         <Icon icon="bxs:left-arrow" class=" text-l" />
-        <p>Back</p>
+        <p>{$t("button.back")}</p>
     </a>
     <div class="prose-wrapper">
         {@html converter.makeHtml(currentContent)}
