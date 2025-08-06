@@ -8,6 +8,12 @@
   --color-accent-dark: #15803d;
 }
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+.dark {
+    --color-primary: #000000; 
+}
+
 @utility strong-text {
   @apply text-accent font-semibold;
 }
