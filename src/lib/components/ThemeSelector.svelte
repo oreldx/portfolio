@@ -20,9 +20,9 @@
         aria-label="Switch Theme"
     >
         <span
-            class={`dark:translate-x-1 translate-x-5 ${hovered ? "bg-primary" : "bg-primary/70"} inline-block w-4 h-4 transform rounded-full transition-transform duration-200 ease-in-out`}
+            class={`translate-x-1 dark:translate-x-5 ${hovered ? "bg-primary" : "bg-primary/70"} inline-block w-4 h-4 transform rounded-full transition-transform duration-200 ease-in-out`}
         ></span>
     </button>
-    <Icon icon="si:moon-fill" class="w-4 h-4 dark:hidden" />
-    <Icon icon="ri:sun-fill" class="w-4 h-4 hidden dark:block " />
+    <Icon icon="si:moon-fill" class="w-4 h-4 hidden dark:block" />
+    <Icon icon="ri:sun-fill" class="w-4 h-4 dark:hidden" />
 </div>

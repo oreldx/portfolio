@@ -8,7 +8,7 @@
 
 {#if data}
     <div
-        class="card flex flex-col gap-2 bg-linear-to-tr from-zinc-950 to-zinc-900 dark:from-stone-50 dark:to-stone-100 rounded-xl p-5 shadow-md border border-zinc-700 hover:border-accent-light hover:shadow-[0px_0px_5px_5px] hover:shadow-accent/30 transition-colors duration-300"
+        class="card flex flex-col gap-2 bg-linear-to-tr from-stone-50 dark:from-zinc-950 to-stone-100 dark:to-zinc-900 rounded-xl p-5 shadow-md border border-zinc-700 hover:border-accent-light hover:shadow-[0px_0px_5px_5px] hover:shadow-accent/30 transition-colors duration-300"
     >
         <h2 class="font-semibold">{$t(`${type}.${data.key}.title`)}</h2>
 
@@ -39,7 +39,7 @@
         <div class="flex justify-end gap-2">
             {#if data.externalLink}
                 <a
-                    class="bg-zinc-800 dark:bg-stone-100 text-accent border border-accent px-4 py-2 text-sm rounded-sm hover:bg-accent hover:text-primary transition-colors"
+                    class="bg-stone-100 dark:bg-zinc-800 text-accent border border-accent px-4 py-2 text-sm rounded-sm hover:bg-accent hover:text-primary transition-colors"
                     href={data.externalLink}
                     target="_blank"
                     aria-label="External Link"
@@ -50,7 +50,7 @@
             {#if data.readMore}
                 <a
                     href={`/${type}/${data.key}`}
-                    class="bg-accent-dark px-4 py-2 text-sm rounded-sm hover:bg-accent transition-colors dark:bg-accent-light dark:hover:bg-accent"
+                    class="px-4 py-2 text-sm rounded-sm transition-colors bg-accent-light dark:bg-accent-dark hover:bg-accent dark:hover:bg-accent"
                     aria-label="Read More"
                 >
                     {$t("button.readMore")}
