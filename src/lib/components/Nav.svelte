@@ -22,7 +22,7 @@
 </script>
 
 <nav>
-    <ul class="flex flex-col gap-6 my-12">
+    <ul class="flex flex-col gap-6">
         {#each navOptions as option, i}
             {#if mounted}
                 <li
