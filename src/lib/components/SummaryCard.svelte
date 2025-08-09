@@ -9,7 +9,7 @@
     } = $props();
 </script>
 
-<div class="card flex flex-col gap-4 justify-between">
+<div class="card flex flex-col gap-4 justify-between h-full">
     <div class="flex flex-col gap-2">
         <h1 class="text-2xl font-bold">{$t(`summary.${sectionKey}.title`)}</h1>
         {#if htmlContent}
