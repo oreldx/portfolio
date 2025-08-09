@@ -7,6 +7,12 @@
     import { t } from "../lib/i18n";
     import SummaryCard from "$lib/components/SummaryCard.svelte";
     import Tag from "$lib/components/Tag.svelte";
+    import { quartIn } from "svelte/easing";
+    import { fly } from "svelte/transition";
+    import { onMount } from "svelte";
+
+    let mounted = $state(false);
+    onMount(() => (mounted = true));
 
     const converter = new showdown.Converter();
 
@@ -15,44 +21,83 @@
     const featuredSkills = $derived(Object.values(skills).filter((skill) => skill.featured));
 </script>
 
-<div class="w-full grid grid-cols-2 grid-rows-[auto_auto_auto] gap-4">
-    <SummaryCard sectionKey="about" htmlContent={converter.makeHtml($t("summary.about.desc"))} />
-
-    <SummaryCard sectionKey="skills">
-        <ul class="flex flex-col gap-2 mt-2">
-            {#each featuredSkills as skill}
-                <Tag icon={skill.icon} type={skill.type} name={skill.name} />
-            {/each}
-        </ul>
-    </SummaryCard>
-
-    {#if featuredProject}
-        <div class="col-span-2">
+{#if mounted}
+    <div class="w-full grid grid-cols-2 grid-rows-[auto_auto_auto] gap-4">
+        <div
+            in:fly={{
+                duration: 300,
+                y: -100,
+                delay: 100,
+                easing: quartIn,
+            }}
+        >
             <SummaryCard
-                sectionKey="project"
-                secondaryLink={featuredProject.readMore
-                    ? `/project/${featuredProject.key}`
-                    : undefined}
-            >
-                <p class="mt-2">{$t(`project.${featuredProject.key}.title`)}</p>
-                <p class="text-sm text-gray-500">{$t(`project.${featuredProject.key}.desc`)}</p>
+                sectionKey="about"
+                htmlContent={converter.makeHtml($t("summary.about.desc"))}
+            />
+        </div>
+
+        <div
+            in:fly={{
+                duration: 300,
+                x: 100,
+                delay: 150,
+                easing: quartIn,
+            }}
+        >
+            <SummaryCard sectionKey="skills">
+                <ul class="flex flex-col gap-2 mt-2">
+                    {#each featuredSkills as skill}
+                        <Tag icon={skill.icon} type={skill.type} name={skill.name} />
+                    {/each}
+                </ul>
             </SummaryCard>
         </div>
-    {/if}
 
-    {#if featuredExperience}
-        <div class="col-span-2">
-            <SummaryCard
-                sectionKey="experience"
-                secondaryLink={featuredExperience.readMore
-                    ? `/experience/${featuredExperience.key}`
-                    : undefined}
-            >
-                <p class="mt-2">{$t(`experience.${featuredExperience.key}.title`)}</p>
-                <p class="text-sm text-gray-500">
-                    {$t(`experience.${featuredExperience.key}.desc`)}
-                </p>
-            </SummaryCard>
+        <div
+            in:fly={{
+                duration: 300,
+                y: 100,
+                delay: 250,
+                easing: quartIn,
+            }}
+            class="col-span-2"
+        >
+            {#if featuredProject}
+                <SummaryCard
+                    sectionKey="project"
+                    secondaryLink={featuredProject.readMore
+                        ? `/project/${featuredProject.key}`
+                        : undefined}
+                >
+                    <p class="mt-2">{$t(`project.${featuredProject.key}.title`)}</p>
+                    <p class="text-sm text-gray-500">{$t(`project.${featuredProject.key}.desc`)}</p>
+                </SummaryCard>
+            {/if}
         </div>
-    {/if}
-</div>
+
+        <div
+            class="col-span-2"
+            in:fly={{
+                duration: 300,
+                y: 100,
+                delay: 350,
+                easing: quartIn,
+            }}
+        >
+            {#if featuredExperience}
+                <SummaryCard
+                    sectionKey="experience"
+                    secondaryLink={featuredExperience.readMore
+                        ? `/experience/${featuredExperience.key}`
+                        : undefined}
+                >
+                    <p class="mt-2">{$t(`experience.${featuredExperience.key}.title`)}</p>
+                    <p class="text-sm text-gray-500">
+                        {$t(`experience.${featuredExperience.key}.desc`)}
+                    </p>
+                </SummaryCard>
+            {/if}
+        </div>
+    </div>
+{/if}

@@ -79,7 +79,7 @@
 {#if mounted}
     <div
         class="flex flex-col gap-6 w-full lg:w-fit"
-        transition:fly={{
+        in:fly={{
             duration: 1000,
             y: -20,
             delay: 100,
@@ -95,7 +95,7 @@
         </a>
         <ul
             class="flex justify-evenly lg:justify-start items-center lg:gap-6"
-            transition:blur={{
+            in:blur={{
                 delay: 100,
                 duration: 300,
                 amount: 6,

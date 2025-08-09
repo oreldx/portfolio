@@ -6,22 +6,20 @@
     import { blur } from "svelte/transition";
 </script>
 
-<div class="flex flex-col gap-4 w-full">
+<div
+    class="flex flex-col gap-4 w-full"
+    in:blur={{
+        amount: 5,
+        duration: 800,
+        easing: expoOut,
+    }}
+>
     {#each skillSections as section}
-        <div
-            class="flex flex-col gap-2 bg-linear-to-tr from-stone-50 dark:from-zinc-950 to-stone-100 dark:to-zinc-900 rounded-xl p-5 shadow-md border border-zinc-700 hover:border-accent hover:shadow-[0px_0px_10px_5px_rgba(0,255,83,0.1)] transition-colors duration-300"
-        >
+        <div class="flex flex-col gap-2 card">
             <h2 class="font-semibold">
                 {$t(`skills.${section.type}.title`)}
             </h2>
-            <div
-                class="flex flex-wrap gap-6 justify-center md:max-w-md lg:max-w-fit mx-auto"
-                in:blur={{
-                    amount: 5,
-                    duration: 800,
-                    easing: expoOut,
-                }}
-            >
+            <div class="flex flex-wrap gap-6 justify-center md:max-w-md lg:max-w-fit mx-auto">
                 {#each section.skills as item}
                     <Skill icon={item.icon} name={item.name} />
                 {/each}
