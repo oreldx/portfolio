@@ -1,15 +1,14 @@
 <script>
-    import { getButtonDataFromURL, getSkillColor } from "$lib/utils";
+    import { getButtonDataFromURL } from "$lib/utils";
     import Icon from "@iconify/svelte";
     import { t } from "../i18n";
+    import Tag from "./Tag.svelte";
 
     let { data, type } = $props();
 </script>
 
 {#if data}
-    <div
-        class="card flex flex-col gap-2 bg-linear-to-tr from-stone-50 dark:from-zinc-950 to-stone-100 dark:to-zinc-900 rounded-xl p-5 shadow-md border border-zinc-700 hover:border-accent-light hover:shadow-[0px_0px_5px_5px] hover:shadow-accent/30 transition-colors duration-300"
-    >
+    <div class="flex flex-col gap-2 card">
         <h2 class="font-semibold">{$t(`${type}.${data.key}.title`)}</h2>
 
         <div class="flex justify-between">
@@ -24,12 +23,7 @@
         {#if data.tags && data.tags.length > 0}
             <div class="flex flex-wrap gap-2 mt-2">
                 {#each data.tags as tag}
-                    <span
-                        class={`flex items-center justify-center gap-2 px-3 py-1 rounded-full text-sm border ${getSkillColor(tag?.type)}`}
-                    >
-                        <Icon icon={tag?.icon ?? "pepicons-pop:circle"} />
-                        {tag?.name ?? tag}
-                    </span>
+                    <Tag icon={tag.icon} type={tag.type} name={tag.name} size={"sm"} />
                 {/each}
             </div>
         {/if}

@@ -1,7 +1,7 @@
 <script>
     import { onMount } from "svelte";
-    import { quartIn } from "svelte/easing";
-    import { blur } from "svelte/transition";
+    import { quartIn, quartOut } from "svelte/easing";
+    import { blur, fly } from "svelte/transition";
     import LanguageSelector from "./LanguageSelector.svelte";
     import ThemeSelector from "./ThemeSelector.svelte";
 
@@ -11,11 +11,11 @@
 
 {#if mounted}
     <div
-        transition:blur={{
+        in:fly={{
+            duration: 800,
+            y: 20,
             delay: 100,
-            duration: 300,
-            amount: 6,
-            easing: quartIn,
+            easing: quartOut,
         }}
         class="flex items-center gap-4 justify-around lg:justify-start"
     >

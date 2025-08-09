@@ -18,6 +18,7 @@ export const experienceItems = [
         ],
         externalLink: "https://namkin.fr/",
         readMore: false,
+        featured: true,
     },
     {
         key: "selectra",
