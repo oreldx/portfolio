@@ -62,18 +62,18 @@ export default {
         },
         experience: {
             grytics: {
-                title: "Assistant Development Engineer",
-                desc: "At Grytics, I conducted functional testing and developed a machine learning/AI proof-of-concept (R&D) for improving their web application. Working independently under the lead developer, I honed my skills in maintainable code and efficient problem-solving, contributing to the application's robustness and showcasing potential future enhancements.",
+                title: "Assistant Development Engineer - Grytics",
+                desc: "I conducted functional testing and developed a machine learning/AI proof-of-concept (R&D) for improving their web application. Working independently under the lead developer, I honed my skills in maintainable code and efficient problem-solving, contributing to the application's robustness and showcasing potential future enhancements.",
                 date: "FEB 2023 - JUL 2023",
             },
             selectra: {
-                title: "Full-stack Web Engineer",
-                desc: "At Selectra, I integrated new features, refactored databases and services, and fixed issues using Vue.js and Laravel, enhancing both the stability and performance of the platforms. I advanced user experience and project efficiency through process optimization and API integration between projects. I worked in a resilient, rigorous and  various monolithic environments, aiming to deliver high-tier quality software and AI-driven applications, such as audio transcription.",
+                title: "Full-stack Web Engineer - Selectra",
+                desc: "I integrated new features, refactored databases and services, and fixed issues using Vue.js and Laravel, enhancing both the stability and performance of the platforms. I advanced user experience and project efficiency through process optimization and API integration between projects. I worked in a resilient, rigorous and  various monolithic environments, aiming to deliver high-tier quality software and AI-driven applications, such as audio transcription.",
                 date: "JUL 2023 - DEC 2023",
             },
             namkin: {
-                title: "Software Engineer",
-                desc: "At Namkin, I am part of an Agile team where I work autonomously to design solutions tailored to industrial clients' BtoB issues. My approach is based on close communication with clients to understand their specific needs and develop custom web applications, thus finding the best technical balance to effectively meet their expectations.",
+                title: "Software Engineer - Namkin",
+                desc: "I am part of an Agile team where I work autonomously to design solutions tailored to industrial clients' BtoB issues. My approach is based on close communication with clients to understand their specific needs and develop custom web applications, thus finding the best technical balance to effectively meet their expectations.",
                 date: "OCT 2024 - PRESENT",
             },
             type: { internship: "Intern", permanent: "Permanent" },
@@ -164,17 +164,17 @@ export default {
         },
         experience: {
             grytics: {
-                title: "Ingénieur Développeur Assistant",
-                desc: "Chez Grytics, j'ai effectué des tests fonctionnels et des preuves de concept en machine learning/IA pour améliorer leur application web. Travaillant de manière autonome sous la direction du lead développeur, j'ai affiné mes compétences dans le code maintenable et la résolution de problèmes efficace, contribuant à la robustesse de l'application et mettant en avant les améliorations futures possibles.",
+                title: "Ingénieur Développeur Assistant - Grytics",
+                desc: "J'ai effectué des tests fonctionnels et des preuves de concept en machine learning/IA pour améliorer leur application web. Travaillant de manière autonome sous la direction du lead développeur, j'ai affiné mes compétences dans le code maintenable et la résolution de problèmes efficace, contribuant à la robustesse de l'application et mettant en avant les améliorations futures possibles.",
                 date: "FÉV 2023 - JUIL 2023",
             },
             selectra: {
-                title: "Ingénieur Web Full-stack",
-                desc: "Chez Selectra, j'ai intégré de nouvelles fonctionnalités, refactorisé des bases de données et des services, et résolu des problèmes en utilisant Vue.js et Laravel, améliorant ainsi la stabilité et la performance des plateformes. J'ai amélioré l'expérience utilisateur et l'efficacité du projet grâce à l'optimisation des processus et à l'intégration d'APIs entre les projets. J'ai travaillé dans un environnement monolithique résilient et rigoureux, visant à fournir des logiciels de haute qualité et des applications poussées utilisant l'IA, comme la transcription audio.",
+                title: "Ingénieur Web Full-stack - Selectra",
+                desc: "J'ai intégré de nouvelles fonctionnalités, refactorisé des bases de données et des services, et résolu des problèmes en utilisant Vue.js et Laravel, améliorant ainsi la stabilité et la performance des plateformes. J'ai amélioré l'expérience utilisateur et l'efficacité du projet grâce à l'optimisation des processus et à l'intégration d'APIs entre les projets. J'ai travaillé dans un environnement monolithique résilient et rigoureux, visant à fournir des logiciels de haute qualité et des applications poussées utilisant l'IA, comme la transcription audio.",
                 date: "JUIL 2023 - DÉC 2023",
             },
             namkin: {
-                title: "Ingénieur Logiciel",
+                title: "Ingénieur Logiciel - Namkin",
                 desc: "Chez Namkin, je fais partie d'une équipe Agile où je travaille en autonomie pour concevoir des solutions adaptées aux problématiques BtoB de clients industriels. Mon approche repose sur une communication étroite avec les clients afin de comprendre leurs besoins spécifiques et de développer des applications web sur mesure, trouvant ainsi le meilleur équilibre technique pour répondre efficacement à leurs attentes.",
                 date: "OCT 2024 - PRÉSENT",
             },
