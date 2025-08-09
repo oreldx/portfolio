@@ -1,5 +1,24 @@
 export default {
     en: {
+        summary: {
+            about: {
+                title: "Welcome to My Portfolio",
+                desc: "**Mid-level** (>2 years) software engineer, specializing in **Web development**.",
+                readMore: "Read full About",
+            },
+            project: {
+                title: "Featured Project",
+                readMore: "View all Projects",
+            },
+            experience: {
+                title: "Featured Experience",
+                readMore: "View all Experiences",
+            },
+            skills: {
+                title: "Specilized Skills",
+                readMore: "View all Skills",
+            },
+        },
         hero: { quote: "I dev stuff on the Web for the World", title: "Software Engineer" },
         footer: {
             github: { text: "", label: "GitHub link" },
@@ -18,7 +37,7 @@ export default {
             social_network_account: {
                 date: "2024",
                 title: "Autonomous Social Network Accounts",
-                desc: "This project entailed developing a Python-based Social Networks automation solution. Key features include data extraction, AI-powered content generation, automated post uploads, and community engagement. A whole architecture was designed to manage multiple accounts and tasks.",
+                desc: "Python-based Multiple Social Network Accounts automation solution, AI-powered content generation, automated post uploads",
             },
             portfolio: {
                 date: "2023",
@@ -75,6 +94,25 @@ export default {
         },
     },
     fr: {
+        summary: {
+            about: {
+                title: "Bienvenue sur mon Portfolio",
+                desc: "Ingénieur logiciel de **niveau intermédiaire** (>2 ans), spécialisé dans le **développement Web**.",
+                readMore: "Lire la suite",
+            },
+            project: {
+                title: "Projet du moment",
+                readMore: "Voir tous les projets",
+            },
+            experience: {
+                title: "Expérience majeure",
+                readMore: "Voir toutes les expériences",
+            },
+            skills: {
+                title: "Compétences spécialisées",
+                readMore: "Voir toutes les compétences",
+            },
+        },
         hero: {
             quote: "Je développe des choses sur le Web pour ce petit Monde",
             title: "Software Engineer",

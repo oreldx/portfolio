@@ -16,6 +16,7 @@ export const projectsItems = [
             skills.docker,
         ],
         readMore: true,
+        featured: true,
     },
     {
         key: "portfolio",
