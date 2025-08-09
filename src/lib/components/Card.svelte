@@ -1,7 +1,8 @@
 <script>
-    import { getButtonDataFromURL, getSkillColor } from "$lib/utils";
+    import { getButtonDataFromURL } from "$lib/utils";
     import Icon from "@iconify/svelte";
     import { t } from "../i18n";
+    import Tag from "./Tag.svelte";
 
     let { data, type } = $props();
 </script>
@@ -22,12 +23,7 @@
         {#if data.tags && data.tags.length > 0}
             <div class="flex flex-wrap gap-2 mt-2">
                 {#each data.tags as tag}
-                    <span
-                        class={`flex items-center justify-center gap-2 px-3 py-1 rounded-full text-sm border ${getSkillColor(tag?.type)}`}
-                    >
-                        <Icon icon={tag?.icon ?? "pepicons-pop:circle"} />
-                        {tag?.name ?? tag}
-                    </span>
+                    <Tag icon={tag.icon} type={tag.type} name={tag.name} size={"sm"} />
                 {/each}
             </div>
         {/if}

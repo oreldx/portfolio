@@ -6,6 +6,7 @@
     import showdown from "showdown";
     import { t } from "../lib/i18n";
     import SummaryCard from "$lib/components/SummaryCard.svelte";
+    import Tag from "$lib/components/Tag.svelte";
 
     const converter = new showdown.Converter();
 
@@ -20,10 +21,7 @@
     <SummaryCard sectionKey="skills">
         <ul class="flex flex-col gap-2 mt-2">
             {#each featuredSkills as skill}
-                <li class="flex items-center gap-2">
-                    <Icon icon={skill.icon} class="w-6 h-6" />
-                    <span>{skill.name}</span>
-                </li>
+                <Tag icon={skill.icon} type={skill.type} name={skill.name} />
             {/each}
         </ul>
     </SummaryCard>
