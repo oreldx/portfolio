@@ -86,13 +86,13 @@
             easing: quartOut,
         }}
     >
-        <a href="/" aria-label="Home Link">
+        <a href="/" aria-label="Home Link" class="flex flex-col gap-6">
             <h1>
                 {displayText}
             </h1>
+            <h2>{$t("hero.title")}</h2>
+            <p class="italic">{$t("hero.quote")}</p>
         </a>
-        <h2>{$t("hero.title")}</h2>
-        <p class="italic">{$t("hero.quote")}</p>
         <ul
             class="flex justify-evenly lg:justify-start items-center lg:gap-6"
             transition:blur={{

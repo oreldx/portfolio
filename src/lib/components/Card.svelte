@@ -7,9 +7,7 @@
 </script>
 
 {#if data}
-    <div
-        class="card flex flex-col gap-2 bg-linear-to-tr from-stone-50 dark:from-zinc-950 to-stone-100 dark:to-zinc-900 rounded-xl p-5 shadow-md border border-zinc-700 hover:border-accent-light hover:shadow-[0px_0px_5px_5px] hover:shadow-accent/30 transition-colors duration-300"
-    >
+    <div class="flex flex-col gap-2 card">
         <h2 class="font-semibold">{$t(`${type}.${data.key}.title`)}</h2>
 
         <div class="flex justify-between">
