@@ -39,7 +39,7 @@ This allowed me to create dynamic subtitle animations.
 > One limitation of this approach was the difficulty of directly manipulating text.  
 > To work around this, I used the **Pillow** library to generate images for each state of the text, which I then integrated into the video using FFmpeg.
 
-<div align="center"> <video src="/assets/social_network_account/video.mp4" muted autoplay loop controls style="max-height: 50vh; padding: 0 2rem;"></video> </div> **Example Video**
+<div align="center"> <video src="/assets/social_network_account/video.mp4" loop controls style="max-height: 50vh; padding: 0 2rem;"></video> </div> **Example Video**
 
 ## Publishing
 

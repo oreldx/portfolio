@@ -40,7 +40,7 @@ Cela m'a permis de créer les animations dynamiques des sous-titres.
 > J'ai donc utilisé la librairie **Pillow** pour générer les images correspondant à chaque état du texte, qui étaient ensuite intégrées dans la vidéo via FFmpeg.
 
 <div align="center">
-    <video src="/assets/social_network_account/video.mp4" muted autoplay loop controls style="max-height: 50vh; padding: 0 2rem;"></video>
+    <video src="/assets/social_network_account/video.mp4" loop controls style="max-height: 50vh; padding: 0 2rem;"></video>
 </div>
 **Exemple de vidéo**
 

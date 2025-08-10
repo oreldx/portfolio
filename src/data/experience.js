@@ -48,7 +48,8 @@ export const experienceItems = [
             skills.cypress,
             skills.react,
         ],
-        externalLink: "https://grytics.com/",
+        externalLink:
+            "https://appsource.microsoft.com/fr-fr/product/saas/1339sas1609951272498.grytics?tab=overview",
         readMore: false,
     },
 ];
