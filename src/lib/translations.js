@@ -37,44 +37,44 @@ export default {
             social_network_account: {
                 date: "2024",
                 title: "Autonomous Social Network Accounts",
-                desc: "Python-based Multiple Social Network Accounts automation solution, AI-powered content generation, automated post uploads",
+                desc: "Autonomous content production for multiple Instagram accounts",
             },
             portfolio: {
                 date: "2023",
                 title: "Personal Portfolio",
                 desc: "Creation of a personal portfolio to showcase my projects and skills.",
             },
-            ml: {
+            machine_learning_model: {
                 date: "2022",
                 title: "Machine Learning Model",
-                desc: "Creation of a machine learning model in Python to predict revenue of all types of retail stores in Norway",
+                desc: "A machine learning model in Python to predict revenue of all types of retail stores in Norway",
             },
             auto_youtube_channel: {
                 date: "2022",
                 title: "Autonomous Youtube Channel",
-                desc: 'This project involved crafting a YouTube channel dedicated to daily "best-of" compilations of top Twitch clips, enhanced with fancy overlays to enrich user experience. Utilizing Python for channel management, tasks encompassed data scrapping, resource acquisition, and content selection & creation.',
+                desc: "Daily video production of the best Twitch clips to create a self-sustaining YouTube channel",
             },
-            dw: {
+            dynamic_website: {
                 date: "2021",
                 title: "Dynamic Website",
-                desc: "Vaccination site in HTML, CSS, PHP, SQL with management of the various functionalities from a provider point of view",
+                desc: "Vaccination site in HTML, CSS, PHP, SQL in MVC architecture",
             },
         },
         experience: {
-            grytics: {
-                title: "Assistant Development Engineer - Grytics",
-                desc: "I conducted functional testing and developed a machine learning/AI proof-of-concept (R&D) for improving their web application. Working independently under the lead developer, I honed my skills in maintainable code and efficient problem-solving, contributing to the application's robustness and showcasing potential future enhancements.",
-                date: "FEB 2023 - JUL 2023",
+            namkin: {
+                title: "Software Engineer - Namkin",
+                desc: "Working on several B2B projects in the industry, I designed and integrated web solutions focused on e-commerce and real-time data monitoring",
+                date: "OCT 2024 - PRESENT",
             },
             selectra: {
                 title: "Full-stack Web Engineer - Selectra",
-                desc: "I integrated new features, refactored databases and services, and fixed issues using Vue.js and Laravel, enhancing both the stability and performance of the platforms. I advanced user experience and project efficiency through process optimization and API integration between projects. I worked in a resilient, rigorous and  various monolithic environments, aiming to deliver high-tier quality software and AI-driven applications, such as audio transcription.",
+                desc: "I worked on the company's back-office applications to add new features, refactor code/databases, and fix bugs to improve team productivity",
                 date: "JUL 2023 - DEC 2023",
             },
-            namkin: {
-                title: "Software Engineer - Namkin",
-                desc: "I am part of an Agile team where I work autonomously to design solutions tailored to industrial clients' BtoB issues. My approach is based on close communication with clients to understand their specific needs and develop custom web applications, thus finding the best technical balance to effectively meet their expectations.",
-                date: "OCT 2024 - PRESENT",
+            grytics: {
+                title: "Assistant Development Engineer - Grytics",
+                desc: "I implemented functional tests across the entire application scope and developed machine learning/AI POCs to improve their web application",
+                date: "FEB 2023 - JUL 2023",
             },
             type: { internship: "Intern", permanent: "Permanent" },
         },
@@ -97,11 +97,11 @@ export default {
         summary: {
             about: {
                 title: "Bienvenue sur mon Portfolio",
-                desc: "Ingénieur logiciel de **niveau intermédiaire** (>2 ans), spécialisé dans le **développement Web**.",
+                desc: "Ingénieur logiciel de **niveau intermédiaire** (+2 ans), spécialisé dans le **développement Web**.",
                 readMore: "Lire la suite",
             },
             project: {
-                title: "Projet du moment",
+                title: "Projet à la une",
                 readMore: "Voir tous les projets",
             },
             experience: {
@@ -139,14 +139,14 @@ export default {
             social_network_account: {
                 date: "2024",
                 title: "Comptes de Réseaux Sociaux Autonomes",
-                desc: "Ce projet consistait à développer une solution d'automatisation des réseaux sociaux basée sur Python. Les principales fonctionnalités comprennent l'extraction de données, la génération de contenu assistée par IA, la publication automatique et l'engagement communautaire. Une architecture complète a été conçue pour gérer plusieurs comptes et tâches.",
+                desc: "Production autonome de contenu pour multiples comptes Instagram",
             },
             portfolio: {
                 date: "2023",
                 title: "Portfolio Personnel",
                 desc: "Création d'un portfolio personnel pour présenter mes projets et compétences.",
             },
-            ml: {
+            machine_learning_model: {
                 date: "2022",
                 title: "Modèle de Machine Learning",
                 desc: "Création d'un modèle d'apprentissage machine en Python pour prédire les revenus de tous types de magasins de détail en Norvège",
@@ -156,27 +156,27 @@ export default {
                 title: "Chaîne Youtube Autonome",
                 desc: "Production de vidéos journalières des meilleurs clips de Twitch permettant d'obtenir une chaîne YouTube autonome",
             },
-            dw: {
+            dynamic_website: {
                 date: "2021",
                 title: "Site Web Dynamique",
-                desc: "Site de vaccination en HTML, CSS, PHP, SQL avec gestion des différentes fonctionnalités du point de vue du fournisseur",
+                desc: "Site de vaccination en HTML, CSS, PHP, SQL en architecture MVC",
             },
         },
         experience: {
-            grytics: {
-                title: "Ingénieur Développeur Assistant - Grytics",
-                desc: "J'ai effectué des tests fonctionnels et des preuves de concept en machine learning/IA pour améliorer leur application web. Travaillant de manière autonome sous la direction du lead développeur, j'ai affiné mes compétences dans le code maintenable et la résolution de problèmes efficace, contribuant à la robustesse de l'application et mettant en avant les améliorations futures possibles.",
-                date: "FÉV 2023 - JUIL 2023",
+            namkin: {
+                title: "Ingénieur Logiciel - Namkin",
+                desc: "Travaillant sur plusieurs projets B2B dans l'industrie, j'ai conçu et intégrer des solutions Web autour de l'e-commerce et la supervision de données en temps réel",
+                date: "OCT 2024 - PRÉSENT",
             },
             selectra: {
                 title: "Ingénieur Web Full-stack - Selectra",
-                desc: "J'ai intégré de nouvelles fonctionnalités, refactorisé des bases de données et des services, et résolu des problèmes en utilisant Vue.js et Laravel, améliorant ainsi la stabilité et la performance des plateformes. J'ai amélioré l'expérience utilisateur et l'efficacité du projet grâce à l'optimisation des processus et à l'intégration d'APIs entre les projets. J'ai travaillé dans un environnement monolithique résilient et rigoureux, visant à fournir des logiciels de haute qualité et des applications poussées utilisant l'IA, comme la transcription audio.",
+                desc: "J'ai travaillé sur les applications de back-office de l'entreprise afin d'ajouter de nouvelles fonctionnalités, refactoriser codes/bases de données, résoudre les bugs pour améliorer la productivité des équipes",
                 date: "JUIL 2023 - DÉC 2023",
             },
-            namkin: {
-                title: "Ingénieur Logiciel - Namkin",
-                desc: "Chez Namkin, je fais partie d'une équipe Agile où je travaille en autonomie pour concevoir des solutions adaptées aux problématiques BtoB de clients industriels. Mon approche repose sur une communication étroite avec les clients afin de comprendre leurs besoins spécifiques et de développer des applications web sur mesure, trouvant ainsi le meilleur équilibre technique pour répondre efficacement à leurs attentes.",
-                date: "OCT 2024 - PRÉSENT",
+            grytics: {
+                title: "Ingénieur Développeur Assistant - Grytics",
+                desc: "J'ai intégré des tests fonctionnels sur tout le périmètre de l'application et j'ai réalisé des POCs en machine learning/IA pour améliorer leur application web",
+                date: "FÉV 2023 - JUIL 2023",
             },
             type: { internship: "Stage", permanent: "CDI" },
         },
@@ -194,53 +194,5 @@ export default {
                 title: "Outils",
             },
         },
-        about: `
-            <p>
-            En 2016, pendant mes années de collège, j'ai commencé un <span class="strong-text"
-                >voyage de curiosité et de découverte</span
-            >, en bidouillant avec des drones FPV, des imprimantes 3D, Arduino et Raspberry Pi. Ce début a servi de porte d'entrée, me plongeant profondément dans les royaumes de la programmation et du développement web. En passant du hardware pure au domaine numérique, j'ai développé une affinité pour le développement <span class="strong-text">front-end et back-end</span>.
-            </p>
-
-            <p>
-                Ayant récemment <span class="strong-text"
-                    >obtenu un Diplôme d'ingénieur en Informatique et Systèmes d'Information de l'UTT</span
-                >, je n'apporte pas seulement des compétences académiques mais aussi une expérience professionnelle grâce à mon parcours. Mon premier pas dans le monde informatique professionnel a commencé avec un stage de six mois chez
-                <a
-                    class="hover:text-secondary font-semibold"
-                    target="_blank"
-                    aria-label="Grytics"
-                    href="https://grytics.com">Grytics</a
-                >, où j'ai affiné mes compétences en programmation. Cela a été suivi par un deuxième stage chez
-                <a
-                    class="hover:text-secondary font-semibold"
-                    target="_blank"
-                    aria-label="Selectra"
-                    href="https://careers.selectra.com/">Selectra</a
-                >, travaillant en tant qu'Ingénieur Web Full-stack. Ces expériences m'ont doté d'une solide
-                base dans les aspects théoriques et pratiques de la technologie. Il est maintenant temps pour moi
-                de <span class="strong-text">chercher les meilleures opportunités pour démarrer ma carrière</span> et faire un
-                impact significatif dans l'industrie technologique.
-            </p>
-
-            <p>
-                Malgré mon emploi du temps chargé, je m'assure de nourrir <span class="strong-text"
-                    >mon amour pour les side-projects</span
-                >. Mes projets englobent de l'impression 3D, des drones FPV, divers thématiques du Web comme Twitch et les réseaux sociaux et l'Intelligence Artificielle - un témoignage de mon affection persistante pour le mélange de créativité et de technologie.
-            </p>
-
-            <p>
-                Loin des écrans et des circuits, je suis une personne active avec un vif intérêt pour
-                l'escalade, la calisthénie et la randonnée. L'excitation d'un nouveau sentier ou la satisfaction d'un
-                entraînement bien exécuté <span class="strong-text">me garde ancré et revigoré</span>.
-                Simultanément, je continue d'élargir mes horizons en explorant le monde du design graphique, un passe-temps qui
-                <span class="strong-text">ajoute une touche d'inspiration artistique à mon esprit orienté techniquement</span
-                >.
-            </p>
-
-            <p>
-                Quand je réfléchis à mon parcours jusqu'à présent, je réalise que c'est le mélange parfait de code, de créativité,
-                et d'aventures en plein air qui <span class="strong-text">me rend enthousiaste pour chaque jour à venir</span>.
-            </p>
-        `,
     },
 };
