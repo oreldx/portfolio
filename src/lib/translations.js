@@ -88,8 +88,14 @@ export default {
             devops: {
                 title: "DevOps",
             },
+            database: {
+                title: "Database",
+            },
             tools: {
                 title: "Tools",
+            },
+            soft: {
+                title: "Soft Skills",
             },
         },
     },
@@ -190,8 +196,14 @@ export default {
             devops: {
                 title: "DevOps",
             },
+            database: {
+                title: "Base de données",
+            },
             tools: {
                 title: "Outils",
+            },
+            soft: {
+                title: "Soft Skills",
             },
         },
     },

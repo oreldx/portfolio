@@ -17,6 +17,7 @@ export const experienceItems = [
             skills.system_design,
             skills.docker,
             skills.graphql,
+            skills.mongodb,
         ],
         externalLink: "https://namkin.fr/",
         readMore: false,
