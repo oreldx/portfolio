@@ -1,9 +1,24 @@
-En 2016, pendant mes années de collège, j'ai commencé un **voyage de curiosité et de découverte**, en bidouillant avec des drones FPV, des imprimantes 3D, Arduino et Raspberry Pi. Ce début a servi de porte d'entrée, me plongeant profondément dans les royaumes de la programmation et du développement web. En passant du hardware pur au domaine numérique, j'ai développé une affinité pour le développement **front-end et back-end**.
+## Qui suis-je ?
 
-Ayant récemment **obtenu un Diplôme d'ingénieur en Informatique et Systèmes d'Information de l'UTT**, je n'apporte pas seulement des compétences académiques mais aussi une expérience professionnelle grâce à mon parcours. Mon premier pas dans le monde informatique professionnel a commencé avec un stage de six mois chez [Grytics](https://grytics.com), où j'ai affiné mes compétences en programmation. Cela a été suivi par un deuxième stage chez [Selectra](https://careers.selectra.com/), travaillant en tant qu'Ingénieur Web Full-stack. Ces expériences m'ont doté d'une solide base dans les aspects théoriques et pratiques de la technologie. Il est maintenant temps pour moi de **chercher les meilleures opportunités pour démarrer ma carrière** et faire un impact significatif dans l'industrie technologique.
+- **Aurélien Dureux**
+- 24 ans
+- **Software Engineer**
+- **Diplômé** de l'Université de Technologie de Troyes
+- **+2 ans d'expérience professionnelle**
+- **+4 ans d'expérience personnelle** en side projects
+- Basé en **France**
+- Ouvert au télétravail
 
-Malgré mon emploi du temps chargé, je m'assure de nourrir **mon amour pour les side-projects**. Mes projets englobent de l'impression 3D, des drones FPV, divers thématiques du Web comme Twitch et les réseaux sociaux et l'Intelligence Artificielle - un témoignage de mon affection persistante pour le mélange de créativité et de technologie.
+## Mes compétences
+- Développeur **full-stack**, orienté **Web**
+- Expérience en **gestion de projets**
+- Connaissances en **DevOps**
+- Compréhension des **besoins client & utilisateurs**
+- Notions en **UX/UI**
+- Travail en **équipe agile**
+- **Français** (natif) et **Anglais** (courant)
 
-Loin des écrans et des circuits, je suis une personne active avec un vif intérêt pour l'escalade, la calisthénie et la randonnée. L'excitation d'un nouveau sentier ou la satisfaction d'un entraînement bien exécuté **me garde ancré et revigoré**. Simultanément, je continue d'élargir mes horizons en explorant le monde du design graphique, un passe-temps qui **ajoute une touche d'inspiration artistique à mon esprit orienté techniquement**.
-
-Quand je réfléchis à mon parcours jusqu'à présent, je réalise que c'est le mélange parfait de code, de créativité, et d'aventures en plein air qui **me rend enthousiaste pour chaque jour à venir**.
+## Passions
+- **Conception**: _Drone FPV, Impression 3D, Electronique_
+- **Sports**: _Triathlon, Escalade, Callisthénie, Randonnée_
+- **Audiovisuel**: _Graphisme, Montage vidéo_
