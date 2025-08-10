@@ -5,7 +5,7 @@ export const skills = {
     flask: { icon: "bxl:flask", name: "Flask", type: "hard" },
     laravel: { icon: "mdi:laravel", name: "Laravel", type: "hard" },
     react: { icon: "mdi:react", name: "React", type: "hard", featured: true },
-    vue: { icon: "mdi:vuejs", name: "Vue.js", type: "hard", featured: true },
+    vue: { icon: "mdi:vuejs", name: "Vue.js", type: "hard" },
     svelte: { icon: "simple-icons:svelte", name: "Svelte", type: "hard" },
     tailwind: { icon: "mdi:tailwind", name: "Tailwind", type: "hard" },
     html: { icon: "uiw:html5", name: "HTML", type: "hard" },
@@ -41,7 +41,7 @@ export const skills = {
         type: "bridge",
         featured: true,
     },
-    ui_ux: { icon: "mdi:design", name: "UI/UX", type: "bridge", featured: true },
+    ui_ux: { icon: "mdi:design", name: "UI/UX", type: "bridge" },
     agile: { icon: "iconoir:agile", name: "Agile", type: "bridge" },
     system_design: { icon: "carbon:network-2", name: "System Design", type: "bridge" },
 

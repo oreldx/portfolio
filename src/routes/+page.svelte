@@ -24,6 +24,7 @@
 {#if mounted}
     <div class="w-full grid grid-cols-2 grid-rows-[auto_auto_auto] gap-4">
         <div
+            class="col-span-2 md:col-span-1 lg:col-span-2 xl:col-span-1"
             in:fly={{
                 duration: 300,
                 y: -100,
@@ -38,6 +39,7 @@
         </div>
 
         <div
+            class="col-span-2 md:col-span-1 lg:col-span-2 xl:col-span-1"
             in:fly={{
                 duration: 300,
                 x: 100,

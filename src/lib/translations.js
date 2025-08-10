@@ -2,8 +2,8 @@ export default {
     en: {
         summary: {
             about: {
-                title: "Welcome to My Portfolio",
-                desc: "**Mid-level** (>2 years) software engineer, specializing in **Web development**.",
+                title: "Welcome",
+                desc: "**Mid-level** (+2 years) software engineer, specializing in **Web development**. Based in _France_ and enjoying **remote work**.",
                 readMore: "Read full About",
             },
             project: {
@@ -96,8 +96,8 @@ export default {
     fr: {
         summary: {
             about: {
-                title: "Bienvenue sur mon Portfolio",
-                desc: "Ingénieur logiciel de **niveau intermédiaire** (+2 ans), spécialisé dans le **développement Web**.",
+                title: "Bienvenue",
+                desc: "Ingénieur logiciel de **niveau intermédiaire** (+2 ans), spécialisé dans le **développement Web**. Basé en _France_ et appréciant le **travail à distance**.",
                 readMore: "Lire la suite",
             },
             project: {
