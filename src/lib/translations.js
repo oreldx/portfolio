@@ -154,7 +154,7 @@ export default {
             auto_youtube_channel: {
                 date: "2022",
                 title: "Chaîne Youtube Autonome",
-                desc: "Ce projet impliquait la création d'une chaîne YouTube dédiée aux compilations quotidiennes des meilleurs clips de Twitch, le tout amélioré par des superpositions graphiques pour enrichir l'expérience utilisateur. Utilisant Python pour la gestion de la chaîne, les tâches comprenaient le scrapping de données, l'acquisition de ressources, la sélection puis la création de contenu et sa mise en ligne.",
+                desc: "Production de vidéos journalières des meilleurs clips de Twitch permettant d'obtenir une chaîne YouTube autonome",
             },
             dw: {
                 date: "2021",

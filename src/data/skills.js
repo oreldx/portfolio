@@ -47,6 +47,16 @@ export const skills = {
     researchanddevelopment: { icon: "material-symbols:lab-research", name: "R&D", type: "soft" },
     autonomy: { icon: "mdi:cook", name: "Autonomy", type: "soft", featured: true },
     php: { icon: "devicon-plain:php", name: "PHP", type: "hard" },
+    data_manipulation: {
+        icon: "fluent:data-area-20-regular",
+        name: "Data Manipulation",
+        type: "soft",
+    },
+    graphql: { icon: "mdi:graphql", name: "GraphQL", type: "hard" },
+    scrapping: { icon: "hugeicons:mining-02", name: "Web Scraping", type: "hard" },
+    agile: { icon: "iconoir:agile", name: "Agile", type: "bridge" },
+    communication: { icon: "icon-park-solid:communication", name: "Communication", type: "soft" },
+    creativity: { icon: "mdi:lightbulb-on", name: "Creativity", type: "soft" },
 };
 
 export const skillSections = [
