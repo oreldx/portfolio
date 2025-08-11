@@ -44,7 +44,7 @@ The layout was organized into four key areas:
 - **Top right**: the Twitch clip itself, forming the main video content.
     
 
-<video class="px-8" muted autoplay loop> <source src="/assets/auto_youtube_channel/video.mp4" type="video/mp4"> </video>
+<video class="px-8" controls muted loop> <source src="/assets/auto_youtube_channel/video.mp4" type="video/mp4"> </video>
 **Video Excerpt**
 
 To achieve this kind of atomic composition, my first step was to standardize the format of the selected clips, since Twitch streams are replayed in various formats and codecs depending on the streamer. This was the purpose of the **Python library**, which handled a lot of preprocessing, making my workflow much simpler.
@@ -59,7 +59,7 @@ Once each edited clip segment was output in the same format, the final step was 
 
 Within the video, I also added **calls to action** for sharing and subscribing. These elements were created in Premiere Pro, allowing me to randomly overlay them on top of certain segments.
 
-<video class="px-8" muted autoplay loop> <source src="/assets/auto_youtube_channel/call_to_action.mp4" type="video/mp4"> </video>
+<video class="px-8" controls muted loop> <source src="/assets/auto_youtube_channel/call_to_action.mp4" type="video/mp4"> </video>
 
 **Example of a Call to Action**
 

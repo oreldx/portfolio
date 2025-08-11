@@ -41,7 +41,7 @@ On retrouve ainsi une disposition contenant quatre zones clés :
 - **En bas à droite** : le titre du clip, généralement rédigé par l’utilisateur auteur du clip.
 - **En haut à droite** : le clip Twitch en lui-même, qui constitue le contenu principal de la vidéo
 
-<video class="px-8" muted autoplay loop>
+<video class="px-8" controls muted loop>
     <source src="/assets/auto_youtube_channel/video.mp4" type="video/mp4">
 </video>
 
@@ -59,7 +59,7 @@ Après avoir reçu chaque segment de clip édité, au format identique, il ne re
 
 Au sein de la vidéo, j'ai également ajouté des **appels à l'action** pour le partage et l'abonnement (**Call to Action**). Ces éléments ont été faits sur Première Pro, me permettant ensuite d'insérer aléatoirement les vidéos en superposition à des segments.
 
-<video class="px-8" muted autoplay loop>
+<video class="px-8" muted controls loop>
 <source src="/assets/auto_youtube_channel/call_to_action.mp4" type="video/mp4">
 </video>
 
