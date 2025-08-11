@@ -103,7 +103,7 @@ export default {
         summary: {
             about: {
                 title: "Bienvenue",
-                desc: "Ingénieur logiciel de **niveau intermédiaire** (+2 ans), spécialisé dans le **développement Web**. Basé en _France_ et appréciant le **travail à distance**.",
+                desc: "Ingénieur logiciel de **niveau intermédiaire** (+2 ans), spécialisé dans le **développement Web**. Basé en _France_ & ouvert au **travail à distance**.",
                 readMore: "Lire la suite",
             },
             project: {
