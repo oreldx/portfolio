@@ -1,6 +1,30 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-primary: #000000; 
+  --color-accent: #10a154;
+  --color-accent-light: #4ade80;
+  --color-accent-dark: #15803d;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+.dark {
+    --color-primary: #ffffff;
+}
+
+@utility strong-text {
+  @apply text-accent font-semibold;
+}
+
+@utility prose-wrapper {
+  @apply prose !max-w-none prose-p:text-primary prose-strong:text-accent prose-a:text-accent prose-headings:text-primary prose-li:text-primary prose-pre:wrap-break-word prose-pre:whitespace-pre-wrap prose-pre:text-primary prose-pre:border prose-pre:border-primary prose-pre:bg-transparent
+}
+
+@utility card {
+    @apply bg-linear-to-tr from-stone-50 dark:from-zinc-950 to-stone-100 dark:to-zinc-900 rounded-xl p-5 shadow-md border border-zinc-700 hover:border-accent-light hover:shadow-[0px_0px_5px_5px] hover:shadow-accent/30 transition-colors duration-300
+}
 
 @layer base {
     h1 {
@@ -23,8 +47,6 @@
     body {
         min-height: 100vh;
         margin: 0;
-        background-color: rgb(11, 11, 14);
-        color: rgba(255, 255, 255, 0.75);
         font-family: Sen;
 
         overflow-y: scroll;
@@ -36,10 +58,4 @@
         width: 0px; 
     }
 
-}
-
-@layer components {
-    .strong-text {
-        @apply text-secondary font-semibold;
-    }
 }

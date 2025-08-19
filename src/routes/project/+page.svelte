@@ -3,7 +3,7 @@
     import { blur } from "svelte/transition";
     import { CardTypes } from "$lib/enums/CardType";
     import Card from "$lib/components/Card.svelte";
-    import { experienceItems } from "data/experience";
+    import { projectsItems } from "data/projects";
 </script>
 
 <div
@@ -14,7 +14,7 @@
         easing: expoOut,
     }}
 >
-    {#each experienceItems as item}
-        <Card type={CardTypes.EXPERIENCE} data={item} />
+    {#each projectsItems as item}
+        <Card type={CardTypes.PROJECT} data={item} />
     {/each}
 </div>
