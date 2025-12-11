@@ -40,3 +40,13 @@ export const fetchMarkdownFiles = async (eventFetch, type, key) => {
     }
     return markdown;
 };
+
+export const splitSkillsByType = (skills) => {
+    return skills.reduce((acc, skill) => {
+        if (!acc[skill.type]) {
+            acc[skill.type] = [];
+        }
+        acc[skill.type].push(skill);
+        return acc;
+    }, {});
+};

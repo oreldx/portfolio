@@ -1,10 +1,21 @@
 <script>
-    import { getButtonDataFromURL } from "$lib/utils";
+    import { getButtonDataFromURL, splitSkillsByType } from "$lib/utils";
     import Icon from "@iconify/svelte";
     import { t } from "../i18n";
     import Tag from "./Tag.svelte";
 
     let { data, type } = $props();
+
+    const splittedSkills = $derived.by(() => {
+        const typeOrder = { hard: 0, bridge: 1, soft: 2 };
+        if (data && data.tags) {
+            const splitted = splitSkillsByType(data.tags);
+            return Object.keys(splitted)
+                .sort((a, b) => typeOrder[a] - typeOrder[b])
+                .map((key) => splitted[key]);
+        }
+        return [];
+    });
 </script>
 
 {#if data}
@@ -21,9 +32,13 @@
         </div>
 
         {#if data.tags && data.tags.length > 0}
-            <div class="flex flex-wrap gap-2 mt-2">
-                {#each data.tags as tag}
-                    <Tag icon={tag.icon} type={tag.type} name={tag.name} size={"sm"} />
+            <div class="flex flex-col gap-2 mt-2">
+                {#each splittedSkills as tagList}
+                    <div class="flex flex-wrap gap-1">
+                        {#each tagList as tag}
+                            <Tag icon={tag.icon} type={tag.type} name={tag.name} size={"sm"} />
+                        {/each}
+                    </div>
                 {/each}
             </div>
         {/if}
