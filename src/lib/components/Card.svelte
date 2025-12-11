@@ -45,7 +45,28 @@
 
         <p class="text-sm mt-2">{$t(`${type}.${data.key}.desc`)}</p>
 
-        <div class="flex justify-end gap-2">
+        {#if data.metrics && data.metrics.length > 0}
+            <div
+                class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mt-3 p-2 rounded-lg bg-zinc-200 dark:bg-zinc-800 border border-zinc-700"
+            >
+                {#each data.metrics as metric}
+                    <div
+                        class="flex flex-col items-center justify-center text-center p-2 rounded-md bg-linear-to-tr from-stone-50 dark:from-zinc-950 to-stone-100 dark:to-zinc-900 border border-zinc-300 dark:border-zinc-700"
+                    >
+                        <Icon
+                            icon={metric.icon ?? "mdi:chart-line"}
+                            class="text-xl text-accent mb-1"
+                        />
+                        <span class="text-lg font-bold text-accent">{metric.value}</span>
+                        <span class="text-xs leading-tight">
+                            {$t(`${type}.${data.key}.metrics.${metric.label}`)}
+                        </span>
+                    </div>
+                {/each}
+            </div>
+        {/if}
+
+        <div class="flex justify-end gap-2 mt-2">
             {#if data.externalLink}
                 <a
                     class="bg-stone-100 dark:bg-zinc-800 text-accent border border-accent px-4 py-2 text-sm rounded-sm hover:bg-accent hover:text-primary transition-colors"

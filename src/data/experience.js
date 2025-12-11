@@ -19,6 +19,15 @@ export const experienceItems = [
             skills.graphql,
             skills.mongodb,
         ],
+        metrics: [
+            { value: "100%", label: "frontend_technical_debt", icon: "mdi:check-all" },
+            {
+                value: "4 months",
+                label: "ecommerce_project_delivery_time",
+                icon: "mdi:calendar-clock",
+            },
+            { value: "+15", label: "major_features_delivered", icon: "mdi:feature-search" },
+        ],
         externalLink: "https://namkin.fr/",
         readMore: false,
         featured: true,
@@ -35,6 +44,14 @@ export const experienceItems = [
             skills.system_design,
             skills.sentry,
         ],
+        metrics: [
+            { value: "+20%", label: "improvement_in_team_productivity", icon: "mdi:chart-line" },
+            {
+                value: "+4",
+                label: "back-office_applications_major_features",
+                icon: "mdi:application",
+            },
+        ],
         externalLink: "https://careers.selectra.com/",
         readMore: false,
     },
@@ -47,6 +64,18 @@ export const experienceItems = [
             skills.researchanddevelopment,
             skills.cypress,
             skills.react,
+        ],
+        metrics: [
+            {
+                value: "100%",
+                label: "functional_tests_implementation",
+                icon: "mdi:check-all",
+            },
+            {
+                value: "+10",
+                label: "ml_ai_pocs_developed",
+                icon: "mdi:robot-industrial",
+            },
         ],
         externalLink:
             "https://appsource.microsoft.com/fr-fr/product/saas/1339sas1609951272498.grytics?tab=overview",
