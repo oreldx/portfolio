@@ -6,7 +6,7 @@
 </script>
 
 <span
-    class={`flex items-center justify-center gap-2 px-3 py-1 rounded-full border ${getSkillColor(type)} text-${size}`}
+    class={`flex items-center justify-center gap-2 px-2 py-0.5 rounded-full border ${getSkillColor(type)} text-${size}`}
 >
     <Icon icon={icon ?? "pepicons-pop:circle"} />
     {name}
