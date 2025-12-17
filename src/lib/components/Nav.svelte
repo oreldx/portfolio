@@ -1,12 +1,12 @@
 <script>
     import { page } from "$app/state";
     import { onMount } from "svelte";
-    import { quartIn } from "svelte/easing";
-    import { blur, slide } from "svelte/transition";
+    import { cubicInOut } from "svelte/easing";
+    import { blur, fade, fly, slide } from "svelte/transition";
     import { t } from "../i18n";
-    import { showBurgerMenu, closeBurgerMenu } from "../stores/menu.js";
-    import ThemeSelector from "./ThemeSelector.svelte";
+    import { closeBurgerMenu, showBurgerMenu } from "../stores/menu.js";
     import LanguageSelector from "./LanguageSelector.svelte";
+    import ThemeSelector from "./ThemeSelector.svelte";
 
     let mounted = $state(false);
     onMount(() => (mounted = true));
@@ -25,7 +25,7 @@
     };
 </script>
 
-<nav class={"hidden sm:block"}>
+<nav class="hidden sm:block">
     <ul class="flex flex-col gap-6">
         {#each navOptions as option, i}
             {#if mounted}
@@ -35,7 +35,7 @@
                         delay: 230 + 100 * i,
                         duration: 300,
                         amount: 6,
-                        easing: quartIn,
+                        easing: cubicInOut,
                     }}
                 >
                     <a
@@ -53,15 +53,41 @@
             {/if}
         {/each}
     </ul>
-
-    <!-- Selectors shown only on small screens when burger menu is open -->
-    {#if $showBurgerMenu}
-        <div
-            class="flex gap-4 mt-6 sm:hidden"
-            transition:slide={{ duration: 200, easing: quartIn }}
-        >
-            <ThemeSelector />
-            <LanguageSelector />
-        </div>
-    {/if}
 </nav>
+
+{#if $showBurgerMenu}
+    <div
+        class="fixed inset-0 z-40 bg-white dark:bg-black/85 backdrop-blur-md flex flex-col items-center justify-center sm:hidden"
+        transition:fade={{ duration: 100, easing: cubicInOut }}
+    >
+        <nav
+            transition:blur={{
+                duration: 100,
+                easing: cubicInOut,
+            }}
+        >
+            <ul class="flex flex-col gap-8 text-center">
+                {#each navOptions as option, i}
+                    <li>
+                        <a
+                            class={`${intSelected == i ? "font-bold tracking-[0.2rem] text-accent drop-shadow-md" : "text-primary hover:text-accent"}
+                             text-2xl transition-all`}
+                            id={i.toString()}
+                            href={`/${option}`}
+                            onclick={switchSection}
+                        >
+                            {$t("nav." + option)
+                                .charAt(0)
+                                .toUpperCase() + $t("nav." + option).slice(1)}
+                        </a>
+                    </li>
+                {/each}
+            </ul>
+
+            <div class="flex gap-4 mt-10 justify-center">
+                <ThemeSelector />
+                <LanguageSelector />
+            </div>
+        </nav>
+    </div>
+{/if}

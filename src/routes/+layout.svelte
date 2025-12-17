@@ -26,6 +26,7 @@
         </div>
     </div>
 
+    <!-- TODO: add an AppPage to set a Title/Desc for every page -->
     <div class="flex-1 flex items-center lg:py-20 pb-16">
         {@render children?.()}
     </div>
