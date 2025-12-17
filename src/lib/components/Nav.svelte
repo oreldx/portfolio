@@ -2,8 +2,11 @@
     import { page } from "$app/state";
     import { onMount } from "svelte";
     import { quartIn } from "svelte/easing";
-    import { blur } from "svelte/transition";
+    import { blur, slide } from "svelte/transition";
     import { t } from "../i18n";
+    import { showBurgerMenu, closeBurgerMenu } from "../stores/menu.js";
+    import ThemeSelector from "./ThemeSelector.svelte";
+    import LanguageSelector from "./LanguageSelector.svelte";
 
     let mounted = $state(false);
     onMount(() => (mounted = true));
@@ -18,10 +21,11 @@
 
     const switchSection = (event) => {
         intSelected = parseInt(event.srcElement.id);
+        closeBurgerMenu();
     };
 </script>
 
-<nav>
+<nav class={"hidden sm:block"}>
     <ul class="flex flex-col gap-6">
         {#each navOptions as option, i}
             {#if mounted}
@@ -49,4 +53,15 @@
             {/if}
         {/each}
     </ul>
+
+    <!-- Selectors shown only on small screens when burger menu is open -->
+    {#if $showBurgerMenu}
+        <div
+            class="flex gap-4 mt-6 sm:hidden"
+            transition:slide={{ duration: 200, easing: quartIn }}
+        >
+            <ThemeSelector />
+            <LanguageSelector />
+        </div>
+    {/if}
 </nav>

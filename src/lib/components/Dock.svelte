@@ -6,6 +6,7 @@
     import Icon from "@iconify/svelte";
     import ThemeSelector from "./ThemeSelector.svelte";
     import LanguageSelector from "./LanguageSelector.svelte";
+    import { showBurgerMenu, toggleBurgerMenu } from "../stores/menu.js";
 
     const dockItems = [
         {
@@ -73,14 +74,22 @@
                     </a>
                 </li>
             {/each}
-            <li>
+            <li class="hidden sm:block">
                 <span class="h-6 border-l border-primary/30"></span>
             </li>
-            <!-- TODO: replace both selector with burger menu -->
-            <li>
+            <li class="sm:hidden">
+                <button
+                    onclick={toggleBurgerMenu}
+                    aria-label="Toggle menu"
+                    class="flex items-center justify-center min-w-12 h-12 rounded-xl text-primary/70 hover:text-primary hover:bg-primary/10 transition-all duration-200 hover:scale-110 cursor-pointer"
+                >
+                    <Icon icon={$showBurgerMenu ? "mdi:close" : "mdi:menu"} class="text-2xl" />
+                </button>
+            </li>
+            <li class="hidden sm:block">
                 <ThemeSelector />
             </li>
-            <li>
+            <li class="hidden sm:block">
                 <LanguageSelector />
             </li>
         </ul>
