@@ -24,7 +24,7 @@ export default {
             github: { text: "", label: "GitHub link" },
             mail: { text: "", label: "Mail address" },
             linkedin: { text: "", label: "Linkedin link" },
-            resume: { text: "My Resume", label: "Resume file", url: "/resume_en.pdf" },
+            resume: { text: "Resume", label: "Resume file", url: "/resume_en.pdf" },
         },
         button: {
             readMore: "Read More",
@@ -127,7 +127,7 @@ export default {
             github: { text: "", label: "Lien GitHub" },
             mail: { text: "", label: "Adresse mail" },
             linkedin: { text: "", label: "Lien Linkedin" },
-            resume: { text: "Mon CV", label: "Fichier CV", url: "/resume_fr.pdf" },
+            resume: { text: "CV", label: "Fichier CV", url: "/resume_fr.pdf" },
         },
         button: {
             readMore: "En savoir plus",

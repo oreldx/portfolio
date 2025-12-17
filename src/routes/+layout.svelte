@@ -14,7 +14,6 @@
     let { children } = $props();
 </script>
 
-<!-- <Background /> -->
 <ModeWatcher />
 
 <main class="flex mx-auto flex-col lg:flex-row px-5 md:px-10 lg:max-w-(--breakpoint-2xl) lg:px-20">
@@ -23,14 +22,11 @@
     >
         <div class="flex flex-col gap-10">
             <Hero />
-            <hr class="h-px border-0 bg-primary lg:hidden" />
             <Nav />
         </div>
-        <hr class="h-px border-0 bg-primary my-10 lg:hidden" />
-        <Footer />
     </div>
 
-    <div class="flex-1 flex items-center lg:py-20 pb-10">
+    <div class="flex-1 flex items-center lg:py-20 pb-16">
         {@render children?.()}
     </div>
 </main>

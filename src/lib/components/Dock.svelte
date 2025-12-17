@@ -4,6 +4,8 @@
     import { fly, scale } from "svelte/transition";
     import { t } from "../i18n";
     import Icon from "@iconify/svelte";
+    import ThemeSelector from "./ThemeSelector.svelte";
+    import LanguageSelector from "./LanguageSelector.svelte";
 
     const dockItems = [
         {
@@ -37,12 +39,12 @@
         in:fly={{
             duration: 600,
             y: 50,
-            delay: 300,
+            delay: 200,
             easing: quartOut,
         }}
     >
         <ul
-            class="flex items-center gap-2 px-4 py-3 rounded-2xl bg-base-100/80 backdrop-blur-md border border-primary/20 shadow-lg"
+            class="flex items-center gap-2 px-2 py-2 rounded-2xl bg-base-100/80 backdrop-blur-md border border-primary/20 shadow-lg"
         >
             {#each dockItems as item, i}
                 <li
@@ -57,12 +59,30 @@
                         target="_blank"
                         href={item.url ? item.url : $t("footer." + item.key + ".url")}
                         aria-label={$t("footer." + item.key + ".label")}
-                        class="flex items-center justify-center w-12 h-12 rounded-xl text-primary/70 hover:text-primary hover:bg-primary/10 transition-all duration-200 hover:scale-110"
+                        class={{
+                            "flex items-center justify-center min-w-12 h-12 rounded-xl text-primary/70 hover:text-primary hover:bg-primary/10 transition-all duration-200 hover:scale-110 gap-2": true,
+                            "sm:p-2": $t("footer." + item.key + ".text"),
+                        }}
                     >
                         <Icon icon={item.icon} class="text-2xl" />
+                        {#if $t("footer." + item.key + ".text")}
+                            <p class="hidden sm:block">
+                                {$t("footer." + item.key + ".text")}
+                            </p>
+                        {/if}
                     </a>
                 </li>
             {/each}
+            <li>
+                <span class="h-6 border-l border-primary/30"></span>
+            </li>
+            <!-- TODO: replace both selector with burger menu -->
+            <li>
+                <ThemeSelector />
+            </li>
+            <li>
+                <LanguageSelector />
+            </li>
         </ul>
     </div>
 {/if}
