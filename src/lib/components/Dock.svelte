@@ -74,7 +74,7 @@
                     </a>
                 </li>
             {/each}
-            <li class="hidden sm:block">
+            <li>
                 <span class="h-6 border-l border-primary/30"></span>
             </li>
             <li class="sm:hidden">
