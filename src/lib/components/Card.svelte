@@ -46,7 +46,7 @@
 
         {#if data.metrics && data.metrics.length > 0}
             <div
-                class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mt-3 p-2 rounded-lg bg-zinc-200 dark:bg-zinc-800 border border-zinc-700"
+                class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mt-3 p-2 rounded-lg bg-gray-200 dark:bg-zinc-800 border border-zinc-700"
             >
                 {#each data.metrics as metric}
                     <div
