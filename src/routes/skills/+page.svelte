@@ -11,7 +11,7 @@
             <h2 class="font-semibold">
                 {$t(`skills.${section.type}.title`)}
             </h2>
-            <div class="flex flex-wrap gap-6 justify-center md:max-w-md lg:max-w-fit mx-auto">
+            <div class="flex flex-wrap gap-6 justify-center lg:max-w-fit mx-auto">
                 {#each section.skills as item}
                     <Skill icon={item.icon} name={item.name} />
                 {/each}
