@@ -40,3 +40,11 @@ export const fetchMarkdownFiles = async (eventFetch, type, key) => {
     }
     return markdown;
 };
+
+export function useBodyScrollLock(isLocked) {
+    if (isLocked()) {
+        document.body.style.overflow = "hidden";
+        return;
+    }
+    document.body.style.overflow = "";
+}

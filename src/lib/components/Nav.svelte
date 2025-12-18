@@ -1,8 +1,9 @@
 <script>
     import { page } from "$app/state";
+    import { useBodyScrollLock } from "$lib/utils";
     import { onMount } from "svelte";
     import { cubicInOut } from "svelte/easing";
-    import { blur, fade, fly, slide } from "svelte/transition";
+    import { blur, fade } from "svelte/transition";
     import { t } from "../i18n";
     import { closeBurgerMenu, showBurgerMenu } from "../stores/menu.js";
     import LanguageSelector from "./LanguageSelector.svelte";
@@ -23,6 +24,10 @@
         intSelected = parseInt(event.srcElement.id);
         closeBurgerMenu();
     };
+
+    $effect(() => {
+        useBodyScrollLock(() => $showBurgerMenu);
+    });
 </script>
 
 <nav class="hidden sm:block">
