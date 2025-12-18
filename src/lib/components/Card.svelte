@@ -1,5 +1,5 @@
 <script>
-    import { getButtonDataFromURL, splitSkillsByType } from "$lib/utils";
+    import { getButtonDataFromURL, skillTypeOrder, splitSkillsByType } from "$lib/utils";
     import Icon from "@iconify/svelte";
     import { t } from "../i18n";
     import Tag from "./Tag.svelte";
@@ -7,11 +7,10 @@
     let { data, type } = $props();
 
     const splittedSkills = $derived.by(() => {
-        const typeOrder = { hard: 0, bridge: 1, soft: 2 };
         if (data && data.tags) {
             const splitted = splitSkillsByType(data.tags);
             return Object.keys(splitted)
-                .sort((a, b) => typeOrder[a] - typeOrder[b])
+                .sort((a, b) => skillTypeOrder[a] - skillTypeOrder[b])
                 .map((key) => splitted[key]);
         }
         return [];

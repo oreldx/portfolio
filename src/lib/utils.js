@@ -50,3 +50,5 @@ export const splitSkillsByType = (skills) => {
         return acc;
     }, {});
 };
+
+export const skillTypeOrder = { hard: 0, bridge: 1, soft: 2 };
