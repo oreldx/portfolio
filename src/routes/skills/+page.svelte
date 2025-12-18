@@ -1,19 +1,11 @@
 <script>
+    import AppPage from "$lib/components/AppPage.svelte";
     import Skill from "$lib/components/Skill.svelte";
     import { t } from "$lib/i18n";
     import { skillSections } from "data/skills";
-    import { expoOut } from "svelte/easing";
-    import { blur } from "svelte/transition";
 </script>
 
-<div
-    class="flex flex-col gap-4 w-full"
-    in:blur={{
-        amount: 5,
-        duration: 800,
-        easing: expoOut,
-    }}
->
+<AppPage key="skills">
     {#each skillSections as section}
         <div class="flex flex-col gap-2 card">
             <h2 class="font-semibold">
@@ -26,4 +18,4 @@
             </div>
         </div>
     {/each}
-</div>
+</AppPage>

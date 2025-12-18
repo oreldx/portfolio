@@ -32,7 +32,11 @@ export default {
             back: "Back",
         },
         nav: { about: "about", experience: "experience", project: "projects", skills: "skills" },
+        about: {
+            title: "My profile",
+        },
         project: {
+            title: "My projects",
             type: { personal: "Personal", academic: "Academic" },
             social_network_account: {
                 date: "2024",
@@ -61,6 +65,7 @@ export default {
             },
         },
         experience: {
+            title: "My experience",
             namkin: {
                 title: "Software Engineer - Namkin",
                 desc: "Working on several B2B projects in the industry, I designed and integrated web solutions focused on e-commerce and real-time data monitoring",
@@ -79,6 +84,7 @@ export default {
             type: { internship: "Intern", permanent: "Permanent" },
         },
         skills: {
+            title: "My skills",
             backend: {
                 title: "Back-end",
             },
@@ -141,6 +147,7 @@ export default {
             skills: "compétences",
         },
         project: {
+            title: "Mes projets",
             type: { personal: "Personnel", academic: "Académique" },
             social_network_account: {
                 date: "2024",
@@ -168,7 +175,11 @@ export default {
                 desc: "Site de vaccination en HTML, CSS, PHP, SQL en architecture MVC",
             },
         },
+        about: {
+            title: "Mon profil",
+        },
         experience: {
+            title: "Mes expériences",
             namkin: {
                 title: "Ingénieur Logiciel - Namkin",
                 desc: "Travaillant sur plusieurs projets B2B dans l'industrie, j'ai conçu et intégrer des solutions Web autour de l'e-commerce et la supervision de données en temps réel",
@@ -187,6 +198,7 @@ export default {
             type: { internship: "Stage", permanent: "CDI" },
         },
         skills: {
+            title: "Mes compétences",
             backend: {
                 title: "Back-end",
             },
