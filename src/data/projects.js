@@ -3,6 +3,23 @@ import { skills } from "./skills";
 
 export const projectsItems = [
     {
+        key: "quiz_yt",
+        type: ProjectType.PERSONAL,
+        tags: [skills.python, skills.remotion, skills.vue, skills.docker, skills.creativity],
+        metrics: [
+            {
+                value: "+500",
+                label: "subscribers/month",
+                icon: "mdi:account-group",
+            },
+            {
+                value: "5k",
+                label: "average_views_per_video",
+                icon: "mdi:eye",
+            },
+        ],
+    },
+    {
         key: "social_network_account",
         type: ProjectType.PERSONAL,
         tags: [
@@ -33,6 +50,7 @@ export const projectsItems = [
             skills.machinelearning,
             skills.data_manipulation,
         ],
+        metrics: [{ value: "TOP 10", label: "rank_reach", icon: "mdi:trophy" }],
         readMore: false,
         externalLink: "https://github.com/oreldx/TDT4173_Project",
     },
@@ -47,6 +65,11 @@ export const projectsItems = [
             skills.docker,
             skills.scrapping,
             skills.creativity,
+        ],
+        metrics: [
+            { value: "400", label: "videos_produced", icon: "mdi:video" },
+            { value: "+300", label: "subscribers", icon: "mdi:account-group" },
+            { value: "40k", label: "single_video_views", icon: "mdi:eye" },
         ],
         readMore: true,
         featured: true,
