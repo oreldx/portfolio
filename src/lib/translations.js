@@ -229,7 +229,7 @@ export default {
             },
             selectra: {
                 title: "Ingénieur Web Full-stack - Selectra",
-                desc: "J'ai travaillé sur les applications de back-office de l'entreprise afin d'ajosuter de nouvelles fonctionnalités, refactoriser codes/bases de données, résoudre les bugs pour améliorer la productivité des équipes",
+                desc: "J'ai travaillé sur les applications de back-office de l'entreprise afin d'ajouter de nouvelles fonctionnalités, refactoriser codes/bases de données, résoudre les bugs pour améliorer la productivité des équipes",
                 date: "JUIL 2023 - DÉC 2023",
                 metrics: {
                     improvement_in_team_productivity: "amélioration de la productivité de l'équipe",
