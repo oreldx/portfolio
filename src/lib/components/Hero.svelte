@@ -68,7 +68,7 @@
                 {displayText}
             </h1>
             <h2>{$t("hero.title")}</h2>
-            <p class="italic">{$t("hero.quote")}</p>
+            <p class="hidden sm:inline italic">{$t("hero.quote")}</p>
         </a>
     </div>
 {/if}
