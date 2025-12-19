@@ -36,17 +36,15 @@
 
 {#if mounted}
     <div
-        class="fixed bottom-4 left-1/2 -translate-x-1/2 z-50"
+        class="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 bg-base-100/80 backdrop-blur-md border border-primary rounded-2xl shadow-lg"
         in:fly={{
-            duration: 600,
+            duration: 300,
             y: 50,
             delay: 200,
             easing: quartOut,
         }}
     >
-        <ul
-            class="flex items-center gap-2 px-2 py-2 rounded-2xl bg-base-100/80 backdrop-blur-md border border-primary/20 shadow-lg"
-        >
+        <ul class="flex items-center gap-2 px-2 py-2">
             {#each dockItems as item, i}
                 <li
                     in:scale={{
@@ -75,7 +73,7 @@
                 </li>
             {/each}
             <li>
-                <span class="h-6 border-l border-primary/30"></span>
+                <span class="h-6 border-l border-primary"></span>
             </li>
             <li class="sm:hidden">
                 <button
