@@ -64,10 +64,15 @@
         }}
     >
         <a href="/" aria-label="Home Link" class="flex flex-col gap-6">
-            <h1>
+            <h1 class="font-extrabold">
                 {displayText}
             </h1>
-            <h2>{$t("hero.title")}</h2>
+            <div class="flex flex-col leading-tight">
+                <h2>
+                    {$t("hero.title")}
+                </h2>
+                <p class="text-sm">[{$t("hero.subtitle")}]</p>
+            </div>
             <p class="hidden sm:inline italic">{$t("hero.quote")}</p>
         </a>
     </div>

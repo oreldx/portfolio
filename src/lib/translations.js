@@ -19,7 +19,11 @@ export default {
                 readMore: "View all Skills",
             },
         },
-        hero: { quote: "I dev stuff on the Web for the World", title: "Software Engineer" },
+        hero: {
+            quote: "I dev stuff on the Web for the World",
+            title: "Software Engineer",
+            subtitle: "Full-Stack Web Development",
+        },
         footer: {
             github: { text: "", label: "GitHub link" },
             mail: { text: "", label: "Mail address" },
@@ -128,6 +132,7 @@ export default {
         hero: {
             quote: "Je développe des choses sur le Web pour ce petit Monde",
             title: "Software Engineer",
+            subtitle: "Développement Web Full-Stack",
         },
         footer: {
             github: { text: "", label: "Lien GitHub" },
