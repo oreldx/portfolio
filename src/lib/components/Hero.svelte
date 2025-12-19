@@ -63,7 +63,7 @@
             easing: quartOut,
         }}
     >
-        <a href="/" aria-label="Home Link" class="flex flex-col gap-6">
+        <div class="flex flex-col gap-6">
             <h1 class="font-extrabold">
                 {displayText}
             </h1>
@@ -74,6 +74,6 @@
                 <p class="text-sm">[{$t("hero.subtitle")}]</p>
             </div>
             <p class="hidden sm:inline italic">{$t("hero.quote")}</p>
-        </a>
+        </div>
     </div>
 {/if}

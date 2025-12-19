@@ -35,7 +35,13 @@ export default {
             viewOn: "View on",
             back: "Back",
         },
-        nav: { about: "about", experience: "experience", project: "projects", skills: "skills" },
+        nav: {
+            home: "home",
+            about: "about",
+            experience: "experience",
+            project: "projects",
+            skills: "skills",
+        },
         about: {
             title: "My profile",
         },
@@ -146,6 +152,7 @@ export default {
             back: "Retour",
         },
         nav: {
+            home: "accueil",
             about: "à propos",
             experience: "expérience",
             project: "projets",
