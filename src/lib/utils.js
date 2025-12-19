@@ -52,3 +52,11 @@ export const splitSkillsByType = (skills) => {
 };
 
 export const skillTypeOrder = { hard: 0, bridge: 1, soft: 2 };
+
+export function useBodyScrollLock(isLocked) {
+    if (isLocked()) {
+        document.body.style.overflow = "hidden";
+        return;
+    }
+    document.body.style.overflow = "";
+}

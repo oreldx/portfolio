@@ -4,17 +4,11 @@
     import { CardTypes } from "$lib/enums/CardType";
     import Card from "$lib/components/Card.svelte";
     import { projectsItems } from "data/projects";
+    import AppPage from "$lib/components/AppPage.svelte";
 </script>
 
-<div
-    class="flex flex-col gap-4"
-    in:blur={{
-        amount: 5,
-        duration: 800,
-        easing: expoOut,
-    }}
->
+<AppPage key="project">
     {#each projectsItems as item}
         <Card type={CardTypes.PROJECT} data={item} />
     {/each}
-</div>
+</AppPage>

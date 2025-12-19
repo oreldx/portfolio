@@ -1,9 +1,7 @@
 <script>
+    import AppPage from "$lib/components/AppPage.svelte";
     import { locale } from "$lib/i18n.js";
     import showdown from "showdown";
-    import { expoOut } from "svelte/easing";
-    import { blur } from "svelte/transition";
-    import { t } from "../../lib/i18n";
 
     let { data } = $props();
 
@@ -13,14 +11,8 @@
     const converter = new showdown.Converter();
 </script>
 
-<div
-    in:blur={{
-        amount: 5,
-        duration: 800,
-        easing: expoOut,
-    }}
->
+<AppPage key="about">
     <div class="prose-wrapper">
         {@html converter.makeHtml(currentContent)}
     </div>
-</div>
+</AppPage>

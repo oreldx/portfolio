@@ -19,20 +19,34 @@ export default {
                 readMore: "View all Skills",
             },
         },
-        hero: { quote: "I dev stuff on the Web for the World", title: "Software Engineer" },
+        hero: {
+            quote: "I dev stuff on the Web for the World",
+            title: "Software Engineer",
+            subtitle: "Full-Stack Web Development",
+        },
         footer: {
             github: { text: "", label: "GitHub link" },
             mail: { text: "", label: "Mail address" },
             linkedin: { text: "", label: "Linkedin link" },
-            resume: { text: "My Resume", label: "Resume file", url: "/resume_en.pdf" },
+            resume: { text: "Resume", label: "Resume file", url: "/resume_en.pdf" },
         },
         button: {
             readMore: "Read More",
             viewOn: "View on",
             back: "Back",
         },
-        nav: { about: "about", experience: "experience", project: "projects", skills: "skills" },
+        nav: {
+            home: "home",
+            about: "about",
+            experience: "experience",
+            project: "projects",
+            skills: "skills",
+        },
+        about: {
+            title: "My profile",
+        },
         project: {
+            title: "My projects",
             type: { personal: "Personal", academic: "Academic" },
             quiz_yt: {
                 date: "2025",
@@ -78,6 +92,7 @@ export default {
             },
         },
         experience: {
+            title: "My experience",
             namkin: {
                 title: "Software Engineer - Namkin",
                 desc: "Working on several B2B projects in the industry, I designed and integrated web solutions focused on e-commerce and real-time data monitoring",
@@ -110,6 +125,7 @@ export default {
             type: { internship: "Intern", permanent: "Permanent" },
         },
         skills: {
+            title: "My skills",
             backend: {
                 title: "Back-end",
             },
@@ -153,12 +169,13 @@ export default {
         hero: {
             quote: "Je développe des choses sur le Web pour ce petit Monde",
             title: "Software Engineer",
+            subtitle: "Développement Web Full-Stack",
         },
         footer: {
             github: { text: "", label: "Lien GitHub" },
             mail: { text: "", label: "Adresse mail" },
             linkedin: { text: "", label: "Lien Linkedin" },
-            resume: { text: "Mon CV", label: "Fichier CV", url: "/resume_fr.pdf" },
+            resume: { text: "CV", label: "Fichier CV", url: "/resume_fr.pdf" },
         },
         button: {
             readMore: "En savoir plus",
@@ -166,12 +183,14 @@ export default {
             back: "Retour",
         },
         nav: {
+            home: "accueil",
             about: "à propos",
             experience: "expérience",
             project: "projets",
             skills: "compétences",
         },
         project: {
+            title: "Mes projets",
             type: { personal: "Personnel", academic: "Académique" },
             quiz_yt: {
                 date: "2025",
@@ -216,7 +235,11 @@ export default {
                 desc: "Site de vaccination en HTML, CSS, PHP, SQL en architecture MVC",
             },
         },
+        about: {
+            title: "Mon profil",
+        },
         experience: {
+            title: "Mes expériences",
             namkin: {
                 title: "Ingénieur Logiciel - Namkin",
                 desc: "Travaillant sur plusieurs projets B2B dans l'industrie, j'ai conçu et intégrer des solutions Web autour de l'e-commerce et la supervision de données en temps réel",
@@ -249,6 +272,7 @@ export default {
             type: { internship: "Stage", permanent: "CDI" },
         },
         skills: {
+            title: "Mes compétences",
             backend: {
                 title: "Back-end",
             },
