@@ -1,9 +1,15 @@
 <script>
     import { t } from "$lib/i18n.js";
-    import { getButtonDataFromURL, getSkillColor } from "$lib/utils.js";
+    import { getButtonDataFromURL, getSkillColor, skillTypeOrder } from "$lib/utils.js";
     import Icon from "@iconify/svelte";
 
     let { data } = $props();
+
+    const ordredSkills = $derived(
+        data.tags
+            ? data.tags.sort((a, b) => skillTypeOrder[a.type] - skillTypeOrder[b.type])
+            : undefined,
+    );
 </script>
 
 <div class="flex flex-col w-full gap-4">
@@ -31,9 +37,9 @@
             </div>
         </div>
 
-        {#if data.tags && data.tags.length > 0}
+        {#if ordredSkills && ordredSkills.length > 0}
             <div class="flex flex-wrap gap-2 mt-2">
-                {#each data.tags as tag}
+                {#each ordredSkills as tag}
                     <span
                         class={`flex items-center justify-center gap-2 px-3 py-1 rounded-full text-sm border ${getSkillColor(tag?.type)}`}
                     >

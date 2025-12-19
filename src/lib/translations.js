@@ -48,6 +48,15 @@ export default {
         project: {
             title: "My projects",
             type: { personal: "Personal", academic: "Academic" },
+            quiz_yt: {
+                date: "2025",
+                title: "Kids Quiz YouTube Channel",
+                desc: "Semi-automated production of quiz original videos for children on YouTube",
+                metrics: {
+                    "subscribers/month": "subscribers/month",
+                    average_views_per_video: "average views/video",
+                },
+            },
             social_network_account: {
                 date: "2024",
                 title: "Autonomous Social Network Accounts",
@@ -62,11 +71,19 @@ export default {
                 date: "2022",
                 title: "Machine Learning Model",
                 desc: "A machine learning model in Python to predict revenue of all types of retail stores in Norway",
+                metrics: {
+                    rank_reach: "rank reach",
+                },
             },
             auto_youtube_channel: {
                 date: "2022",
                 title: "Autonomous Youtube Channel",
                 desc: "Daily video production of the best Twitch clips to create a self-sustaining YouTube channel",
+                metrics: {
+                    videos_produced: "videos produced",
+                    subscribers: "subscribers reached",
+                    single_video_views: "single video views",
+                },
             },
             dynamic_website: {
                 date: "2021",
@@ -80,16 +97,30 @@ export default {
                 title: "Software Engineer - Namkin",
                 desc: "Working on several B2B projects in the industry, I designed and integrated web solutions focused on e-commerce and real-time data monitoring",
                 date: "OCT 2024 - PRESENT",
+                metrics: {
+                    frontend_technical_debt: "frontend TypeScript error reduction",
+                    ecommerce_project_delivery_time: "ecommerce project delivery time",
+                    major_features_delivered: "major features delivered",
+                },
             },
             selectra: {
                 title: "Full-stack Web Engineer - Selectra",
                 desc: "I worked on the company's back-office applications to add new features, refactor code/databases, and fix bugs to improve team productivity",
                 date: "JUL 2023 - DEC 2023",
+                metrics: {
+                    improvement_in_team_productivity: "improvement in team productivity",
+                    "back-office_applications_major_features":
+                        "back-office applications major features",
+                },
             },
             grytics: {
                 title: "Assistant Development Engineer - Grytics",
                 desc: "I implemented functional tests across the entire application scope and developed machine learning/AI POCs to improve their web application",
                 date: "FEB 2023 - JUL 2023",
+                metrics: {
+                    functional_tests_implementation: "functional tests implementation",
+                    ml_ai_pocs_developed: "ML/AI POCs developed",
+                },
             },
             type: { internship: "Intern", permanent: "Permanent" },
         },
@@ -161,6 +192,15 @@ export default {
         project: {
             title: "Mes projets",
             type: { personal: "Personnel", academic: "Académique" },
+            quiz_yt: {
+                date: "2025",
+                title: "Chaîne YouTube de Quiz pour Enfants",
+                desc: "Production semi-automatisée de vidéos originales de quiz pour enfants sur YouTube",
+                metrics: {
+                    "subscribers/month": "abonnés/mois",
+                    average_views_per_video: "vues moyennes/vidéo",
+                },
+            },
             social_network_account: {
                 date: "2024",
                 title: "Comptes de Réseaux Sociaux Autonomes",
@@ -175,11 +215,19 @@ export default {
                 date: "2022",
                 title: "Modèle de Machine Learning",
                 desc: "Création d'un modèle d'apprentissage machine en Python pour prédire les revenus de tous types de magasins de détail en Norvège",
+                metrics: {
+                    rank_reach: "rang atteint",
+                },
             },
             auto_youtube_channel: {
                 date: "2022",
                 title: "Chaîne Youtube Autonome",
                 desc: "Production de vidéos journalières des meilleurs clips de Twitch permettant d'obtenir une chaîne YouTube autonome",
+                metrics: {
+                    videos_produced: "vidéos produites",
+                    subscribers: "abonnés atteints",
+                    single_video_views: "vues sur une vidéo",
+                },
             },
             dynamic_website: {
                 date: "2021",
@@ -196,16 +244,30 @@ export default {
                 title: "Ingénieur Logiciel - Namkin",
                 desc: "Travaillant sur plusieurs projets B2B dans l'industrie, j'ai conçu et intégrer des solutions Web autour de l'e-commerce et la supervision de données en temps réel",
                 date: "OCT 2024 - PRÉSENT",
+                metrics: {
+                    frontend_technical_debt: "réduction des erreurs TypeScript front-end",
+                    ecommerce_project_delivery_time: "délai de livraison du projet e-commerce",
+                    major_features_delivered: "fonctionnalités majeures livrées",
+                },
             },
             selectra: {
                 title: "Ingénieur Web Full-stack - Selectra",
                 desc: "J'ai travaillé sur les applications de back-office de l'entreprise afin d'ajouter de nouvelles fonctionnalités, refactoriser codes/bases de données, résoudre les bugs pour améliorer la productivité des équipes",
                 date: "JUIL 2023 - DÉC 2023",
+                metrics: {
+                    improvement_in_team_productivity: "amélioration de la productivité de l'équipe",
+                    "back-office_applications_major_features":
+                        "fonctionnalités majeures des applications de back-office",
+                },
             },
             grytics: {
                 title: "Ingénieur Développeur Assistant - Grytics",
                 desc: "J'ai intégré des tests fonctionnels sur tout le périmètre de l'application et j'ai réalisé des POCs en machine learning/IA pour améliorer leur application web",
                 date: "FÉV 2023 - JUIL 2023",
+                metrics: {
+                    functional_tests_implementation: "implémentation des tests fonctionnels",
+                    ml_ai_pocs_developed: "POCs ML/IA développés",
+                },
             },
             type: { internship: "Stage", permanent: "CDI" },
         },
