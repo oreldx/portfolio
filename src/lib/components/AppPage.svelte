@@ -6,7 +6,7 @@
     let { children, key } = $props();
 </script>
 
-<div class="flex flex-col gap-8">
+<div class="flex flex-col gap-8 w-full">
     <div
         class="flex flex-col gap-2"
         in:blur={{
