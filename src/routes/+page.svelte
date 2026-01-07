@@ -42,7 +42,7 @@
             class="col-span-2 md:col-span-1 lg:col-span-2 xl:col-span-1"
             in:fly={{
                 duration: 300,
-                x: 100,
+                y: 100,
                 delay: 150,
                 easing: quartIn,
             }}

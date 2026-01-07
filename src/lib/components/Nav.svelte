@@ -43,8 +43,8 @@
 <nav class="hidden sm:block">
     <ul class="flex flex-col gap-6">
         {#each navOptions as option, i}
-            {#if mounted}
-                {#if !option.isMobileOnly}
+            {#if !option.isMobileOnly}
+                {#if mounted}
                     <li
                         class="w-fit"
                         transition:blur={{
