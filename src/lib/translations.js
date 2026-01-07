@@ -44,6 +44,41 @@ export default {
         },
         about: {
             title: "My profile",
+            sections: {
+                personal_info: {
+                    title: "Who am I?",
+                    items: [
+                        "<strong>Aurélien Dureux</strong>",
+                        "24 years old",
+                        "<strong>Software Engineer</strong> (Full-Stack Web Development)",
+                        "Graduate of the University of Technology of Troyes",
+                        "<strong>+2.5 years of professional experience</strong>",
+                        "<strong>+4 years of personal experience</strong> in side projects",
+                        "Based in <strong>France</strong>",
+                        "Open to remote work",
+                    ],
+                },
+                skills: {
+                    title: "My skills",
+                    items: [
+                        "<strong>Full-stack</strong> developer, web-oriented",
+                        "Experience in <strong>project management</strong>",
+                        "Knowledge of <strong>DevOps</strong>",
+                        "Understanding of <strong>client & user needs</strong>",
+                        "Basics in <strong>UX/UI</strong>",
+                        "<strong>Agile team</strong> work",
+                        "<strong>French</strong> (native) and <strong>English</strong> (fluent)",
+                    ],
+                },
+                hobbies: {
+                    title: "My hobbies",
+                    items: [
+                        "<strong>Design</strong>: <em>FPV drones, 3D printing, electronics</em>",
+                        "<strong>Sports</strong>: <em>Triathlon, climbing, calisthenics, hiking</em>",
+                        "<strong>Audiovisual</strong>: <em>Graphic design, video editing</em>",
+                    ],
+                },
+            },
         },
         project: {
             title: "My projects",
@@ -237,6 +272,41 @@ export default {
         },
         about: {
             title: "Mon profil",
+            sections: {
+                personal_info: {
+                    title: "Qui suis-je ?",
+                    items: [
+                        "<strong>Aurélien Dureux</strong>",
+                        "24 ans",
+                        "<strong>Software Engineer</strong> (Full-Stack Web Development)",
+                        "Diplômé de l'Université de Technologie de Troyes",
+                        "<strong>+2.5 ans d'expérience professionnelle</strong>",
+                        "<strong>+4 ans d'expérience personnelle</strong> en side projects",
+                        "Basé en <strong>France</strong>",
+                        "Ouvert au télétravail",
+                    ],
+                },
+                skills: {
+                    title: "Mes compétences",
+                    items: [
+                        "Développeur <strong>full-stack</strong>, orienté <strong>Web</strong>",
+                        "Expérience en <strong>gestion de projets</strong>",
+                        "Connaissances en <strong>DevOps</strong>",
+                        "Compréhension des <strong>besoins client & utilisateurs</strong>",
+                        "Notions en <strong>UX/UI</strong>",
+                        "Travail en <strong>équipe agile</strong>",
+                        "<strong>Français</strong> (natif) et <strong>Anglais</strong> (courant)",
+                    ],
+                },
+                hobbies: {
+                    title: "Mes passions",
+                    items: [
+                        "<strong>Conception</strong>: <em>Drone FPV, Impression 3D, Electronique</em>",
+                        "<strong>Sports</strong>: <em>Triathlon, Escalade, Callisthénie, Randonnée</em>",
+                        "<strong>Audiovisuel</strong>: <em>Graphisme, Montage vidéo</em>",
+                    ],
+                },
+            },
         },
         experience: {
             title: "Mes expériences",
