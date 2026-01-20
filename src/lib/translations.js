@@ -137,6 +137,13 @@ export default {
                     ecommerce_project_delivery_time: "ecommerce project delivery time",
                     major_features_delivered: "major features delivered",
                 },
+                evolutions: {
+                    test_implementation: {
+                        title: "Test Implementation",
+                        desc: "Implementation of unit and integration tests across the entire codebase",
+                        result: "↓ 35% support tickets, ↑ 28% customer satisfaction",
+                    },
+                },
             },
             selectra: {
                 title: "Full-stack Web Engineer - Selectra",
@@ -318,6 +325,13 @@ export default {
                     frontend_technical_debt: "réduction des erreurs TypeScript front-end",
                     ecommerce_project_delivery_time: "délai de livraison du projet e-commerce",
                     major_features_delivered: "fonctionnalités majeures livrées",
+                },
+                evolutions: {
+                    test_implementation: {
+                        title: "Test Implementation",
+                        desc: "Implementation of unit and integration tests across the entire codebase",
+                        result: "↓ 35% support tickets, ↑ 28% customer satisfaction",
+                    },
                 },
             },
             selectra: {

@@ -19,10 +19,17 @@ export const experienceItems = [
             skills.graphql,
             skills.mongodb,
         ],
-        metrics: [
-            { value: "100%", label: "frontend_technical_debt", icon: "mdi:check-all" },
+        evolutions: [
             {
-                value: "4 months",
+                key: "test_implementation",
+                icon: "mdi:test-tube",
+            },
+        ],
+        metrics: [
+            { value: "100", unit: "%", label: "frontend_technical_debt", icon: "mdi:check-all" },
+            {
+                value: "4",
+                unit: "months",
                 label: "ecommerce_project_delivery_time",
                 icon: "mdi:calendar-clock",
             },
@@ -45,7 +52,12 @@ export const experienceItems = [
             skills.sentry,
         ],
         metrics: [
-            { value: "+20%", label: "improvement_in_team_productivity", icon: "mdi:chart-line" },
+            {
+                value: "+20",
+                unit: "%",
+                label: "improvement_in_team_productivity",
+                icon: "mdi:chart-line",
+            },
             {
                 value: "+4",
                 label: "back-office_applications_major_features",
