@@ -40,3 +40,23 @@ export const fetchMarkdownFiles = async (eventFetch, type, key) => {
     }
     return markdown;
 };
+
+export const splitSkillsByType = (skills) => {
+    return skills.reduce((acc, skill) => {
+        if (!acc[skill.type]) {
+            acc[skill.type] = [];
+        }
+        acc[skill.type].push(skill);
+        return acc;
+    }, {});
+};
+
+export const skillTypeOrder = { hard: 0, bridge: 1, soft: 2 };
+
+export function useBodyScrollLock(isLocked) {
+    if (isLocked()) {
+        document.body.style.overflow = "hidden";
+        return;
+    }
+    document.body.style.overflow = "";
+}

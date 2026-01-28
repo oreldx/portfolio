@@ -18,6 +18,13 @@ export const experienceItems = [
             skills.docker,
             skills.graphql,
             skills.mongodb,
+            skills.agile,
+        ],
+        evolutions: [
+            {
+                key: "ecommerce_project_recovery",
+                icon: "mdi:shopping",
+            },
         ],
         externalLink: "https://namkin.fr/",
         readMore: false,
@@ -34,6 +41,14 @@ export const experienceItems = [
             skills.datadog,
             skills.system_design,
             skills.sentry,
+            skills.autonomy,
+            skills.agile,
+        ],
+        evolutions: [
+            {
+                key: "productivity_increase",
+                icon: "mdi:chart-line",
+            },
         ],
         externalLink: "https://careers.selectra.com/",
         readMore: false,
@@ -47,6 +62,16 @@ export const experienceItems = [
             skills.researchanddevelopment,
             skills.cypress,
             skills.react,
+        ],
+        evolutions: [
+            {
+                key: "test_implementation",
+                icon: "mdi:check-decagram",
+            },
+            {
+                key: "ml_ai_pocs_developed",
+                icon: "mdi:robot-industrial",
+            },
         ],
         externalLink:
             "https://appsource.microsoft.com/fr-fr/product/saas/1339sas1609951272498.grytics?tab=overview",
