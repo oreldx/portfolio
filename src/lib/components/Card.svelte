@@ -53,10 +53,10 @@
                         <div class="flex flex-col items-center gap-1 mt-1">
                             <div class="w-2 h-2 rounded-full bg-zinc-400 dark:bg-zinc-600"></div>
                             <div
-                                class="w-0.5 h-12 bg-gradient-to-b from-zinc-400 to-zinc-300 dark:from-zinc-600 dark:to-zinc-700"
+                                class="w-0.5 h-full bg-linear-to-b from-zinc-400 to-zinc-300 dark:from-zinc-600 dark:to-zinc-700"
                             ></div>
                         </div>
-                        <div class="flex-1 pb-3">
+                        <div class="flex-1">
                             <div class="flex items-start justify-between gap-2">
                                 <div>
                                     <p class="text-sm font-medium text-zinc-900 dark:text-zinc-100">
@@ -71,13 +71,13 @@
                                 {#if evolution.icon}
                                     <Icon
                                         icon={evolution.icon}
-                                        class="text-lg text-accent flex-shrink-0 mt-0.5"
+                                        class="text-lg text-accent shrink-0 mt-0.5"
                                     />
                                 {/if}
                             </div>
                             <div class="mt-2 px-2 py-1 rounded bg-accent/10 dark:bg-accent/5">
                                 <span class="text-xs font-semibold text-accent">
-                                    {$t(`${type}.${data.key}.evolutions.${evolution.key}.desc`)}
+                                    {$t(`${type}.${data.key}.evolutions.${evolution.key}.result`)}
                                 </span>
                             </div>
                         </div>
