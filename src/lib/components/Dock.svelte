@@ -64,7 +64,7 @@
                         }}
                     >
                         <Icon icon={item.icon} class="text-2xl" />
-                        {#if $t("footer." + item.key + ".text") != "footer." + item.key + ".text"}
+                        {#if $t("footer." + item.key + ".text")}
                             <p class="hidden sm:block">
                                 {$t("footer." + item.key + ".text")}
                             </p>

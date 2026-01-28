@@ -131,30 +131,46 @@ export default {
             namkin: {
                 title: "Software Engineer - Namkin",
                 desc: "Working on several B2B projects in the industry, I designed and integrated web solutions focused on e-commerce and real-time data monitoring",
-                date: "OCT 2024 - PRESENT",
-                metrics: {
-                    frontend_technical_debt: "frontend TypeScript error reduction",
-                    ecommerce_project_delivery_time: "ecommerce project delivery time",
-                    major_features_delivered: "major features delivered",
+                date: "OCT 2024 - MAR 2026",
+                evolutions: {
+                    ecommerce_project_recovery: {
+                        title: "E-commerce - Client Project Ownership",
+                        desc: "Taking over a paused client e-commerce project, with direct communication with the client and their teams for backend integration",
+                        result: "100% of the functional scope delivered within 3 months, including product import, order synchronization, and deployment.",
+                    },
                 },
             },
             selectra: {
                 title: "Full-stack Web Engineer - Selectra",
                 desc: "I worked on the company's back-office applications to add new features, refactor code/databases, and fix bugs to improve team productivity",
                 date: "JUL 2023 - DEC 2023",
-                metrics: {
-                    improvement_in_team_productivity: "improvement in team productivity",
-                    "back-office_applications_major_features":
-                        "back-office applications major features",
+                evolutions: {
+                    productivity_increase: {
+                        title: "Back-office tool - Productivity increase",
+                        desc: "Integration of several functional components and code refactoring",
+                        result: "Internationalization of the tool and management of analytical uncertainty, resulting in a reduction of 3 minutes per analysis performed.",
+                    },
                 },
             },
             grytics: {
                 title: "Assistant Development Engineer - Grytics",
                 desc: "I implemented functional tests across the entire application scope and developed machine learning/AI POCs to improve their web application",
                 date: "FEB 2023 - JUL 2023",
-                metrics: {
-                    functional_tests_implementation: "functional tests implementation",
-                    ml_ai_pocs_developed: "ML/AI POCs developed",
+                // metrics: {
+                //     functional_tests_implementation: "functional tests implementation",
+                //     ml_ai_pocs_developed: "ML/AI POCs developed",
+                // },
+                evolutions: {
+                    test_implementation: {
+                        title: "Application-wide functional test implementation",
+                        desc: "Development and integration of end-to-end tests using Cypress to ensure application reliability",
+                        result: "Achieved 100% test coverage on critical user flows, significantly reducing post-deployment bugs.",
+                    },
+                    ml_ai_pocs_developed: {
+                        title: "Machine Learning/AI POCs development",
+                        desc: "Created multiple POCs leveraging machine learning and AI to enhance application features",
+                        result: "Delivered over 10 innovative POCs, with 2 being integrated into the main product roadmap.",
+                    },
                 },
             },
             type: { internship: "Intern", permanent: "Permanent" },
@@ -313,30 +329,42 @@ export default {
             namkin: {
                 title: "Ingénieur Logiciel - Namkin",
                 desc: "Travaillant sur plusieurs projets B2B dans l'industrie, j'ai conçu et intégrer des solutions Web autour de l'e-commerce et la supervision de données en temps réel",
-                date: "OCT 2024 - PRÉSENT",
-                metrics: {
-                    frontend_technical_debt: "réduction des erreurs TypeScript front-end",
-                    ecommerce_project_delivery_time: "délai de livraison du projet e-commerce",
-                    major_features_delivered: "fonctionnalités majeures livrées",
+                date: "OCT 2024 - MAR 2026",
+                evolutions: {
+                    ecommerce_project_recovery: {
+                        title: "E-commerce - Ownership projet client",
+                        desc: "Prise en charge d'un projet e-commerce client interrompu, échanges directs avec le client et ses équipes pour une intégration backend",
+                        result: "100% du scope fonctionnel livré en 3 mois, dont import produits, synchronisation des commandes et déploiement.",
+                    },
                 },
             },
             selectra: {
                 title: "Ingénieur Web Full-stack - Selectra",
                 desc: "J'ai travaillé sur les applications de back-office de l'entreprise afin d'ajouter de nouvelles fonctionnalités, refactoriser codes/bases de données, résoudre les bugs pour améliorer la productivité des équipes",
                 date: "JUIL 2023 - DÉC 2023",
-                metrics: {
-                    improvement_in_team_productivity: "amélioration de la productivité de l'équipe",
-                    "back-office_applications_major_features":
-                        "fonctionnalités majeures des applications de back-office",
+                evolutions: {
+                    productivity_increase: {
+                        title: "Outil back-office - Augmentation de la productivité",
+                        desc: "Intégration de plusieurs briques fonctionnelles et refactorisation du code",
+                        result: "Internationalisation de l'outil et Gestion de l'incertitude des analyses résultant une baisse de 3 minutes par analyse effectuée.",
+                    },
                 },
             },
             grytics: {
                 title: "Ingénieur Développeur Assistant - Grytics",
                 desc: "J'ai intégré des tests fonctionnels sur tout le périmètre de l'application et j'ai réalisé des POCs en machine learning/IA pour améliorer leur application web",
                 date: "FÉV 2023 - JUIL 2023",
-                metrics: {
-                    functional_tests_implementation: "implémentation des tests fonctionnels",
-                    ml_ai_pocs_developed: "POCs ML/IA développés",
+                evolutions: {
+                    test_implementation: {
+                        title: "Mise en place de tests fonctionnels",
+                        desc: "Développement et intégration de tests de bout en bout avec Cypress afin de garantir la fiabilité de l'application",
+                        result: "Atteinte de 100 % de couverture de tests sur les parcours utilisateurs critiques, réduisant significativement les bugs après déploiement.",
+                    },
+                    ml_ai_pocs_developed: {
+                        title: "Développement de POC en Machine Learning / IA",
+                        desc: "Création de plusieurs POC exploitant le machine learning et l'IA pour enrichir les fonctionnalités de l'application",
+                        result: "Livraison de plus de 10 POC innovants, dont 2 intégrés à la feuille de route du produit principal.",
+                    },
                 },
             },
             type: { internship: "Stage", permanent: "CDI" },
