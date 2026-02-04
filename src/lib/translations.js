@@ -83,6 +83,11 @@ export default {
         project: {
             title: "My projects",
             type: { personal: "Personal", academic: "Academic" },
+            gritprint: {
+                date: "2026",
+                title: "GritPrint",
+                desc: "Web-based e-commerce platform that converts Strava activity data into personalized generative art posters, blending data and visual design.",
+            },
             quiz_yt: {
                 date: "2025",
                 title: "Kids Quiz YouTube Channel",
@@ -243,6 +248,11 @@ export default {
         project: {
             title: "Mes projets",
             type: { personal: "Personnel", academic: "Académique" },
+            gritprint: {
+                date: "2026",
+                title: "GritPrint",
+                desc: "Plateforme web e-commerce qui transforme des activités sportives (Strava) en posters d’art génératif personnalisés, mêlant data et graphisme.",
+            },
             quiz_yt: {
                 date: "2025",
                 title: "Chaîne YouTube de Quiz pour Enfants",
