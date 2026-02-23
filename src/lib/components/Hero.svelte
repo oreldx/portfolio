@@ -54,7 +54,7 @@
 </script>
 
 {#if mounted}
-    <div
+    <a
         class="flex flex-col gap-6 w-full lg:w-fit"
         in:fly={{
             duration: 1000,
@@ -62,6 +62,7 @@
             delay: 100,
             easing: quartOut,
         }}
+        href="/"
     >
         <div class="flex flex-col gap-6">
             <h1 class="font-extrabold">
@@ -75,5 +76,5 @@
             </div>
             <p class="hidden sm:inline italic">{$t("hero.quote")}</p>
         </div>
-    </div>
+    </a>
 {/if}
