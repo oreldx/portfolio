@@ -3,7 +3,7 @@ export default {
         summary: {
             about: {
                 title: "Welcome",
-                desc: "**Mid-level** (+2 years) software engineer, specializing in **Web development**. Based in _France_ and enjoying **remote work**.",
+                desc: "**Mid-level** (+2 years) software engineer full-stack. Based in _Lyon, France_ and enjoying **remote work**.",
                 readMore: "Read full About",
             },
             project: {
@@ -22,7 +22,7 @@ export default {
         hero: {
             quote: "I dev stuff on the Web for the World",
             title: "Software Engineer",
-            subtitle: "Full-Stack Web Development",
+            subtitle: "Full-Stack Development",
         },
         footer: {
             github: { text: "", label: "GitHub link" },
@@ -50,18 +50,18 @@ export default {
                     items: [
                         "<strong>Aurélien Dureux</strong>",
                         "24 years old",
-                        "<strong>Software Engineer</strong> (Full-Stack Web Development)",
+                        "<strong>Software Engineer</strong> (Full-Stack Development)",
                         "Graduate of the University of Technology of Troyes",
                         "<strong>+2.5 years of professional experience</strong>",
                         "<strong>+4 years of personal experience</strong> in side projects",
-                        "Based in <strong>France</strong>",
+                        "Based in <strong>Lyon</strong>, France",
                         "Open to remote work",
                     ],
                 },
                 skills: {
                     title: "My skills",
                     items: [
-                        "<strong>Full-stack</strong> developer, web-oriented",
+                        "<strong>Full-stack</strong> developer",
                         "Experience in <strong>project management</strong>",
                         "Knowledge of <strong>DevOps</strong>",
                         "Understanding of <strong>client & user needs</strong>",
@@ -141,7 +141,7 @@ export default {
                     ecommerce_project_recovery: {
                         title: "E-commerce — Full project recovery for SEDIS",
                         desc: "Took over a stalled client e-commerce project end-to-end: functional scoping with the client, data migration from a legacy ERP (Python), full backend development (Medusa.js) and partial frontend (React) to reduce ordering friction for partners.",
-                        result: "V1 delivered and validated by the client within 3 months, including product import, order synchronization, deployment, and successful onboarding of the first customers.",
+                        result: "V1 delivered and validated by the client within 3 months, including product import, order synchronization, deployment, and successful onboarding of the first customers, reducing client order cycle time by 50%.",
                     },
                     industrial_visualization_platform: {
                         title: "Real-time industrial site visualization — Mecatherm",
@@ -207,7 +207,7 @@ export default {
         summary: {
             about: {
                 title: "Bienvenue",
-                desc: "Ingénieur logiciel de **niveau intermédiaire** (+2 ans), spécialisé dans le **développement Web**. Basé en _France_ & ouvert au **travail à distance**.",
+                desc: "Ingénieur logiciel de **niveau intermédiaire** (+2 ans), spécialisé dans le **développement Web**. Basé à _Lyon_ & ouvert au **travail à distance**.",
                 readMore: "Lire la suite",
             },
             project: {
@@ -305,18 +305,18 @@ export default {
                     items: [
                         "<strong>Aurélien Dureux</strong>",
                         "24 ans",
-                        "<strong>Software Engineer</strong> (Full-Stack Web Development)",
+                        "<strong>Software Engineer</strong> (Full-Stack Development)",
                         "Diplômé de l'Université de Technologie de Troyes",
                         "<strong>+2.5 ans d'expérience professionnelle</strong>",
                         "<strong>+4 ans d'expérience personnelle</strong> en side projects",
-                        "Basé en <strong>France</strong>",
+                        "Basé à <strong>Lyon</strong>",
                         "Ouvert au télétravail",
                     ],
                 },
                 skills: {
                     title: "Mes compétences",
                     items: [
-                        "Développeur <strong>full-stack</strong>, orienté <strong>Web</strong>",
+                        "Développeur <strong>full-stack</strong>",
                         "Expérience en <strong>gestion de projets</strong>",
                         "Connaissances en <strong>DevOps</strong>",
                         "Compréhension des <strong>besoins client & utilisateurs</strong>",
@@ -345,7 +345,7 @@ export default {
                     ecommerce_project_recovery: {
                         title: "E-commerce — Reprise projet client pour SEDIS",
                         desc: "Prise en charge complète d'un projet e-commerce client interrompu : cadrage fonctionnel avec le client, migration de données depuis un ERP legacy (Python), développement intégral du backend (Medusa.js) et partiel du frontend (React) pour réduire la friction du passage de commandes des partenaires.",
-                        result: "V1 livrée et validée par le client en 3 mois, incluant import produits, synchronisation des commandes, déploiement et onboarding réussi des premiers clients.",
+                        result: "V1 livrée et validée par le client en 3 mois, incluant import produits, synchronisation des commandes, déploiement et onboarding réussi des premiers clients, réduisant de 50% le cycle de commande côté client.",
                     },
                     industrial_visualization_platform: {
                         title: "Visualisation de sites industriels en temps réel — Mecatherm",

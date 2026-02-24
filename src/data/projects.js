@@ -1,3 +1,4 @@
+import { read } from "$app/server";
 import { ProjectType } from "$lib/enums/ProjectType";
 import { skills } from "./skills";
 
@@ -17,6 +18,7 @@ export const projectsItems = [
             skills.system_design,
         ],
         externalLink: "https://gritprint.art",
+        readMore: true,
         featured: true,
     },
     {
@@ -35,6 +37,7 @@ export const projectsItems = [
                 icon: "mdi:eye",
             },
         ],
+        readMore: true,
     },
     {
         key: "social_network_account",
