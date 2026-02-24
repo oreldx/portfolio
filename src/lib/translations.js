@@ -3,7 +3,7 @@ export default {
         summary: {
             about: {
                 title: "Welcome",
-                desc: "**Mid-level** (+2 years) software engineer, specializing in **Web development**. Based in _France_ and enjoying **remote work**.",
+                desc: "**Mid-level** (+2 years) software engineer full-stack. Based in _Lyon, France_ and enjoying **remote work**.",
                 readMore: "Read full About",
             },
             project: {
@@ -22,7 +22,7 @@ export default {
         hero: {
             quote: "I dev stuff on the Web for the World",
             title: "Software Engineer",
-            subtitle: "Full-Stack Web Development",
+            subtitle: "Full-Stack Development",
         },
         footer: {
             github: { text: "", label: "GitHub link" },
@@ -50,18 +50,18 @@ export default {
                     items: [
                         "<strong>Aurélien Dureux</strong>",
                         "24 years old",
-                        "<strong>Software Engineer</strong> (Full-Stack Web Development)",
+                        "<strong>Software Engineer</strong> (Full-Stack Development)",
                         "Graduate of the University of Technology of Troyes",
                         "<strong>+2.5 years of professional experience</strong>",
                         "<strong>+4 years of personal experience</strong> in side projects",
-                        "Based in <strong>France</strong>",
+                        "Based in <strong>Lyon</strong>, France",
                         "Open to remote work",
                     ],
                 },
                 skills: {
                     title: "My skills",
                     items: [
-                        "<strong>Full-stack</strong> developer, web-oriented",
+                        "<strong>Full-stack</strong> developer",
                         "Experience in <strong>project management</strong>",
                         "Knowledge of <strong>DevOps</strong>",
                         "Understanding of <strong>client & user needs</strong>",
@@ -83,6 +83,11 @@ export default {
         project: {
             title: "My projects",
             type: { personal: "Personal", academic: "Academic" },
+            gritprint: {
+                date: "2026",
+                title: "GritPrint",
+                desc: "Web-based e-commerce platform that converts Strava activity data into personalized generative art posters, blending data and visual design.",
+            },
             quiz_yt: {
                 date: "2025",
                 title: "Kids Quiz YouTube Channel",
@@ -130,46 +135,47 @@ export default {
             title: "My experience",
             namkin: {
                 title: "Software Engineer - Namkin",
-                desc: "Working on several B2B projects in the industry, I designed and integrated web solutions focused on e-commerce and real-time data monitoring",
+                desc: "Delivered B2B industrial web solutions — from a full e-commerce project recovery to a real-time factory visualization platform — working directly with clients on both technical and functional decisions.",
                 date: "OCT 2024 - MAR 2026",
                 evolutions: {
                     ecommerce_project_recovery: {
-                        title: "E-commerce - Client Project Ownership",
-                        desc: "Taking over a paused client e-commerce project, with direct communication with the client and their teams for backend integration",
-                        result: "100% of the functional scope delivered within 3 months, including product import, order synchronization, and deployment.",
+                        title: "E-commerce — Full project recovery for SEDIS",
+                        desc: "Took over a stalled client e-commerce project end-to-end: functional scoping with the client, data migration from a legacy ERP (Python), full backend development (Medusa.js) and partial frontend (React) to reduce ordering friction for partners.",
+                        result: "V1 delivered and validated by the client within 3 months, including product import, order synchronization, deployment, and successful onboarding of the first customers, reducing client order cycle time by 50%.",
+                    },
+                    industrial_visualization_platform: {
+                        title: "Real-time industrial site visualization — Mecatherm",
+                        desc: "Built front-end features (React, GraphQL) to turn raw industrial data into readable dashboards for operators. Developed admin features (NestJS) to streamline client/provider coordination, and created metric widgets tailored to operators' business context.",
+                        result: "Delivered new analysis vectors for industrial operators, improving data readability and reducing coordination overhead between client and provider teams.",
                     },
                 },
             },
             selectra: {
-                title: "Full-stack Web Engineer - Selectra",
-                desc: "I worked on the company's back-office applications to add new features, refactor code/databases, and fix bugs to improve team productivity",
-                date: "JUL 2023 - DEC 2023",
+                title: "Software Engineer Intern - Selectra",
+                desc: "Contributed to internal back-office web applications, including a tool designed to reduce time-consuming tasks for the quality team through AI integration, resulting in a 100% productivity gain.",
+                date: "FEB 2024 - JUL 2024",
                 evolutions: {
                     productivity_increase: {
-                        title: "Back-office tool - Productivity increase",
-                        desc: "Integration of several functional components and code refactoring",
-                        result: "Internationalization of the tool and management of analytical uncertainty, resulting in a reduction of 3 minutes per analysis performed.",
+                        title: "Back-office tool — Quality team productivity",
+                        desc: "Segmented users by country to enable independent team and workflow management (Vue.js, Laravel). Built manual validation mechanisms for AI results to increase collaborator trust in automated processing. Identified and fixed bugs through monitoring (Datadog, Sentry) to stabilize the user experience.",
+                        result: "100% productivity increase for the quality team, with more reliable AI-assisted workflows and a measurable reduction in recurring incidents.",
                     },
                 },
             },
             grytics: {
-                title: "Assistant Development Engineer - Grytics",
-                desc: "I implemented functional tests across the entire application scope and developed machine learning/AI POCs to improve their web application",
+                title: "Junior Development Engineer Intern - Grytics",
+                desc: "Contributed to a B2B SaaS data analytics platform by identifying high-value AI use cases and securing deployment reliability through end-to-end testing.",
                 date: "FEB 2023 - JUL 2023",
-                // metrics: {
-                //     functional_tests_implementation: "functional tests implementation",
-                //     ml_ai_pocs_developed: "ML/AI POCs developed",
-                // },
                 evolutions: {
-                    test_implementation: {
-                        title: "Application-wide functional test implementation",
-                        desc: "Development and integration of end-to-end tests using Cypress to ensure application reliability",
-                        result: "Achieved 100% test coverage on critical user flows, significantly reducing post-deployment bugs.",
-                    },
                     ml_ai_pocs_developed: {
-                        title: "Machine Learning/AI POCs development",
-                        desc: "Created multiple POCs leveraging machine learning and AI to enhance application features",
-                        result: "Delivered over 10 innovative POCs, with 2 being integrated into the main product roadmap.",
+                        title: "Machine Learning & Generative AI POCs",
+                        desc: "Built multiple POCs (Python) using application data to explore ML and generative AI use cases with real business value potential.",
+                        result: "Delivered 10+ innovative POCs, 2 of which were integrated into the main product roadmap.",
+                    },
+                    test_implementation: {
+                        title: "End-to-end functional test coverage",
+                        desc: "Designed and integrated end-to-end tests (React, Cypress) across critical user flows to prevent regressions and secure production deployments.",
+                        result: "100% test coverage on critical paths, significantly reducing post-deployment bugs.",
                     },
                 },
             },
@@ -201,7 +207,7 @@ export default {
         summary: {
             about: {
                 title: "Bienvenue",
-                desc: "Ingénieur logiciel de **niveau intermédiaire** (+2 ans), spécialisé dans le **développement Web**. Basé en _France_ & ouvert au **travail à distance**.",
+                desc: "Ingénieur logiciel de **niveau intermédiaire** (+2 ans), spécialisé dans le **développement Web**. Basé à _Lyon_ & ouvert au **travail à distance**.",
                 readMore: "Lire la suite",
             },
             project: {
@@ -243,6 +249,11 @@ export default {
         project: {
             title: "Mes projets",
             type: { personal: "Personnel", academic: "Académique" },
+            gritprint: {
+                date: "2026",
+                title: "GritPrint",
+                desc: "Plateforme web e-commerce qui transforme des activités sportives (Strava) en posters d’art génératif personnalisés, mêlant data et graphisme.",
+            },
             quiz_yt: {
                 date: "2025",
                 title: "Chaîne YouTube de Quiz pour Enfants",
@@ -294,18 +305,18 @@ export default {
                     items: [
                         "<strong>Aurélien Dureux</strong>",
                         "24 ans",
-                        "<strong>Software Engineer</strong> (Full-Stack Web Development)",
+                        "<strong>Software Engineer</strong> (Full-Stack Development)",
                         "Diplômé de l'Université de Technologie de Troyes",
                         "<strong>+2.5 ans d'expérience professionnelle</strong>",
                         "<strong>+4 ans d'expérience personnelle</strong> en side projects",
-                        "Basé en <strong>France</strong>",
+                        "Basé à <strong>Lyon</strong>",
                         "Ouvert au télétravail",
                     ],
                 },
                 skills: {
                     title: "Mes compétences",
                     items: [
-                        "Développeur <strong>full-stack</strong>, orienté <strong>Web</strong>",
+                        "Développeur <strong>full-stack</strong>",
                         "Expérience en <strong>gestion de projets</strong>",
                         "Connaissances en <strong>DevOps</strong>",
                         "Compréhension des <strong>besoins client & utilisateurs</strong>",
@@ -328,42 +339,47 @@ export default {
             title: "Mes expériences",
             namkin: {
                 title: "Ingénieur Logiciel - Namkin",
-                desc: "Travaillant sur plusieurs projets B2B dans l'industrie, j'ai conçu et intégrer des solutions Web autour de l'e-commerce et la supervision de données en temps réel",
+                desc: "Livraison de solutions web B2B industrielles — de la reprise complète d'un projet e-commerce à une plateforme de visualisation d'usines en temps réel — en travaillant directement avec les clients sur les décisions techniques et fonctionnelles.",
                 date: "OCT 2024 - MAR 2026",
                 evolutions: {
                     ecommerce_project_recovery: {
-                        title: "E-commerce - Ownership projet client",
-                        desc: "Prise en charge d'un projet e-commerce client interrompu, échanges directs avec le client et ses équipes pour une intégration backend",
-                        result: "100% du scope fonctionnel livré en 3 mois, dont import produits, synchronisation des commandes et déploiement.",
+                        title: "E-commerce — Reprise projet client pour SEDIS",
+                        desc: "Prise en charge complète d'un projet e-commerce client interrompu : cadrage fonctionnel avec le client, migration de données depuis un ERP legacy (Python), développement intégral du backend (Medusa.js) et partiel du frontend (React) pour réduire la friction du passage de commandes des partenaires.",
+                        result: "V1 livrée et validée par le client en 3 mois, incluant import produits, synchronisation des commandes, déploiement et onboarding réussi des premiers clients, réduisant de 50% le cycle de commande côté client.",
+                    },
+                    industrial_visualization_platform: {
+                        title: "Visualisation de sites industriels en temps réel — Mecatherm",
+                        desc: "Développement de fonctionnalités front-end (React, GraphQL) pour rendre intelligibles des données brutes aux opérateurs industriels. Développement de fonctionnalités d'administration (NestJS) simplifiant la coordination client/prestataire, et création de widgets de métriques adaptés au contexte métier des opérateurs.",
+                        result: "Nouveaux vecteurs d'analyse livrés aux opérateurs industriels, améliorant la lisibilité des données et réduisant les frictions de coordination entre les équipes client et prestataire.",
                     },
                 },
             },
             selectra: {
                 title: "Ingénieur Web Full-stack - Selectra",
-                desc: "J'ai travaillé sur les applications de back-office de l'entreprise afin d'ajouter de nouvelles fonctionnalités, refactoriser codes/bases de données, résoudre les bugs pour améliorer la productivité des équipes",
-                date: "JUIL 2023 - DÉC 2023",
+                desc: "Contribution aux applications web back-office internes, dont un outil visant à réduire les tâches chronophages du pôle qualité grâce à l'intégration d'IA, avec un gain de productivité de 100%.",
+                date: "FÉV 2024 - JUIL 2024",
                 evolutions: {
                     productivity_increase: {
-                        title: "Outil back-office - Augmentation de la productivité",
-                        desc: "Intégration de plusieurs briques fonctionnelles et refactorisation du code",
-                        result: "Internationalisation de l'outil et Gestion de l'incertitude des analyses résultant une baisse de 3 minutes par analyse effectuée.",
+                        title: "Outil back-office — Productivité pôle qualité",
+                        desc: "Segmentation des utilisateurs par pays pour une gestion indépendante des équipes et des flux métiers (Vue.js, Laravel). Mécanismes de validation manuelle des résultats IA pour renforcer la confiance des collaborateurs dans les traitements automatisés. Identification et correction de bugs via monitoring (Datadog, Sentry) pour stabiliser l'expérience utilisateur.",
+                        result: "Gain de productivité de 100% pour le pôle qualité, avec des workflows IA plus fiables et une réduction mesurable des incidents récurrents.",
                     },
                 },
             },
             grytics: {
                 title: "Ingénieur Développeur Assistant - Grytics",
-                desc: "J'ai intégré des tests fonctionnels sur tout le périmètre de l'application et j'ai réalisé des POCs en machine learning/IA pour améliorer leur application web",
+                desc: "Contribution au développement d'une SaaS B2B d'analyse de données, en identifiant des cas d'usage IA à forte valeur et en sécurisant la fiabilité des mises en production par des tests end-to-end.",
                 date: "FÉV 2023 - JUIL 2023",
                 evolutions: {
-                    test_implementation: {
-                        title: "Mise en place de tests fonctionnels",
-                        desc: "Développement et intégration de tests de bout en bout avec Cypress afin de garantir la fiabilité de l'application",
-                        result: "Atteinte de 100 % de couverture de tests sur les parcours utilisateurs critiques, réduisant significativement les bugs après déploiement.",
-                    },
                     ml_ai_pocs_developed: {
-                        title: "Développement de POC en Machine Learning / IA",
-                        desc: "Création de plusieurs POC exploitant le machine learning et l'IA pour enrichir les fonctionnalités de l'application",
-                        result: "Livraison de plus de 10 POC innovants, dont 2 intégrés à la feuille de route du produit principal.",
+                        title: "POCs Machine Learning & IA générative",
+                        desc: "Réalisation de plusieurs POCs (Python) à partir des données applicatives pour explorer des cas d'usage en ML et IA générative à fort potentiel business.",
+                        result: "Plus de 10 POCs innovants livrés, dont 2 intégrés à la feuille de route du produit principal.",
+                    },
+                    test_implementation: {
+                        title: "Couverture de tests fonctionnels end-to-end",
+                        desc: "Conception et intégration de tests end-to-end (React, Cypress) sur les parcours utilisateurs critiques pour prévenir les régressions et sécuriser les mises en production.",
+                        result: "100% de couverture sur les parcours critiques, réduisant significativement les bugs après déploiement.",
                     },
                 },
             },

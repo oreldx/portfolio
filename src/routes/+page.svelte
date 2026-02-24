@@ -57,28 +57,6 @@
         </div>
 
         <div
-            in:fly={{
-                duration: 300,
-                y: 100,
-                delay: 250,
-                easing: quartIn,
-            }}
-            class="col-span-2"
-        >
-            {#if featuredProject}
-                <SummaryCard
-                    sectionKey="project"
-                    secondaryLink={featuredProject.readMore
-                        ? `/project/${featuredProject.key}`
-                        : undefined}
-                >
-                    <p class="mt-2">{$t(`project.${featuredProject.key}.title`)}</p>
-                    <p class="text-sm text-gray-500">{$t(`project.${featuredProject.key}.desc`)}</p>
-                </SummaryCard>
-            {/if}
-        </div>
-
-        <div
             class="col-span-2"
             in:fly={{
                 duration: 300,
@@ -98,6 +76,28 @@
                     <p class="text-sm text-gray-500">
                         {$t(`experience.${featuredExperience.key}.desc`)}
                     </p>
+                </SummaryCard>
+            {/if}
+        </div>
+
+        <div
+            in:fly={{
+                duration: 300,
+                y: 100,
+                delay: 250,
+                easing: quartIn,
+            }}
+            class="col-span-2"
+        >
+            {#if featuredProject}
+                <SummaryCard
+                    sectionKey="project"
+                    secondaryLink={featuredProject.readMore
+                        ? `/project/${featuredProject.key}`
+                        : undefined}
+                >
+                    <p class="mt-2">{$t(`project.${featuredProject.key}.title`)}</p>
+                    <p class="text-sm text-gray-500">{$t(`project.${featuredProject.key}.desc`)}</p>
                 </SummaryCard>
             {/if}
         </div>
