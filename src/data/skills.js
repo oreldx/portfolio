@@ -34,6 +34,7 @@ export const skills = {
     graphql: { icon: "mdi:graphql", name: "GraphQL", type: "hard" },
     scrapping: { icon: "hugeicons:mining-02", name: "Web Scraping", type: "hard" },
     mongodb: { icon: "devicon-plain:mongodb", name: "MongoDB", type: "hard" },
+    hosting: { icon: "mdi:cloud-outline", name: "Hosting", type: "hard" },
 
     // BRIDGE
     project_management: {

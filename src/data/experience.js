@@ -25,6 +25,10 @@ export const experienceItems = [
                 key: "ecommerce_project_recovery",
                 icon: "mdi:shopping",
             },
+            {
+                key: "industrial_visualization_platform",
+                icon: "mdi:factory",
+            },
         ],
         externalLink: "https://namkin.fr/",
         readMore: false,

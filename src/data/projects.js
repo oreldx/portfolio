@@ -1,7 +1,26 @@
+import { read } from "$app/server";
 import { ProjectType } from "$lib/enums/ProjectType";
 import { skills } from "./skills";
 
 export const projectsItems = [
+    {
+        key: "gritprint",
+        type: ProjectType.PERSONAL,
+        tags: [
+            skills.autonomy,
+            skills.creativity,
+            skills.data_manipulation,
+            skills.svelte,
+            skills.ui_ux,
+            skills.docker,
+            skills.hosting,
+            skills.postgresql,
+            skills.system_design,
+        ],
+        externalLink: "https://gritprint.art",
+        readMore: true,
+        featured: true,
+    },
     {
         key: "quiz_yt",
         type: ProjectType.PERSONAL,
@@ -18,6 +37,7 @@ export const projectsItems = [
                 icon: "mdi:eye",
             },
         ],
+        readMore: true,
     },
     {
         key: "social_network_account",
@@ -72,7 +92,6 @@ export const projectsItems = [
             { value: "40k", label: "single_video_views", icon: "mdi:eye" },
         ],
         readMore: true,
-        featured: true,
     },
     {
         key: "dynamic_website",
