@@ -226,7 +226,7 @@ export default {
         hero: {
             quote: "Je développe des choses sur le Web pour ce petit Monde",
             title: "Software Engineer",
-            subtitle: "Développement Web Full-Stack",
+            subtitle: "Développement Full-Stack",
         },
         footer: {
             github: { text: "", label: "Lien GitHub" },
