@@ -3,6 +3,14 @@ import { skills } from "./skills";
 
 export const experienceItems = [
     {
+        key: "indy",
+        type: ExperienceType.PERMANENT,
+        tags: [skills.vue, skills.nodejs, skills.typescript, skills.mongodb],
+        externalLink: "https://indy.fr/",
+        readMore: false,
+        featured: false,
+    },
+    {
         key: "namkin",
         type: ExperienceType.PERMANENT,
         tags: [
