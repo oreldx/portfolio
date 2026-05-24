@@ -3,7 +3,7 @@ export default {
         summary: {
             about: {
                 title: "Welcome",
-                desc: "**Mid-level** (+2 years) software engineer full-stack. Based in _Lyon, France_ and enjoying **remote work**.",
+                desc: "Junior (+2 years) **software engineer full-stack at Indy**.",
                 readMore: "Read full About",
             },
             project: {
@@ -21,7 +21,7 @@ export default {
         },
         hero: {
             quote: "I dev stuff on the Web for the World",
-            title: "Software Engineer",
+            title: "Software Engineer @ Indy",
             subtitle: "Full-Stack Development",
         },
         footer: {
@@ -49,13 +49,12 @@ export default {
                     title: "Who am I?",
                     items: [
                         "<strong>Aurélien Dureux</strong>",
-                        "24 years old",
-                        "<strong>Software Engineer</strong> (Full-Stack Development)",
+                        "25 years old",
+                        "<strong>Software Engineer @ Indy</strong> (Full-Stack Development)",
                         "Graduate of the University of Technology of Troyes",
                         "<strong>+2.5 years of professional experience</strong>",
                         "<strong>+4 years of personal experience</strong> in side projects",
                         "Based in <strong>Lyon</strong>, France",
-                        "Open to remote work",
                     ],
                 },
                 skills: {
@@ -133,6 +132,11 @@ export default {
         },
         experience: {
             title: "My experience",
+            indy: {
+                title: "Software Engineer - Indy",
+                desc: "Work in progress... (exploring the lovely VAT world with great people)",
+                date: "MAY 2026 - Present",
+            },
             namkin: {
                 title: "Software Engineer - Namkin",
                 desc: "Delivered B2B industrial web solutions — from a full e-commerce project recovery to a real-time factory visualization platform — working directly with clients on both technical and functional decisions.",
@@ -207,7 +211,7 @@ export default {
         summary: {
             about: {
                 title: "Bienvenue",
-                desc: "Ingénieur logiciel de **niveau intermédiaire** (+2 ans), spécialisé dans le **développement Web**. Basé à _Lyon_ & ouvert au **travail à distance**.",
+                desc: "**Ingénieur logiciel** Junior (+2 ans) chez **Indy**.",
                 readMore: "Lire la suite",
             },
             project: {
@@ -304,13 +308,12 @@ export default {
                     title: "Qui suis-je ?",
                     items: [
                         "<strong>Aurélien Dureux</strong>",
-                        "24 ans",
-                        "<strong>Software Engineer</strong> (Full-Stack Development)",
+                        "25 ans",
+                        "<strong>Software Engineer @ Indy</strong> (Full-Stack Development)",
                         "Diplômé de l'Université de Technologie de Troyes",
                         "<strong>+2.5 ans d'expérience professionnelle</strong>",
                         "<strong>+4 ans d'expérience personnelle</strong> en side projects",
                         "Basé à <strong>Lyon</strong>",
-                        "Ouvert au télétravail",
                     ],
                 },
                 skills: {
@@ -337,6 +340,11 @@ export default {
         },
         experience: {
             title: "Mes expériences",
+            indy: {
+                title: "Ingénieur Logiciel - Indy",
+                desc: "Travaille en cours... (explorer le merveilleux monde de la TVA avec des personnes formidables)",
+                date: "MAI 2026 - Présent",
+            },
             namkin: {
                 title: "Ingénieur Logiciel - Namkin",
                 desc: "Livraison de solutions web B2B industrielles — de la reprise complète d'un projet e-commerce à une plateforme de visualisation d'usines en temps réel — en travaillant directement avec les clients sur les décisions techniques et fonctionnelles.",
