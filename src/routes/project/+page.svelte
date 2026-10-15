@@ -1,6 +1,4 @@
 <script>
-    import { expoOut } from "svelte/easing";
-    import { blur } from "svelte/transition";
     import { CardTypes } from "$lib/enums/CardType";
     import Card from "$lib/components/Card.svelte";
     import { projectsItems } from "data/projects";

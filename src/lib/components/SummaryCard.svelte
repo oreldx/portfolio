@@ -24,14 +24,14 @@
         {#if secondaryLink}
             <a
                 href={secondaryLink}
-                class="bg-stone-100 dark:bg-zinc-800 text-accent border border-accent px-4 py-2 text-sm rounded-sm hover:bg-accent hover:text-primary transition-colors"
+                class="bg-surface-muted text-accent-dark dark:text-accent-light border border-accent px-4 py-2 text-sm rounded-sm hover:bg-accent-dark hover:text-white dark:hover:bg-accent-light dark:hover:text-black"
             >
                 {$t("button.readMore")}
             </a>
         {/if}
         <a
             href={`/${sectionKey}`}
-            class="px-4 py-2 text-sm rounded-sm transition-colors bg-accent-light dark:bg-accent-dark hover:bg-accent dark:hover:bg-accent"
+            class="px-4 py-2 text-sm rounded-sm bg-accent-light text-black dark:bg-accent-dark dark:text-white hover:bg-accent-dark hover:text-white dark:hover:bg-accent-light dark:hover:text-black"
         >
             {$t(`summary.${sectionKey}.readMore`)}
         </a>

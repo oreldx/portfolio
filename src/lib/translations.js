@@ -1,9 +1,17 @@
 export default {
     en: {
+        controls: {
+            reading: "Reading",
+            theme: "Change theme",
+            language: "Change language",
+            menu: "Menu",
+            navigation: "Main navigation",
+            tools: "Portfolio tools",
+        },
         summary: {
             about: {
-                title: "Welcome",
-                desc: "Junior (+2 years) **software engineer full-stack at Indy**.",
+                title: "Build, explore, automate.",
+                desc: "I explore the web, data and visual creation through personal projects, from automation to generative art.\n\nBuilding at Indy with a team that ships 🚀",
                 readMore: "Read full About",
             },
             project: {
@@ -22,7 +30,6 @@ export default {
         hero: {
             quote: "I dev stuff on the Web for the World",
             title: "Software Engineer @ Indy",
-            subtitle: "Full-Stack Development",
         },
         footer: {
             github: { text: "", label: "GitHub link" },
@@ -31,6 +38,9 @@ export default {
             resume: { text: "Resume", label: "Resume file", url: "/resume_en.pdf" },
         },
         button: {
+            details: "Details",
+            result: "Result:",
+            website: "website",
             readMore: "Read More",
             viewOn: "View on",
             back: "Back",
@@ -83,11 +93,13 @@ export default {
             title: "My projects",
             type: { personal: "Personal", academic: "Academic" },
             gritprint: {
+                summary: "Generative art posters created from Strava activities.",
                 date: "2026",
                 title: "GritPrint",
                 desc: "Web-based e-commerce platform that converts Strava activity data into personalized generative art posters, blending data and visual design.",
             },
             quiz_yt: {
+                summary: "A semi-automated workflow for producing children’s quiz videos.",
                 date: "2025",
                 title: "Kids Quiz YouTube Channel",
                 desc: "Semi-automated production of quiz original videos for children on YouTube",
@@ -97,16 +109,19 @@ export default {
                 },
             },
             social_network_account: {
+                summary: "Automated content creation for Instagram accounts.",
                 date: "2024",
                 title: "Autonomous Social Network Accounts",
                 desc: "Autonomous content production for multiple Instagram accounts",
             },
             portfolio: {
+                summary: "A personal space to share my projects and experience.",
                 date: "2023",
                 title: "Personal Portfolio",
                 desc: "Creation of a personal portfolio to showcase my projects and skills.",
             },
             machine_learning_model: {
+                summary: "Predicting retail store revenue with machine learning.",
                 date: "2022",
                 title: "Machine Learning Model",
                 desc: "A machine learning model in Python to predict revenue of all types of retail stores in Norway",
@@ -115,6 +130,7 @@ export default {
                 },
             },
             auto_youtube_channel: {
+                summary: "A daily automated video pipeline built from Twitch clips.",
                 date: "2022",
                 title: "Autonomous Youtube Channel",
                 desc: "Daily video production of the best Twitch clips to create a self-sustaining YouTube channel",
@@ -125,6 +141,7 @@ export default {
                 },
             },
             dynamic_website: {
+                summary: "An MVC web application for a vaccination service.",
                 date: "2021",
                 title: "Dynamic Website",
                 desc: "Vaccination site in HTML, CSS, PHP, SQL in MVC architecture",
@@ -133,11 +150,14 @@ export default {
         experience: {
             title: "My experience",
             indy: {
+                summary: "Full-stack development on VAT workflows at Indy.",
                 title: "Software Engineer - Indy",
                 desc: "Work in progress... (exploring the lovely VAT world with great people)",
                 date: "MAY 2026 - Present",
             },
             namkin: {
+                summary:
+                    "B2B e-commerce and real-time industrial visualization, from scoping to delivery.",
                 title: "Software Engineer - Namkin",
                 desc: "Delivered B2B industrial web solutions — from a full e-commerce project recovery to a real-time factory visualization platform — working directly with clients on both technical and functional decisions.",
                 date: "OCT 2024 - MAR 2026",
@@ -155,6 +175,7 @@ export default {
                 },
             },
             selectra: {
+                summary: "Internal tools and AI-assisted workflows for the quality team.",
                 title: "Software Engineer Intern - Selectra",
                 desc: "Contributed to internal back-office web applications, including a tool designed to reduce time-consuming tasks for the quality team through AI integration, resulting in a 100% productivity gain.",
                 date: "FEB 2024 - JUL 2024",
@@ -167,6 +188,7 @@ export default {
                 },
             },
             grytics: {
+                summary: "AI experimentation and end-to-end testing for a B2B analytics platform.",
                 title: "Junior Development Engineer Intern - Grytics",
                 desc: "Contributed to a B2B SaaS data analytics platform by identifying high-value AI use cases and securing deployment reliability through end-to-end testing.",
                 date: "FEB 2023 - JUL 2023",
@@ -208,10 +230,18 @@ export default {
         },
     },
     fr: {
+        controls: {
+            reading: "Lecture",
+            theme: "Changer de thème",
+            language: "Changer de langue",
+            menu: "Menu",
+            navigation: "Navigation principale",
+            tools: "Outils du portfolio",
+        },
         summary: {
             about: {
-                title: "Bienvenue",
-                desc: "**Ingénieur logiciel** Junior (+2 ans) chez **Indy**.",
+                title: "Créer, explorer, automatiser.",
+                desc: "J’explore le web, la donnée et la création visuelle à travers des projets personnels, de l’automatisation à l’art génératif.\n\nJe prod' chez Indy, avec une équipe qui envoie 🚀",
                 readMore: "Lire la suite",
             },
             project: {
@@ -230,7 +260,6 @@ export default {
         hero: {
             quote: "Je développe des choses sur le Web pour ce petit Monde",
             title: "Software Engineer",
-            subtitle: "Développement Full-Stack",
         },
         footer: {
             github: { text: "", label: "Lien GitHub" },
@@ -239,6 +268,9 @@ export default {
             resume: { text: "CV", label: "Fichier CV", url: "/resume_fr.pdf" },
         },
         button: {
+            details: "Détails",
+            result: "Résultat :",
+            website: "le site",
             readMore: "En savoir plus",
             viewOn: "Regarder sur",
             back: "Retour",
@@ -254,11 +286,14 @@ export default {
             title: "Mes projets",
             type: { personal: "Personnel", academic: "Académique" },
             gritprint: {
+                summary: "Des posters d’art génératif créés à partir d’activités Strava.",
                 date: "2026",
                 title: "GritPrint",
                 desc: "Plateforme web e-commerce qui transforme des activités sportives (Strava) en posters d’art génératif personnalisés, mêlant data et graphisme.",
             },
             quiz_yt: {
+                summary:
+                    "Un workflow semi-automatisé pour produire des vidéos de quiz pour enfants.",
                 date: "2025",
                 title: "Chaîne YouTube de Quiz pour Enfants",
                 desc: "Production semi-automatisée de vidéos originales de quiz pour enfants sur YouTube",
@@ -268,16 +303,19 @@ export default {
                 },
             },
             social_network_account: {
+                summary: "La création automatisée de contenu pour des comptes Instagram.",
                 date: "2024",
                 title: "Comptes de Réseaux Sociaux Autonomes",
                 desc: "Production autonome de contenu pour multiples comptes Instagram",
             },
             portfolio: {
+                summary: "Un espace personnel pour partager mes projets et mon parcours.",
                 date: "2023",
                 title: "Portfolio Personnel",
                 desc: "Création d'un portfolio personnel pour présenter mes projets et compétences.",
             },
             machine_learning_model: {
+                summary: "Prédire le chiffre d’affaires de commerces grâce au machine learning.",
                 date: "2022",
                 title: "Modèle de Machine Learning",
                 desc: "Création d'un modèle d'apprentissage machine en Python pour prédire les revenus de tous types de magasins de détail en Norvège",
@@ -286,6 +324,8 @@ export default {
                 },
             },
             auto_youtube_channel: {
+                summary:
+                    "Une chaîne de production vidéo quotidienne automatisée à partir de clips Twitch.",
                 date: "2022",
                 title: "Chaîne Youtube Autonome",
                 desc: "Production de vidéos journalières des meilleurs clips de Twitch permettant d'obtenir une chaîne YouTube autonome",
@@ -296,6 +336,7 @@ export default {
                 },
             },
             dynamic_website: {
+                summary: "Une application web en architecture MVC pour un service de vaccination.",
                 date: "2021",
                 title: "Site Web Dynamique",
                 desc: "Site de vaccination en HTML, CSS, PHP, SQL en architecture MVC",
@@ -341,11 +382,14 @@ export default {
         experience: {
             title: "Mes expériences",
             indy: {
+                summary: "Développement full-stack autour de la TVA chez Indy.",
                 title: "Ingénieur Logiciel - Indy",
                 desc: "Travaille en cours... (explorer le merveilleux monde de la TVA avec des personnes formidables)",
                 date: "MAI 2026 - Présent",
             },
             namkin: {
+                summary:
+                    "E-commerce B2B et visualisation industrielle en temps réel, du cadrage à la livraison.",
                 title: "Ingénieur Logiciel - Namkin",
                 desc: "Livraison de solutions web B2B industrielles — de la reprise complète d'un projet e-commerce à une plateforme de visualisation d'usines en temps réel — en travaillant directement avec les clients sur les décisions techniques et fonctionnelles.",
                 date: "OCT 2024 - MAR 2026",
@@ -363,6 +407,8 @@ export default {
                 },
             },
             selectra: {
+                summary:
+                    "Des outils internes et des workflows assistés par IA pour le pôle qualité.",
                 title: "Ingénieur Web Full-stack - Selectra",
                 desc: "Contribution aux applications web back-office internes, dont un outil visant à réduire les tâches chronophages du pôle qualité grâce à l'intégration d'IA, avec un gain de productivité de 100%.",
                 date: "FÉV 2024 - JUIL 2024",
@@ -375,6 +421,8 @@ export default {
                 },
             },
             grytics: {
+                summary:
+                    "Expérimentation IA et tests end-to-end pour une plateforme d’analyse B2B.",
                 title: "Ingénieur Développeur Assistant - Grytics",
                 desc: "Contribution au développement d'une SaaS B2B d'analyse de données, en identifiant des cas d'usage IA à forte valeur et en sécurisant la fiabilité des mises en production par des tests end-to-end.",
                 date: "FÉV 2023 - JUIL 2023",

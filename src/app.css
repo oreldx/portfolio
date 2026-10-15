@@ -1,29 +1,37 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --color-primary: #000000; 
-  --color-accent: #10a154;
-  --color-accent-light: #4ade80;
-  --color-accent-dark: #15803d;
+    --color-primary: #000000;
+    --color-page: #f5f5f4;
+    --color-surface: #fafaf9;
+    --color-surface-muted: #e7e5e4;
+    --color-divider: #d4d4d8;
+    --color-accent: #10a154;
+    --color-accent-light: #4ade80;
+    --color-accent-dark: #15803d;
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 .dark {
     --color-primary: #ffffff;
+    --color-page: #09090b;
+    --color-surface: #18181b;
+    --color-surface-muted: #27272a;
+    --color-divider: #3f3f46;
 }
 
 @utility strong-text {
-  @apply text-accent font-semibold;
+    @apply text-accent font-semibold;
 }
 
 @utility prose-wrapper {
-  @apply prose !max-w-none prose-p:text-primary prose-strong:text-accent prose-a:text-accent prose-headings:text-primary prose-li:text-primary prose-pre:wrap-break-word prose-pre:whitespace-pre-wrap prose-pre:text-primary prose-pre:border prose-pre:border-primary prose-pre:bg-transparent
+    @apply prose !max-w-none prose-p:text-primary prose-strong:text-primary prose-a:text-accent prose-headings:text-primary prose-li:text-primary prose-pre:wrap-break-word prose-pre:whitespace-pre-wrap prose-pre:text-primary prose-pre:border prose-pre:border-primary prose-pre:bg-surface;
 }
 
 @utility card {
-    @apply bg-linear-to-tr from-stone-50 dark:from-zinc-950 to-stone-100 dark:to-zinc-900 rounded-xl p-5 shadow-md border border-zinc-700 hover:border-accent-light hover:shadow-[0px_0px_5px_5px] hover:shadow-accent/30 transition-all duration-300
+    @apply bg-surface rounded-xl p-5 border border-divider hover:border-accent dark:hover:border-accent-light;
 }
 
 @layer base {
@@ -35,7 +43,6 @@
         @apply text-2xl;
     }
 
-
     h3 {
         @apply text-2xl;
     }
@@ -45,6 +52,7 @@
     }
 
     body {
+        background-color: var(--color-page);
         min-height: 100vh;
         margin: 0;
         font-family: Sen;
@@ -55,7 +63,13 @@
     }
 
     body::-webkit-scrollbar {
-        width: 0px; 
+        width: 0px;
     }
+}
+@utility dock-control {
+    @apply flex items-center justify-center shrink-0 w-11 h-11 sm:w-12 sm:h-12 rounded-lg text-zinc-600 dark:text-zinc-400 hover:text-accent dark:hover:text-accent-light cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent;
+}
 
+@utility quiet-link {
+    @apply text-sm font-semibold text-accent dark:text-accent-light hover:underline underline-offset-4 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent;
 }
