@@ -1,119 +1,35 @@
+J'ai développé un outil pour produire des vidéos de quiz pour enfants, composées de mini-jeux. Le montage de ce type de contenu est répétitif : je voulais automatiser la production, du scénario à la publication sur YouTube.
 
-## Chaîne YouTube interactive automatisée — Contenu éducatif généré de bout en bout
+Les vidéos de chaînes comme [Hero Quiz](https://www.youtube.com/@heroquiz_) m'ont servi de référence. Elles simulent une interaction avec l'enfant grâce à un rythme soutenu, des règles claires et des repères visuels comme les émojis, les couleurs et les animations. J'ai gardé ces contraintes de rythme et de lisibilité dès la conception.
 
-**Comment concevoir** une **chaîne YouTube pour enfants**, capable de **générer automatiquement des vidéos interactives**, structurées comme des mini-jeux ?
+## Des mini-jeux à base d'émojis
 
-## Introduction
+Chaque vidéo enchaîne des jeux de choix, d'observation, de rapidité ou de logique simple. Les émojis sont faciles à comprendre pour les enfants et servent d'éléments graphiques standardisés pour la génération procédurale.
 
-Les formats de vidéos pour enfants de type _[Hero Quiz](https://www.youtube.com/@heroquiz_)_ reposent sur une mécanique simple mais efficace :  
-de l’**interaction simulée**, un rythme soutenu, des règles claires et des **repères visuels forts** (émojis, couleurs, animations).
+Chaque séquence a ses propres règles, sa durée et ses éléments d'interaction.
 
-Derrière cette apparente simplicité se cache pourtant un **montage répétitif**, chronophage et peu scalable.
+## Préparer le contenu
 
-L’objectif de ce projet a été de **reproduire ce type de contenu de manière entièrement automatisée**, en construisant une chaîne capable de :
--   Générer des scénarios de mini-jeux
--   Produire les voix, visuels et animations
--   Monter les séquences en vidéo complète et cohérente
-    
-Le tout pensé dès le départ pour un public enfant, avec une attention particulière portée au **rythme**, à la **lisibilité** et à la **clarté des interactions**.
+J'ai créé une interface d'administration en Vue.js pour gérer les types de mini-jeux, leurs paramètres et leurs règles. Elle permet de préparer rapidement le contenu et de prévisualiser la logique des séquences.
 
-## Concept des vidéos
+Cette interface communique avec une application Flask, qui gère la logique métier, valide les données et construit la structure narrative des vidéos. Une fois le contenu validé, Flask pilote les étapes de génération.
 
-Chaque vidéo est conçue comme une **succession de mini-jeux**, reposant principalement sur des **emojis** comme support visuel :
--   Jeux de choix (trouver le bon emoji)
--   Jeux d’observation
--   Jeux de rapidité ou de logique simple
-    
-Les emojis servent à la fois :
--   De **langage universel** compréhensible par les enfants
--   De **briques graphiques standardisées**
--   De base idéale pour une génération procédurale
+## Générer le scénario et les ressources
 
-Une vidéo complète est ainsi une **orchestration de séquences**, chacune ayant ses règles, son timing et ses éléments interactifs.
+À partir des paramètres saisis dans l'interface, un LLM génère la structure de la vidéo, ordonne les mini-jeux et rédige les instructions, les transitions et les retours donnés au spectateur. Le résultat est un scénario structuré que les services suivants peuvent utiliser.
 
-## Backoffice et création de contenu
+Les voix sont produites par synthèse vocale. Les ressources graphiques, dont les émojis, les fonds et les éléments d'interface, sont préparées automatiquement. Cette préparation est déterministe pour garder un résultat cohérent.
 
-Afin de permettre la création et la gestion du contenu, un **backoffice dédié** a été développé.
+## Monter la vidéo
 
-### Interface d’administration
+Un service basé sur Remotion.js assemble les séquences, anime les émojis et les éléments d'interface, puis synchronise les voix avec les animations et les transitions. Il génère la vidéo finale et sa miniature.
 
--   Développée en **Vue.js**    
--   UX dédiée à la création rapide de contenus
--   Gestion des types de mini-jeux, paramètres et règles
--   Prévisualisation logique des séquences
+Le montage se fait entièrement par le code, sans manipulation manuelle d'une timeline.
 
-### Backend applicatif
+## Publier et faire évoluer les formats
 
-Le backoffice communique avec une application **Flask**, qui centralise :
+Les vidéos générées peuvent être stockées et publiées automatiquement sur YouTube. L'architecture permet de produire des variations de contenu en volume, de faire évoluer les formats et d'ajouter des types de mini-jeux sans tout reconstruire.
 
--   La logique métier    
--   La validation des données
--   La génération de la structure narrative des vidéos
-    
+Ce projet m'a fait travailler sur la génération procédurale de vidéos et la conception d'une chaîne de production automatisée complexe. Il m'a aussi demandé de relier l'interface de création, le backend, l'IA et le rendu vidéo, en tenant compte d'un public enfant.
 
-## Génération automatisée des vidéos
-
-Une fois le contenu validé, l’application Flask prend le relais pour **orchestrer l’ensemble du pipeline de génération**.
-
-### Génération du scénario
-
-À partir des paramètres définis dans le backoffice :
-
--   Un **LLM** est utilisé pour générer la structure globale de la vidéo
--   Ordonnancement des mini-jeux
--   Génération des textes (instructions, transitions, feedback)
-    
-Le scénario devient ainsi une **description structurée** de la vidéo, exploitable par les étapes suivantes.
-
-### Génération des assets
-
-À partir de ce scénario :
-
--   Les voix sont générées via des systèmes de **Text-to-Speech**
--   Les assets graphiques (emojis, fonds, éléments UI) sont préparés automatiquement
-
-L’ensemble des ressources est produit de manière déterministe afin de garantir la cohérence finale.
-
-## Montage vidéo automatisé
-
-La mise en forme finale est assurée par un service basé sur **Remotion.js**.
-
-Ce service permet :
-
--   D’assembler les séquences vidéo
--   D’animer les emojis et éléments UI
--   De synchroniser voix, animations et transitions
--   De générer automatiquement :
-    -   La **vidéo finale**
-    -   La **miniature (thumbnail)** associée
-        
-
-Le montage est ainsi entièrement **piloté par le code**, sans timeline manuelle.
-
-## Publication et scalabilité
-
-Une fois générée, la vidéo peut être :
-
--   Stockée
--   Publiée automatiquement sur YouTube
--   Répliquée à grande échelle avec des variations de contenu
-
-L’architecture a été pensée pour permettre :
-
--   Une production en volume
--   Une évolution rapide des formats
--   L’ajout de nouveaux types de mini-jeux sans refonte globale
-    
-
-## Conclusion
-
-Ce projet m’a permis d’explorer :
-
--   La **génération procédurale de contenus vidéo**
--   La conception de **pipelines automatisés complexes**
--   L’interconnexion entre UX, backend, IA et rendu vidéo
--   L’adaptation des contraintes techniques à un **public enfant**
-
-Il démontre qu’un format fortement codifié, comme les vidéos interactives pour enfants, peut devenir un **système de production automatisé**, fiable et scalable.
-
-Néanmoins, le besoin du backoffice pour structurer le contenu émane de l'impossibilité actuelle de déléguer entièrement la création à une IA (dans une plage de coût raisonnable pour obtenir une qualité satisfaisante).
+La création du contenu reste semi-automatisée : j'ai eu besoin du back-office pour la structurer, car je n'arrivais pas à la déléguer entièrement à une IA avec une qualité satisfaisante et un coût raisonnable.

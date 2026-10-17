@@ -1,54 +1,19 @@
-## GritPrint — Turning Sports Data into Graphic Objects
+With GritPrint, I turn sports activities into personalized generative art posters. I wanted to make the data recorded on Strava into something people could keep at home as a reminder of an activity or effort they were proud of.
 
-**How can raw sports activities be transformed** into **unique artistic posters**?
+The project combines sports data processing, generative design and full-stack web development. I also worked on the brand identity and how to tell the stories behind these activities, as well as e-commerce and print production.
 
-## Introduction
+## From activities to posters
 
-Sports platforms such as Strava generate a massive amount of **data**.  
-This data is precise and useful, but often remains **cold and purely functional**.
+Activities are imported from third-party platforms, including Strava. An algorithmic graphics system then turns the data into visual forms.
 
-With GritPrint, the idea emerged to **give this data a second life**, by transforming it into **decorative graphic objects** that carry meaning, memory, and personal pride.
+The challenge was to let the data determine the form so each poster would be unique. This meant working on deterministic generative systems and finding ways to make complex data readable through an image.
 
-GritPrint thus became a project combining:
-- **Generative design**  
-- **Sports data processing**  
-- **Full-stack web development**  
-- **Print production & e-commerce**  
-- **Branding & brand storytelling**  
+## Choosing and ordering a poster
 
-## Data retrieval and structuring
+The web application lets people select their activities, preview posters in real time and choose a format. They can then order a poster or give one through a gift card.
 
-Sports activities are imported from third-party platforms (notably Strava).
+I wanted a simple interface that gives people time to look at the result. The visuals take priority, with the technical steps of generation kept out of the way.
 
-## Poster generation
+## From the application to print
 
-At the core of GritPrint lies a system of **algorithmic graphic generation**.
-
-The main challenge was to design a system where **data dictates form**, while never producing two identical posters.
-
-## User experience and web application
-
-GritPrint is designed as a **full web application**, allowing users to:
-
-- Select their activities  
-- Preview posters in real time  
-- Choose a format  
-- Order or gift a poster via a **gift card**  
-
-The interface deliberately downplays technical complexity in favor of a **simple, contemplative experience** focused on visuals.
-
-## Production and automation
-
-The goal is to ensure a process that is **reliable, reproducible, and scalable**.
-
-## Conclusion
-
-GritPrint is a project at the intersection of **design**, **technology**, and **personal storytelling**.
-
-It allowed me to work on:
-- Transforming complex data into readable visual forms  
-- Designing deterministic generative systems  
-- Creating a digital product conceived all the way through to its physical materialization  
-
-Beyond the technical aspects, GritPrint explores a simple idea:  
-**invisible efforts sometimes deserve to be hung on a wall.**
+Building GritPrint meant thinking through the product all the way to its printed form. The aim of automation is to make production reliable and repeatable while allowing for more orders.

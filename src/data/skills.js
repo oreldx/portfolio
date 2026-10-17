@@ -32,30 +32,30 @@ export const skills = {
     postgresql: { icon: "akar-icons:postgresql-fill", name: "PostgreSQL", type: "hard" },
     php: { icon: "devicon-plain:php", name: "PHP", type: "hard" },
     graphql: { icon: "mdi:graphql", name: "GraphQL", type: "hard" },
-    scrapping: { icon: "hugeicons:mining-02", name: "Web Scraping", type: "hard" },
+    scrapping: { icon: "hugeicons:mining-02", name: "Web scraping", type: "hard" },
     mongodb: { icon: "devicon-plain:mongodb", name: "MongoDB", type: "hard" },
     hosting: { icon: "mdi:cloud-outline", name: "Hosting", type: "hard" },
 
     // BRIDGE
     project_management: {
         icon: "fluent-mdl2:machine-learning",
-        name: "Project Management",
+        name: "Project management",
         type: "bridge",
         featured: true,
     },
     ui_ux: { icon: "mdi:design", name: "UI/UX", type: "bridge" },
     agile: { icon: "iconoir:agile", name: "Agile", type: "bridge" },
-    system_design: { icon: "carbon:network-2", name: "System Design", type: "bridge" },
+    system_design: { icon: "carbon:network-2", name: "System design", type: "bridge" },
 
     // SOFT
     data_manipulation: {
         icon: "fluent:data-area-20-regular",
-        name: "Data Manipulation",
+        name: "Data manipulation",
         type: "soft",
     },
     machinelearning: {
         icon: "fluent-mdl2:machine-learning",
-        name: "Machine Learning",
+        name: "Machine learning",
         type: "soft",
     },
     researchanddevelopment: { icon: "material-symbols:lab-research", name: "R&D", type: "soft" },

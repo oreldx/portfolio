@@ -1,64 +1,49 @@
+After [my automated YouTube channel project](/project/auto_youtube_channel), I wanted to try a similar experiment on another platform. Instagram and TikTok interested me, so I started working on automating several accounts.
 
-After [my automated YouTube channel project](/project/auto_youtube_channel), I spent quite some time thinking about trying a similar experiment on another platform. With social media like Instagram and TikTok trending, I decided to start a project to automate multiple accounts.
+This time, I chose to create original content with generative AI. I already had experience editing videos through code, so most of the work involved generating the content and improving my editing tools.
 
-## Introduction
+## Starting with a poetry account
 
-When designing these accounts, I didn’t want to rely on existing media content — I wanted to **create something new and original**. With the rise of **generative AI**, this felt like the perfect opportunity to explore that approach.
+I wanted each account to have its own identity while sharing a similar production workflow. To focus on the technical work first, I started with a simple idea: publish one poetry reading a day, with a video background, accompanying audio and the poem's text scrolling on screen.
 
-Since I already had experience with code-based video editing, I knew the real challenge would be **creating the content itself** and improving my **video editing workflow**.
+## Generating the content
 
-## Goal
+I separated script generation from preparation of the video assets.
 
-My goal was to **create accounts with their own unique identities**. While the structure of each account would remain fairly similar, each one would have its own personality and branding.
+For the text, I used OpenAI's GPT-3.5. After adjusting the prompts, I was getting reliable, consistent scripts. The same prompt let the model choose a background from a list of royalty-free videos sourced from Pexels. This resembled Retrieval-Augmented Generation (RAG), without embeddings or vector storage, which I did not need for such a small dataset.
 
-To begin, I decided to focus on the technical aspects and chose the simplest possible concept: _a poetry account_.  
-The idea was to publish **a daily poetry reading**, with a _pleasant video and audio background, accompanied by the poem’s text scrolling on screen_.
+The ElevenLabs API then generated the voice from the poem.
 
-## Content Generation
+I still needed to synchronize the subtitles with the audio. I first used an open-source model that accepted the original text and aligned it with the voice. This avoided errors that a transcription tool such as Whisper might have introduced by working out the words itself. Later, I found another ElevenLabs API endpoint that provided text-to-voice alignment directly, simplifying this step.
 
-I split content generation into two main parts: **text script creation** and **resource production** for the video.
+## Building my editing tool
 
-For the first part, I used the most popular LLM at the time, OpenAI’s **GPT-3.5**. With some **prompt engineering**, I achieved a consistent and reliable output for my video scripts.
+In the previous project, I used MoviePy and FFmpeg. This time, I built my own Python editing SDK around FFmpeg, taking inspiration from Adobe Premiere Pro.
 
-For the second part, I used **Pexels** to source royalty-free background videos. The LLM would select the ideal background during the initial prompt (by choosing a name **from** a predefined list). This was essentially a form of _Retrieval-Augmented Generation_ (**RAG**), but without embeddings or vector storage — unnecessary for the small dataset involved.
+I used layers and filters to handle images, videos and audio tracks. Among other things, the tool let me animate subtitles.
 
-For the poem’s voiceover, I used the leading provider in the field, **ElevenLabs**, whose API produces high-quality synthetic voices.  
-I generated the audio directly from the text provided by the LLM.
+Text was still difficult to manipulate with this approach. I used Pillow to generate an image for each state of the text, then added those images to the video with FFmpeg.
 
-One missing element remained: **subtitles**. I had the text and voice, but they weren’t synchronized yet. This **text alignment** step was handled by an open-source model that injected my raw text into the audio timeline, avoiding transcription errors that a tool like Whisper might have introduced.
+<div align="center"> <video src="/assets/social_network_account/video.mp4" loop controls style="max-height: 50vh; padding: 0 2rem;"></video> </div>
 
-Later, I discovered that ElevenLabs offered a dedicated API endpoint for direct text-to-voice alignment, which simplified the process further.
+Example video.
 
-## Video Creation
+## Publishing on Instagram
 
-In my previous project, I used **MoviePy** and **FFmpeg** for video editing. This time, I decided to rely exclusively on **FFmpeg**. Drawing inspiration from tools I was familiar with, such as _Adobe Premiere Pro_, I built **my own Python-based video editing SDK**.
+I used Meta's API to publish on Instagram. In this integration, the video and thumbnail had to be accessible on a server: I could not upload the files directly from the client. I had to add this step to the publishing workflow.
 
-By adopting the concepts of **layers** and **filters**, I developed an editor capable of handling images, videos, and audio tracks.  
-This allowed me to create dynamic subtitle animations.
+## Managing several accounts
 
-> One limitation of this approach was the difficulty of directly manipulating text.  
-> To work around this, I used the **Pillow** library to generate images for each state of the text, which I then integrated into the video using FFmpeg.
+Once the first account was running, I refactored a substantial part of the code to share tools across accounts while keeping the freedom to develop each one separately.
 
-<div align="center"> <video src="/assets/social_network_account/video.mp4" loop controls style="max-height: 50vh; padding: 0 2rem;"></video> </div> **Example Video**
+I added a task queue with Redis and Celery to run generation and publishing asynchronously. The architecture was intended to support more hosting resources if the number of accounts grew.
 
-## Publishing
+In practice, I always kept a single queue with one worker for video rendering. My hosting did not have the resources to run several renders in parallel.
 
-For publishing, I used Meta’s API for Instagram. However, it required the video and thumbnail to be hosted on a server — it was not possible to upload the file directly from the client. This added some extra work to the **publishing workflow**.
+I also built a Vue.js interface to track each account's progress through the steps in real time and view its publishing history.
 
-## Multi-Account Management
+## Why I stopped
 
-Once the first part of the project was completed, I wanted to extend the **solution to multiple accounts**. To achieve this, I **refactored** a significant portion of the codebase so the same tools could be reused for different accounts, while maintaining development flexibility.
+I ran the project for several months. The few accounts I created struggled to find an audience among the other content. I started developing more original concepts, then gave up because I found Instagram's rules for managing multiple accounts unclear and sometimes unfairly restrictive. I could not continue on TikTok, whose API was almost inaccessible to me.
 
-To prepare for a potential increase in the number of accounts — which would require scaling the hosting infrastructure — I implemented a **queuing architecture** using **Redis** and **Celery**. This allowed content generation and publishing tasks to be handled **asynchronously**, ensuring **horizontal scalability**.
-
-> In practice, I always used a single queue with one worker for video rendering, as the hosting infrastructure did not have the resources to run multiple rendering instances in parallel.
-
-To make managing multiple accounts easier, I also developed a frontend interface with **Vue.js**. It provided **real-time visibility** into the execution of each step for every account and allowed viewing the publishing history.
-
-## Conclusion
-
-After running the project for **several months**, I eventually decided to shut it down. The few accounts I created quickly became **lost in the sea of content** generated by other users. I explored and started developing **more original account concepts**, but Instagram’s unclear (and sometimes **unjustifiably restrictive**) policies on managing multiple accounts led me to abandon the idea.  
-Since TikTok’s API access is nearly impossible, I was unable to move the project to that platform.
-
-This project helped me gain a deeper understanding of **separation of concerns in code logic** and managing **scalability** through **asynchronous processing**.  
-It also made me aware of the limitations of my current integrations — particularly in video editing — which led me to explore promising external solutions such as **Remotion**.
+The project helped me separate responsibilities in my code and understand how asynchronous processing supports more tasks. The limits of my editing tool also led me to explore Remotion, which looked promising to me.
