@@ -19,10 +19,12 @@ export const skills = {
     datadog: { icon: "simple-icons:datadog", name: "Datadog", type: "hard" },
     remotion: { icon: "gravity-ui:triangle-right-fill", name: "Remotion", type: "hard" },
     nodejs: { icon: "devicon-plain:nodejs", name: "Node.js", type: "hard" },
+    fastify: { icon: "simple-icons:fastify", name: "Fastify", type: "hard" },
     redis: { icon: "devicon-plain:redis", name: "Redis", type: "hard" },
     celery: { name: "Celery", type: "hard" },
     sqlite: { icon: "devicon-plain:sqlite", name: "SQLite", type: "hard" },
     cypress: { icon: "simple-icons:cypress", name: "Cypress", type: "hard" },
+    testing: { icon: "mdi:test-tube", name: "Testing", type: "hard" },
     apis: { icon: "icon-park-solid:api", name: "APIs", type: "hard" },
     ffmpeg: { icon: "file-icons:ffmpeg", name: "FFmpeg", type: "hard" },
     cron: { icon: "eos-icons:cronjob", name: "Cron", type: "hard" },
@@ -46,6 +48,7 @@ export const skills = {
     ui_ux: { icon: "mdi:design", name: "UI/UX", type: "bridge" },
     agile: { icon: "iconoir:agile", name: "Agile", type: "bridge" },
     system_design: { icon: "carbon:network-2", name: "System design", type: "bridge" },
+    support: { icon: "mdi:headset", name: "Support", type: "bridge" },
 
     // SOFT
     data_manipulation: {
@@ -72,19 +75,21 @@ export const skillSections = [
     {
         type: "backend",
         skills: [
+            skills.nodejs,
             skills.python,
             skills.nest,
             skills.flask,
+            skills.fastify,
             skills.medusajs,
             skills.laravel,
-            skills.nodejs,
+            skills.typescript,
         ],
     },
     {
         type: "frontend",
         skills: [
-            skills.react,
             skills.vue,
+            skills.react,
             skills.svelte,
             skills.remotion,
             skills.tailwind,
@@ -94,7 +99,7 @@ export const skillSections = [
     },
     {
         type: "devops",
-        skills: [skills.docker, skills.git, skills.semaphore, skills.datadog, skills.linux],
+        skills: [skills.docker, skills.git, skills.semaphore, skills.datadog, skills.linux, skills.testing],
     },
     {
         type: "database",

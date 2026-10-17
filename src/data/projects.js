@@ -22,6 +22,14 @@ export const projectsItems = [
         featured: true,
     },
     {
+        key: "lofibirds",
+        type: ProjectType.PERSONAL,
+        tags: [skills.vue, skills.typescript, skills.ui_ux, skills.creativity],
+        externalLink: "https://lofibirds.oreldx.dev",
+        readMore: false,
+        featured: true,
+    },
+    {
         key: "quiz_yt",
         type: ProjectType.PERSONAL,
         tags: [skills.python, skills.remotion, skills.vue, skills.docker, skills.creativity],

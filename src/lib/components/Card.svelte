@@ -91,9 +91,7 @@
                             target="_blank"
                             rel="noopener noreferrer"
                             ><Icon icon="mdi:web" aria-hidden="true" />
-                            {$t("button.viewOn")}
-                            {getButtonDataFromURL(data.externalLink).text ??
-                                $t("button.website")}</a
+                            {$t(getButtonDataFromURL(data.externalLink).labelKey)}</a
                         >
                     {/if}
                 </div>
@@ -110,8 +108,7 @@
                 rel="noopener noreferrer"
                 class="quiet-link mt-4 inline-flex items-center gap-1.5"
                 ><Icon icon="mdi:web" aria-hidden="true" />
-                {$t("button.viewOn")}
-                {getButtonDataFromURL(data.externalLink).text ?? $t("button.website")}</a
+                {$t(getButtonDataFromURL(data.externalLink).labelKey)}</a
             >
         {/if}
     </article>

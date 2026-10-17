@@ -16,7 +16,7 @@ export default {
                 readMore: "More about me",
             },
             project: {
-                title: "Featured project",
+                title: "Featured projects",
                 readMore: "View all projects",
             },
             experience: {
@@ -41,9 +41,9 @@ export default {
         button: {
             details: "Details",
             result: "Result:",
-            website: "website",
+            viewWebsite: "View website",
             readMore: "Read more",
-            viewOn: "View on",
+            viewOnGitHub: "View on GitHub",
             back: "Back",
         },
         nav: {
@@ -63,7 +63,7 @@ export default {
                         "25 years old",
                         "Software engineer at Indy, working in full-stack development",
                         "Graduate of the University of Technology of Troyes",
-                        "Over 2.5 years of professional experience",
+                        "Over 3 years of professional experience",
                         "Over 4 years of experience building side projects",
                         "Based in Lyon, France",
                     ],
@@ -93,6 +93,12 @@ export default {
         project: {
             title: "My projects",
             type: { personal: "Personal", academic: "Academic" },
+            lofibirds: {
+                summary: "A pixel art sound garden with birds and ambient sounds.",
+                date: "2026",
+                title: "Lofibirds",
+                desc: "A pixel art sound garden for creating a personal soundscape with five bird species and five ambient sounds, each with independent volume controls.",
+            },
             gritprint: {
                 summary: "Generative art posters created from Strava activities.",
                 date: "2026",
@@ -151,9 +157,9 @@ export default {
         experience: {
             title: "My experience",
             indy: {
-                summary: "Full-stack development on VAT workflows at Indy.",
+                summary: "Full-stack development on VAT features and premium subscriptions.",
                 title: "Software engineer at Indy",
-                desc: "I work on VAT workflows at Indy, across the frontend and backend.",
+                desc: "At Indy, I handle VAT features and the in-app premium subscription flow. I build new frontend and backend features to help self-employed people with their accounting, and maintain and support existing functionality.",
                 date: "MAY 2026 - Present",
             },
             namkin: {
@@ -242,11 +248,11 @@ export default {
         summary: {
             about: {
                 title: "Ce que j'aime créer",
-                desc: "J'explore le web, la donnée et la création visuelle à travers des projets personnels, de l'automatisation à l'art génératif.\n\nJe prod' chez Indy, avec une équipe qui envoie 🚀",
+                desc: "J'explore le web, la donnée et la création visuelle à travers des projets personnels, de l'automatisation à l'art génératif.\n\nSinon je prod' chez Indy, avec une équipe qui envoie 🚀",
                 readMore: "Lire la suite",
             },
             project: {
-                title: "Projet à la une",
+                title: "Projets à la une",
                 readMore: "Voir tous les projets",
             },
             experience: {
@@ -271,9 +277,9 @@ export default {
         button: {
             details: "Détails",
             result: "Résultat :",
-            website: "le site",
+            viewWebsite: "Voir le site",
             readMore: "En savoir plus",
-            viewOn: "Voir sur",
+            viewOnGitHub: "Voir sur GitHub",
             back: "Retour",
         },
         nav: {
@@ -286,11 +292,17 @@ export default {
         project: {
             title: "Mes projets",
             type: { personal: "Personnel", academic: "Académique" },
+            lofibirds: {
+                summary: "Un jardin sonore en pixel art mêlant oiseaux et ambiances sonores.",
+                date: "2026",
+                title: "Lofibirds",
+                desc: "Un jardin sonore en pixel art pour composer une ambiance avec cinq espèces d’oiseaux et cinq ambiances sonores, aux volumes indépendants.",
+            },
             gritprint: {
                 summary: "Des posters d'art génératif créés à partir d'activités Strava.",
                 date: "2026",
                 title: "GritPrint",
-                desc: "Une boutique en ligne pour transformer ses activités Strava en posters d'art génératif personnalisés.",
+                desc: "Une app/boutique en ligne pour transformer ses activités Strava en posters d'art génératif personnalisés.",
             },
             quiz_yt: {
                 summary: "Un outil de production semi-automatisée de vidéos de quiz pour enfants.",
@@ -352,7 +364,7 @@ export default {
                         "25 ans",
                         "Ingénieur logiciel chez Indy, en développement full-stack",
                         "Diplômé de l'Université de Technologie de Troyes",
-                        "Plus de 2,5 ans d'expérience professionnelle",
+                        "Plus de 3 ans d'expérience professionnelle",
                         "Plus de 4 ans à développer des projets personnels",
                         "Basé à Lyon",
                     ],
@@ -382,9 +394,9 @@ export default {
         experience: {
             title: "Mes expériences",
             indy: {
-                summary: "Développement full-stack autour de la TVA chez Indy.",
+                summary: "Développement full-stack sur la TVA et la souscription à l’offre premium.",
                 title: "Ingénieur logiciel chez Indy",
-                desc: "Je travaille sur les parcours liés à la TVA chez Indy, côté frontend et backend.",
+                desc: "Chez Indy, je m’occupe de la TVA et du parcours de souscription à l’offre premium dans l’application. Côté frontend et backend, je développe de nouvelles fonctionnalités pour aider les indépendants dans leur comptabilité et j’assure le support et la maintenance de l’existant.",
                 date: "MAI 2026 - Présent",
             },
             namkin: {
