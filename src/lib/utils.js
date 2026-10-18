@@ -10,13 +10,13 @@ export const getButtonDataFromURL = (url) => {
 export const getSkillColor = (type) => {
     switch (type) {
         case "hard":
-            return "text-primary dark:text-amber-200 dark:border-amber-200 bg-amber-200 dark:bg-transparent";
+            return "bg-skill-hard-bg text-skill-hard-text border-skill-hard-border";
         case "soft":
-            return "text-primary dark:text-pink-300 dark:border-pink-300 bg-pink-300 dark:bg-transparent";
+            return "bg-skill-soft-bg text-skill-soft-text border-skill-soft-border";
         case "bridge":
-            return "text-primary dark:text-cyan-300 dark:border-cyan-300 bg-cyan-300 dark:bg-transparent";
+            return "bg-skill-bridge-bg text-skill-bridge-text border-skill-bridge-border";
         default:
-            return "text-primary dark:text-gray-500 dark:border-gray-600 bg-gray-600 dark:bg-transparent";
+            return "bg-skill-neutral-bg text-skill-neutral-text border-skill-neutral-border";
     }
 };
 

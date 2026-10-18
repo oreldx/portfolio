@@ -7,9 +7,21 @@
     --color-surface: #fafaf9;
     --color-surface-muted: #e7e5e4;
     --color-divider: #d4d4d8;
-    --color-accent: #10a154;
-    --color-accent-light: #4ade80;
-    --color-accent-dark: #15803d;
+    --color-accent: #ea620e;
+    --color-accent-light: #fb923c;
+    --color-accent-dark: #c2410c;
+    --color-skill-hard-bg: #eaf0f6;
+    --color-skill-hard-text: #334e68;
+    --color-skill-hard-border: #c8d5e3;
+    --color-skill-bridge-bg: #e6f2ef;
+    --color-skill-bridge-text: #205b50;
+    --color-skill-bridge-border: #bfd9d1;
+    --color-skill-soft-bg: #f2ecf3;
+    --color-skill-soft-text: #67476d;
+    --color-skill-soft-border: #dbcadd;
+    --color-skill-neutral-bg: #f1f1f0;
+    --color-skill-neutral-text: #52525b;
+    --color-skill-neutral-border: #d4d4d8;
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
@@ -20,6 +32,18 @@
     --color-surface: #18181b;
     --color-surface-muted: #27272a;
     --color-divider: #3f3f46;
+    --color-skill-hard-bg: #1b2735;
+    --color-skill-hard-text: #b8cce0;
+    --color-skill-hard-border: #41566c;
+    --color-skill-bridge-bg: #172d29;
+    --color-skill-bridge-text: #a3d1c4;
+    --color-skill-bridge-border: #3b6258;
+    --color-skill-soft-bg: #2c222f;
+    --color-skill-soft-text: #d3b9d8;
+    --color-skill-soft-border: #604867;
+    --color-skill-neutral-bg: #27272a;
+    --color-skill-neutral-text: #d4d4d8;
+    --color-skill-neutral-border: #52525b;
 }
 
 @utility strong-text {
