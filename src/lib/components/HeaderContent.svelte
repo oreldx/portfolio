@@ -54,10 +54,9 @@
                 class="flex gap-2 justify-center bg-surface-muted text-accent-dark dark:text-accent-light border border-accent px-4 py-2 text-sm rounded-sm hover:bg-accent-dark hover:text-white dark:hover:bg-accent-light dark:hover:text-black"
                 href={data.externalLink}
                 target="_blank"
-                aria-label="External Link"
             >
                 <Icon icon={getButtonDataFromURL(data.externalLink).icon} class="text-lg" />
-                {getButtonDataFromURL(data.externalLink).text}
+                {$t(getButtonDataFromURL(data.externalLink).labelKey)}
             </a>
         {/if}
     </div>

@@ -9,7 +9,7 @@
 
     const converter = new showdown.Converter();
 
-    const featuredProject = $derived(projectsItems.find((item) => item.featured));
+    const featuredProjects = $derived(projectsItems.filter((item) => item.featured));
     const featuredExperience = $derived(experienceItems.find((item) => item.featured));
     const featuredSkills = $derived(Object.values(skills).filter((skill) => skill.featured));
 </script>
@@ -32,35 +32,15 @@
         </SummaryCard>
     </div>
 
-    <div class="col-span-2">
-        {#if featuredExperience}
-            <SummaryCard
-                sectionKey="experience"
-                secondaryLink={featuredExperience.readMore
-                    ? `/experience/${featuredExperience.key}`
-                    : undefined}
-            >
-                <p class="mt-2">{$t(`experience.${featuredExperience.key}.title`)}</p>
-                <p class="text-sm text-zinc-600 dark:text-zinc-400">
-                    {$t(`experience.${featuredExperience.key}.desc`)}
-                </p>
-            </SummaryCard>
-        {/if}
-    </div>
+    {#if featuredExperience}
+        <div class="col-span-2">
+            <SummaryCard sectionKey="experience" items={[featuredExperience]} />
+        </div>
+    {/if}
 
-    <div class="col-span-2">
-        {#if featuredProject}
-            <SummaryCard
-                sectionKey="project"
-                secondaryLink={featuredProject.readMore
-                    ? `/project/${featuredProject.key}`
-                    : undefined}
-            >
-                <p class="mt-2">{$t(`project.${featuredProject.key}.title`)}</p>
-                <p class="text-sm text-zinc-600 dark:text-zinc-400">
-                    {$t(`project.${featuredProject.key}.desc`)}
-                </p>
-            </SummaryCard>
-        {/if}
-    </div>
+    {#if featuredProjects.length}
+        <div class="col-span-2">
+            <SummaryCard sectionKey="project" items={featuredProjects} />
+        </div>
+    {/if}
 </div>
