@@ -4,7 +4,7 @@ export const skills = {
     nest: { icon: "simple-icons:nestjs", name: "NestJS", type: "hard" },
     flask: { icon: "bxl:flask", name: "Flask", type: "hard" },
     laravel: { icon: "mdi:laravel", name: "Laravel", type: "hard" },
-    react: { icon: "mdi:react", name: "React", type: "hard", featured: true },
+    react: { icon: "mdi:react", name: "React", type: "hard" },
     vue: { icon: "mdi:vuejs", name: "Vue.js", type: "hard" },
     svelte: { icon: "simple-icons:svelte", name: "Svelte", type: "hard" },
     tailwind: { icon: "mdi:tailwind", name: "Tailwind", type: "hard" },
@@ -28,7 +28,7 @@ export const skills = {
     apis: { icon: "icon-park-solid:api", name: "APIs", type: "hard" },
     ffmpeg: { icon: "file-icons:ffmpeg", name: "FFmpeg", type: "hard" },
     cron: { icon: "eos-icons:cronjob", name: "Cron", type: "hard" },
-    typescript: { icon: "devicon-plain:typescript", name: "TypeScript", type: "hard" },
+    typescript: { icon: "devicon-plain:typescript", name: "TypeScript", type: "hard", featured: true },
     medusajs: { icon: "simple-icons:medusa", name: "MedusaJS", type: "hard" },
     sentry: { icon: "file-icons:sentry", name: "Sentry", type: "hard" },
     postgresql: { icon: "akar-icons:postgresql-fill", name: "PostgreSQL", type: "hard" },
@@ -47,7 +47,7 @@ export const skills = {
     },
     ui_ux: { icon: "mdi:design", name: "UI/UX", type: "bridge" },
     agile: { icon: "iconoir:agile", name: "Agile", type: "bridge" },
-    system_design: { icon: "carbon:network-2", name: "System design", type: "bridge" },
+    system_design: { icon: "carbon:network-2", name: "System design", type: "bridge", featured: true },
     support: { icon: "mdi:headset", name: "Support", type: "bridge" },
 
     // SOFT

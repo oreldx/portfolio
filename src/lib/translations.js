@@ -94,19 +94,16 @@ export default {
             title: "My projects",
             type: { personal: "Personal", academic: "Academic" },
             lofibirds: {
-                summary: "A pixel art sound garden with birds and ambient sounds.",
                 date: "2026",
                 title: "Lofibirds",
                 desc: "A pixel art sound garden for creating a personal soundscape with five bird species and five ambient sounds, each with independent volume controls.",
             },
             gritprint: {
-                summary: "Generative art posters created from Strava activities.",
                 date: "2026",
                 title: "GritPrint",
                 desc: "An online store where people turn their Strava activities into personalized generative art posters.",
             },
             quiz_yt: {
-                summary: "A semi-automated workflow for producing quiz videos for children.",
                 date: "2025",
                 title: "YouTube quiz videos for children",
                 desc: "A tool for creating original quiz videos for children, with semi-automated production for YouTube.",
@@ -116,19 +113,16 @@ export default {
                 },
             },
             social_network_account: {
-                summary: "Automated content creation for Instagram accounts.",
                 date: "2024",
                 title: "Automated Instagram accounts",
                 desc: "A system that creates and publishes content for multiple Instagram accounts automatically.",
             },
             portfolio: {
-                summary: "A personal space to share my projects and experience.",
                 date: "2023",
                 title: "Personal portfolio",
                 desc: "The site I built to share my projects, skills and experience.",
             },
             machine_learning_model: {
-                summary: "Predicting retail store revenue with machine learning.",
                 date: "2022",
                 title: "Retail revenue prediction",
                 desc: "A Python machine learning model that predicts revenue for all types of retail stores in Norway.",
@@ -137,7 +131,6 @@ export default {
                 },
             },
             auto_youtube_channel: {
-                summary: "Daily Twitch clip compilations, edited and published automatically.",
                 date: "2022",
                 title: "Automated YouTube channel",
                 desc: "A YouTube channel that automatically selects, edits and publishes a daily compilation of popular Twitch clips.",
@@ -148,7 +141,6 @@ export default {
                 },
             },
             dynamic_website: {
-                summary: "An MVC web application for a vaccination service.",
                 date: "2021",
                 title: "Vaccination website",
                 desc: "A vaccination website built with HTML, CSS, PHP and SQL using an MVC architecture.",
@@ -157,14 +149,11 @@ export default {
         experience: {
             title: "My experience",
             indy: {
-                summary: "Full-stack development on VAT features and premium subscriptions.",
                 title: "Software engineer at Indy",
-                desc: "At Indy, I handle VAT features and the in-app premium subscription flow. I build new frontend and backend features to help self-employed people with their accounting, and maintain and support existing functionality.",
+                desc: "At Indy, I handle VAT features and the in-app premium subscription flow. I build new features to help self-employed people with their accounting, and maintain and support existing functionality.",
                 date: "MAY 2026 - Present",
             },
             namkin: {
-                summary:
-                    "B2B e-commerce and real-time industrial visualization, from scoping to delivery.",
                 title: "Software engineer at Namkin",
                 desc: "I took over a stalled B2B e-commerce project and worked on a real-time factory visualization platform, making technical and functional decisions directly with clients.",
                 date: "OCT 2024 - MAR 2026",
@@ -182,7 +171,6 @@ export default {
                 },
             },
             selectra: {
-                summary: "Internal tools and AI-assisted workflows for the quality team.",
                 title: "Software engineering intern at Selectra",
                 desc: "I worked on internal web applications, including an AI-assisted tool that reduced time-consuming tasks for the quality team and increased its productivity by 100%.",
                 date: "FEB 2024 - JUL 2024",
@@ -195,7 +183,6 @@ export default {
                 },
             },
             grytics: {
-                summary: "AI experimentation and end-to-end testing for a B2B analytics platform.",
                 title: "Junior software engineering intern at Grytics",
                 desc: "I worked on a B2B SaaS analytics platform, testing AI use cases with business potential and adding end-to-end tests to make deployments more reliable.",
                 date: "FEB 2023 - JUL 2023",
@@ -293,19 +280,16 @@ export default {
             title: "Mes projets",
             type: { personal: "Personnel", academic: "Académique" },
             lofibirds: {
-                summary: "Un jardin sonore en pixel art mêlant oiseaux et ambiances sonores.",
                 date: "2026",
                 title: "Lofibirds",
-                desc: "Un jardin sonore en pixel art pour composer une ambiance avec cinq espèces d’oiseaux et cinq ambiances sonores, aux volumes indépendants.",
+                desc: "Un jardin sonore en pixel art pour composer une ambiance avec cinq espèces d'oiseaux et cinq ambiances sonores, aux volumes indépendants.",
             },
             gritprint: {
-                summary: "Des posters d'art génératif créés à partir d'activités Strava.",
                 date: "2026",
                 title: "GritPrint",
                 desc: "Une app/boutique en ligne pour transformer ses activités Strava en posters d'art génératif personnalisés.",
             },
             quiz_yt: {
-                summary: "Un outil de production semi-automatisée de vidéos de quiz pour enfants.",
                 date: "2025",
                 title: "Quiz YouTube pour enfants",
                 desc: "Un outil pour créer des vidéos originales de quiz pour enfants, avec une production semi-automatisée pour YouTube.",
@@ -315,19 +299,16 @@ export default {
                 },
             },
             social_network_account: {
-                summary: "La création automatisée de contenu pour des comptes Instagram.",
                 date: "2024",
                 title: "Comptes Instagram automatisés",
                 desc: "Un système qui crée et publie automatiquement du contenu pour plusieurs comptes Instagram.",
             },
             portfolio: {
-                summary: "Un espace personnel pour partager mes projets et mon parcours.",
                 date: "2023",
                 title: "Portfolio personnel",
                 desc: "Le site que j'ai créé pour partager mes projets, mes compétences et mon parcours.",
             },
             machine_learning_model: {
-                summary: "Prédire le chiffre d'affaires de commerces grâce au machine learning.",
                 date: "2022",
                 title: "Prédiction du chiffre d'affaires de commerces",
                 desc: "Un modèle de machine learning en Python pour prédire le chiffre d'affaires de tous types de commerces en Norvège.",
@@ -336,8 +317,6 @@ export default {
                 },
             },
             auto_youtube_channel: {
-                summary:
-                    "Des compilations quotidiennes de clips Twitch, montées et publiées automatiquement.",
                 date: "2022",
                 title: "Chaîne YouTube automatisée",
                 desc: "Une chaîne YouTube qui sélectionne, monte et publie chaque jour une compilation de clips Twitch populaires.",
@@ -348,7 +327,6 @@ export default {
                 },
             },
             dynamic_website: {
-                summary: "Une application web en architecture MVC pour un service de vaccination.",
                 date: "2021",
                 title: "Site de vaccination",
                 desc: "Un site de vaccination développé en HTML, CSS, PHP et SQL, avec une architecture MVC.",
@@ -394,14 +372,11 @@ export default {
         experience: {
             title: "Mes expériences",
             indy: {
-                summary: "Développement full-stack sur la TVA et la souscription à l’offre premium.",
                 title: "Ingénieur logiciel chez Indy",
-                desc: "Chez Indy, je m’occupe de la TVA et du parcours de souscription à l’offre premium dans l’application. Côté frontend et backend, je développe de nouvelles fonctionnalités pour aider les indépendants dans leur comptabilité et j’assure le support et la maintenance de l’existant.",
+                desc: "Chez Indy, je m'occupe de la TVA et du parcours de souscription à l'offre premium dans l'application. Je développe de nouvelles fonctionnalités pour aider les indépendants dans leur comptabilité et j'assure le support et la maintenance de l'existant.",
                 date: "MAI 2026 - Présent",
             },
             namkin: {
-                summary:
-                    "E-commerce B2B et visualisation industrielle en temps réel, du cadrage à la livraison.",
                 title: "Ingénieur logiciel chez Namkin",
                 desc: "J'ai repris un projet e-commerce B2B à l'arrêt et travaillé sur une plateforme de visualisation d'usines en temps réel, en échangeant directement avec les clients sur les choix techniques et fonctionnels.",
                 date: "OCT 2024 - MAR 2026",
@@ -419,7 +394,6 @@ export default {
                 },
             },
             selectra: {
-                summary: "Des outils internes et l'aide de l'IA pour le pôle qualité.",
                 title: "Ingénieur web full-stack chez Selectra",
                 desc: "J'ai travaillé sur les applications web internes, dont un outil assisté par IA qui a réduit les tâches chronophages du pôle qualité et augmenté sa productivité de 100 %.",
                 date: "FÉV 2024 - JUIL 2024",
@@ -432,8 +406,6 @@ export default {
                 },
             },
             grytics: {
-                summary:
-                    "Expérimentations autour de l'IA et tests de bout en bout pour une plateforme d'analyse B2B.",
                 title: "Ingénieur développeur assistant chez Grytics",
                 desc: "J'ai travaillé sur un SaaS B2B d'analyse de données, en testant des usages de l'IA utiles au produit et en ajoutant des tests de bout en bout pour fiabiliser les mises en production.",
                 date: "FÉV 2023 - JUIL 2023",
