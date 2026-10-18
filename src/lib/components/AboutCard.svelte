@@ -18,3 +18,10 @@
         {/each}
     </ul>
 </div>
+
+<style>
+    ul :global(strong) {
+        color: inherit;
+        font-weight: 700;
+    }
+</style>

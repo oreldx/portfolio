@@ -2,9 +2,9 @@ import { locales } from "./i18n";
 
 export const getButtonDataFromURL = (url) => {
     if (url.includes("github")) {
-        return { icon: "mdi:github", text: "GitHub" };
+        return { icon: "mdi:github", labelKey: "button.viewOnGitHub" };
     }
-    return { icon: "mdi:link", text: null };
+    return { icon: "mdi:web", labelKey: "button.viewWebsite" };
 };
 
 export const getSkillColor = (type) => {

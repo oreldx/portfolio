@@ -1,99 +1,70 @@
+While watching Twitch clip compilations on YouTube, I noticed how repetitive the editing was. I wanted to create a channel that would fetch clips, filter them, add a graphic layout and publish a compilation every day without human intervention.
 
-**How to Create an Autonomous YouTube Channel**  
-—or in other words, how to **fetch** data and resources, **filter** and **enrich** them, then **publish** the result without any human intervention.
+I had just started learning C and Python. At that point, I could write a recursive function and handle some basic data structures. The project introduced me to web scraping, APIs, video processing with FFmpeg and hosting on a VPS with Docker.
 
-## Introduction
+Twitch clips are short excerpts from a live stream, created by viewers or streamers. They are publicly accessible, while full replays are often restricted to subscribers.
 
-After seeing countless Twitch clip compilations on YouTube, I noticed that the editing style was often **highly repetitive**.
+## Fetching and selecting clips
 
-For context, Twitch clips are short excerpts taken from a longer live broadcast called a **stream**. These clips can be created by viewers or streamers themselves and are publicly available (unlike full VODs, which are often restricted to a streamer’s subscribers).
+I used the Twitch API to retrieve streamer, clip and video data. It gave me a snapshot at a particular moment, with clips accessible by category or streamer, but without a search by popularity. I recorded a history of popular streamers over the previous 24 hours so I could fetch their clips afterward.
 
-Having just started learning programming (**C** & **Python**)—meaning I could now write a recursive function or perform basic data structure manipulations—I decided to experiment by **creating a YouTube channel dedicated to daily compilations of the best Twitch clips**.
+The scraper had to run continuously, while I was still launching the video script by hand on my computer. I was a little afraid of setting up a database, so my first homemade solution was Google Sheets. It let me structure the data and retrieve it through the API, with history limited to a 48-hour sliding window. I later moved to SQLite.
 
-During this project, I learned and explored concepts such as:
-- **Web scraping**
-- **APIs**
-- Video manipulation with **FFmpeg**
-- Hosting on a **VPS** with **Docker**
-    
-I didn’t just want to compile clips, though—I wanted to add **a creative graphic touch to improve the viewing experience**.
+For each video, I retrieved as many clips as possible from the past 24 hours. I filtered them by popularity and fixed criteria, including lists of allowed or excluded streamers and categories, and clip duration. Each clip's video, thumbnail and metadata were then downloaded locally.
 
-## Clip Retrieval
+## Editing the compilations
 
-Clips were retrieved using the Twitch API, which provides access to streamer, clip, and video data. However, the API only allows retrieval at a **specific moment in time**. Clips can only be fetched by category or streamer—not by popularity.  
-To work around this, I built a system to track popular streamers over the last **24 hours**, then retrieve their clips afterward.
+The compilations contained clips of up to 60 seconds. Editing used MoviePy in Python and FFmpeg commands. I processed clips one at a time to avoid loading them all into memory and running out of RAM.
 
-Since the scraper needed to run continuously, but the video generation script was initially launched manually on my computer, I was hesitant to set up a full database.  
-My first _DIY_ solution was to store data in **Google Sheets**, which allowed for structured organization and easy retrieval via the Google Sheets API. The drawback was limited history, as I used a **48-hour sliding window** system. Later, I switched to **SQLite**.
+Inspired by Spi0n's Zaps, I designed a layout that showed the compilation's timeline and information about the current clip:
 
-When creating the video, I would retrieve as many clips as possible from the past **24 hours**, then filter them by popularity and other static criteria _(whitelists/blacklists of streamers or categories, clip duration, etc.)_.
-
-Each clip’s resources—video, thumbnail, and metadata—were then downloaded and stored locally.
-
-## Video Structure
-
-Since the final video was a compilation, it consisted of Twitch clips, each lasting up to 60 seconds.  
-For editing, I ended up splitting the process between two tools: a Python library (**MoviePy**) and raw **FFmpeg** CLI processing.  
-Using MoviePy encouraged me to think of video processing in **atomic units**—in this case, a single clip—so as not to load all clips into the same instance and risk running out of RAM.
-
-Inspired by Spi0n’s _Zaps_, I wanted to display an on-screen timeline of the content alongside a brief summary of the current clip.  
-The layout was organized into four key areas:
-- **Top left**: list of streamers appearing in the video, in order of appearance, with a cursor showing the current streamer.    
-- **Bottom left**: thumbnail of the game or Twitch category for the clip.
-- **Bottom right**: title of the clip, usually written by the viewer who created it.
-- **Top right**: the Twitch clip itself, forming the main video content.
-    
+- Top left, the streamers in order of appearance, with a cursor on the one currently on screen.
+- Bottom left, the thumbnail of the game or Twitch category.
+- Bottom right, the clip title, usually written by its creator.
+- Top right, the clip itself, occupying the main area.
 
 <video class="px-8" controls muted loop> <source src="/assets/auto_youtube_channel/video.mp4" type="video/mp4"> </video>
-**Video Excerpt**
 
-To achieve this kind of atomic composition, my first step was to standardize the format of the selected clips, since Twitch streams are replayed in various formats and codecs depending on the streamer. This was the purpose of the **Python library**, which handled a lot of preprocessing, making my workflow much simpler.
+Video excerpt.
 
-The **overlay** was then added using **FFmpeg**, with static images. Animations were applied to each element to make them smoothly appear and disappear, along with transitions between clips, to provide a pleasant visual experience. To do this, I used **FFmpeg filters**, combined into a single complex filter, allowing me to generate a complete, fully-edited clip segment with just one command.
+I first used MoviePy to standardize formats and codecs, which varied between clips. I then added the graphic overlay with FFmpeg, using static images. A complex filter combined the elements' entrance and exit animations with transitions to generate each segment in a single command.
 
-This step was fairly complex because **FFmpeg** is not a video editing tool but a video processing tool. You have to think of the video composition as a sequence of operations to be applied to the video and audio streams in a single instruction, while managing timing through global variables.
+This step took a lot of work. With FFmpeg, I had to describe the edit as a sequence of operations on audio and video streams in one instruction, managing timing with global variables.
 
-Once each edited clip segment was output in the same format, the final step was to **concatenate** the clips together, adding a static **outro** at the end.
+Once all segments shared the same format, I concatenated them and added a static outro. To avoid black frames during crossfades, I used the first frame of the next clip as the background.
 
-> **Note:** To make transitions smoother between clips, I would take the first frame of the next clip and display it as a background during the crossfade with the current clip, preventing any black frames in between.
-
-Within the video, I also added **calls to action** for sharing and subscribing. These elements were created in Premiere Pro, allowing me to randomly overlay them on top of certain segments.
+I also created sharing and subscription animations in Premiere Pro, then overlaid them on randomly selected segments.
 
 <video class="px-8" controls muted loop> <source src="/assets/auto_youtube_channel/call_to_action.mp4" type="video/mp4"> </video>
 
-**Example of a Call to Action**
+Example of a sharing and subscription animation.
 
-## Thumbnail Design
+## Generating thumbnails
 
-Each video’s **thumbnail** was designed to grab the viewer’s attention, using vibrant colors and bold graphical elements.  
-To achieve this, I used a Python image manipulation library (**Pillow**).
+I created thumbnails with Pillow, using bright colors and graphics intended to catch viewers' attention. The most popular streamers in the selection appeared in the center with predefined images. Other streamers' profile pictures sat in circles at the sides.
 
-From the selected clips, **the most popular streamers were highlighted** in the center with predefined graphics, while the profile pictures of other streamers were displayed inside side circles.
-
-The episode number and stills from two viral clips were used as the background, with the option to vary the background, title, and number colors across **several random combinations**.
+The background combined the episode number with stills from two viral clips. Background, title and number colors varied across several random combinations.
 
 ![Video thumbnail](/assets/auto_youtube_channel/thumbnail.jpg)
 
-**Video Thumbnail**
+## Generating titles and descriptions
 
-## Automatically Generated Text
+The title included the names of the featured streamers and the episode number.
 
-For title generation, just like for thumbnails, the selected clips determined which streamers were highlighted in the title, along with the episode number.
-
-**Example Title:**
+Example title:
 
 ```
 Mynthos, Sackzi, Wingobear, Terracid et LittleBigWhale... [Twitch FR Compilation #1]
 ```
 
-The **description** was generated based on the final edit, providing a precise timeline for each clip to make navigation easier.
+The description was generated from the final edit, with precise timestamps for each clip to make navigation easier.
 
-**Video Description:**
+Example description:
 
 ```
 ••► New compilation [#1] of the best French Twitch clips 🇫🇷 from the past 24 hours. 
 
-••► 🔥 Today’s lineup: 🔥 
+••► 🔥 Today's lineup: 🔥 
 
 00:00 - Mynthos: "Emmanuel Maquerong has a message for Antoine Daniel!" 🔗 http://www.twitch.tv/mynthos 
 
@@ -103,24 +74,18 @@ The **description** was generated based on the final edit, providing a precise t
 
 ••► See you tomorrow for 💥 a brand new compilation 💥!!
 
-If you’re a streamer and don’t wish to appear in my compilations anymore, feel free to contact me at the following email address:
+If you're a streamer and don't wish to appear in my compilations anymore, feel free to contact me at the following email address:
 📧 example@mail.com 📧` 
 ```
 
-## Publishing to YouTube
+## Publishing on YouTube
 
-Video publishing was handled via the **YouTube API**, which allowed me to automatically upload the video along with its thumbnail, title, and description.  
-The most challenging part here was obtaining the necessary credentials for my API to publish public content.
+The YouTube API handled automatic publishing of the video with its thumbnail, title and description. Obtaining the credentials needed to publish publicly was the hardest part of this integration.
 
-## Conclusion
+## After a year of publishing
 
-The YouTube channel ran for about a year, gaining over **300 subscribers** and videos reaching up to **40,000 views**.  
-Although I saw the project as a great way to archive Twitch clips, **copyright claims eventually forced me to shut it down**.
+The channel passed 300 subscribers, with videos reaching up to 40,000 views. I liked the idea of keeping an archive of these clips, but copyright claims forced me to stop.
 
-This project taught me a lot about key technical concepts.  
-It also showed me that I could take a project from start to finish without prior knowledge of its feasibility, which gave me confidence in my ability to bring ideas to life no matter the challenge.
+I learned a lot of technical skills. Taking the project from start to finish without knowing whether it was feasible also gave me confidence to try other ideas.
 
-I had many ideas to improve the project, such as:
-- Enhancing text content using Markov chains or the early LLMs of the time (**BLOOM**)
-- Improving clip selection and orchestration algorithms with viewership stats and machine learning
-- Adding a graphical user interface
+I still had several directions to explore: improving the text with Markov chains or BLOOM, one of the early LLMs I was considering at the time; using viewership statistics and machine learning to select and order clips; and adding a graphical interface.
