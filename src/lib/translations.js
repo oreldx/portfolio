@@ -1,5 +1,16 @@
 export default {
     en: {
+        blog: {
+            subscribe: "RSS feed",
+            read: "Read article",
+            back: "All articles",
+            empty: "The first articles are on their way. Come back soon.",
+            tags: "Topics",
+            articleLanguage: "Article language",
+            translationMissing:
+                "Translation unavailable. This article is displayed in {{language}}.",
+            languages: { fr: "French", en: "English" },
+        },
         controls: {
             reading: "Reading",
             theme: "Change theme",
@@ -52,6 +63,7 @@ export default {
             experience: "experience",
             project: "projects",
             skills: "skills",
+            blog: "blog",
         },
         about: {
             title: "My profile",
@@ -224,6 +236,16 @@ export default {
         },
     },
     fr: {
+        blog: {
+            subscribe: "Flux RSS",
+            read: "Lire l’article",
+            back: "Tous les articles",
+            empty: "Les premiers articles se préparent. À bientôt ici.",
+            tags: "Thèmes",
+            articleLanguage: "Langue de l’article",
+            translationMissing: "Traduction indisponible. Cet article est affiché en {{language}}.",
+            languages: { fr: "français", en: "anglais" },
+        },
         controls: {
             reading: "Lecture",
             theme: "Changer de thème",
@@ -275,6 +297,7 @@ export default {
             experience: "expérience",
             project: "projets",
             skills: "compétences",
+            blog: "blog",
         },
         project: {
             title: "Mes projets",

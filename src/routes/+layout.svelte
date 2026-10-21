@@ -14,8 +14,12 @@
 
     /** @type {Props} */
     let { children } = $props();
+    const isBlog = $derived(
+        page.url.pathname === "/blog" || page.url.pathname.startsWith("/blog/"),
+    );
     const narrowReading = $derived(
         page.url.pathname === "/about" ||
+            page.url.pathname.startsWith("/blog/") ||
             page.url.pathname.startsWith("/project/") ||
             page.url.pathname.startsWith("/experience/"),
     );
@@ -36,9 +40,13 @@
     });
 </script>
 
+<svelte:head>
+    <title>Orel's Portfolio</title>
+</svelte:head>
+
 <ModeWatcher />
 
-{#if $readingMode}
+{#if $readingMode || isBlog}
     <header
         class="mx-auto flex max-w-[960px] flex-wrap items-center justify-between gap-6 border-b border-divider px-5 py-6 sm:mx-6 lg:mx-auto"
     >
@@ -75,4 +83,4 @@
     </main>
 {/if}
 
-<Dock />
+<Dock showReadingMode={!isBlog} />

@@ -97,3 +97,33 @@
 @utility quiet-link {
     @apply text-sm font-semibold text-accent dark:text-accent-light hover:underline underline-offset-4 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent;
 }
+
+@layer components {
+    .blog-prose {
+        overflow-wrap: anywhere;
+        line-height: 1.85;
+    }
+    .blog-prose :is(h2, h3, h4) {
+        scroll-margin-top: 2rem;
+    }
+    .blog-prose :is(h2, h3, h4) a {
+        color: inherit;
+        text-decoration: none;
+    }
+    .blog-prose :is(h2, h3, h4) a:hover {
+        text-decoration: underline;
+        text-decoration-color: var(--color-accent);
+        text-underline-offset: 0.25em;
+    }
+    .blog-prose pre {
+        white-space: pre;
+        overflow-x: auto;
+        color: inherit;
+    }
+    .blog-prose :not(pre) > code {
+        color: inherit;
+    }
+    .blog-prose img {
+        border-radius: 0.75rem;
+    }
+}

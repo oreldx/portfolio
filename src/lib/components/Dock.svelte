@@ -7,6 +7,8 @@
     import { showBurgerMenu, toggleBurgerMenu } from "../stores/menu.js";
     import { readingMode, toggleReadingMode } from "../stores/reading.js";
 
+    let { showReadingMode = true } = $props();
+
     const dockItems = [
         { key: "github", icon: "mdi:github", url: "https://github.com/oreldx" },
         { key: "mail", icon: "tabler:mail-filled", url: "mailto:aurelien.dureux+pf@proton.me" },
@@ -46,19 +48,21 @@
                 </li>
             {/each}
             <li aria-hidden="true" class="h-6 w-px shrink-0 bg-divider"></li>
-            <li class="hidden sm:block">
-                <button
-                    onclick={toggleReadingMode}
-                    aria-pressed={$readingMode}
-                    aria-label={$t("controls.reading")}
-                    title={$t("controls.reading")}
-                    class="dock-control sm:w-auto sm:px-3 sm:gap-2"
-                    class:reading-active={$readingMode}
-                >
-                    <Icon icon="mdi:book-open-page-variant-outline" class="text-2xl" />
-                    <span class="hidden sm:block text-sm">{$t("controls.reading")}</span>
-                </button>
-            </li>
+            {#if showReadingMode}
+                <li class="hidden sm:block">
+                    <button
+                        onclick={toggleReadingMode}
+                        aria-pressed={$readingMode}
+                        aria-label={$t("controls.reading")}
+                        title={$t("controls.reading")}
+                        class="dock-control sm:w-auto sm:px-3 sm:gap-2"
+                        class:reading-active={$readingMode}
+                    >
+                        <Icon icon="mdi:book-open-page-variant-outline" class="text-2xl" />
+                        <span class="hidden sm:block text-sm">{$t("controls.reading")}</span>
+                    </button>
+                </li>
+            {/if}
             <li class="sm:hidden">
                 <button
                     onclick={toggleBurgerMenu}

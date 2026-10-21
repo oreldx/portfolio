@@ -14,6 +14,7 @@
         { key: "experience", isMobileOnly: false, path: "/experience" },
         { key: "project", isMobileOnly: false, path: "/project" },
         { key: "skills", isMobileOnly: false, path: "/skills" },
+        { key: "blog", isMobileOnly: false, path: "/blog" },
     ];
 
     const intSelected = $derived(
